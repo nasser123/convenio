@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7374f43b-7dd2-4834-86bc-b8fbcc99f03c">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="71"/>
+	<parameter name="CONVENIO" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PERIODO" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     cliente.`nome` AS cliente_nome,
+     convenio.`nome` AS convenio_nome,
+     venda.`notafiscal` AS venda_notafiscal,
+     venda.`valor` AS venda_valor,
+     venda.`data` AS venda_data,
+     parcela.`nrparcela` AS parcela_nrparcela,
+     parcela.`vencimento` AS parcela_vencimento,
+     parcela.`valorparcela` AS parcela_valorparcela,
+     parcela.`pago` AS parcela_pago,
+     convenio.`responsavel` AS convenio_responsavel,
+     convenio.`telefone` AS convenio_telefone,
+     venda.`nrparcelas` AS venda_nrparcelas
+FROM
+     `parcela` parcela INNER JOIN `venda` venda ON parcela.`idvenda` = venda.`idvenda`
+     INNER JOIN `cliente` cliente ON venda.`idcliente` = cliente.`idcliente`
+     INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`
+WHERE
+     parcela.`vencimento` = $P{PERIODO}
+     and cliente.`idconvenio` = $P{CONVENIO}]]>
+	</queryString>
+	<field name="cliente_nome" class="java.lang.String"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="venda_notafiscal" class="java.lang.Integer"/>
+	<field name="venda_valor" class="java.lang.Float"/>
+	<field name="venda_data" class="java.sql.Date"/>
+	<field name="parcela_nrparcela" class="java.lang.Integer"/>
+	<field name="parcela_vencimento" class="java.sql.Date"/>
+	<field name="parcela_valorparcela" class="java.lang.Float"/>
+	<field name="parcela_pago" class="java.lang.Boolean"/>
+	<field name="convenio_responsavel" class="java.lang.String"/>
+	<field name="convenio_telefone" class="java.lang.String"/>
+	<field name="venda_nrparcelas" class="java.lang.Integer"/>
+	<variable name="TotalPrestacoes" class="java.lang.String"/>
+	<variable name="parcela_valorparcela_1" class="java.lang.Double" resetType="Group" resetGroup="Cliente_group" calculation="Sum">
+		<variableExpression><![CDATA[$F{parcela_valorparcela}]]></variableExpression>
+	</variable>
+	<variable name="variable1" class="java.lang.String"/>
+	<variable name="parcela_valorparcela_2" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{parcela_valorparcela}]]></variableExpression>
+	</variable>
+	<group name="Cliente_group">
+		<groupExpression><![CDATA[$F{cliente_nome}]]></groupExpression>
+		<groupHeader>
+			<band height="49">
+				<textField>
+					<reportElement x="0" y="7" width="303" height="20" uuid="d7bd6dc6-0a8b-4404-a105-6343f2b9b4d3"/>
+					<textElement>
+						<font size="12" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cliente_nome}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="1" y="28" width="79" height="21" uuid="36e0b034-e27a-42b9-98fb-800b07bc2bf5"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Data da Venda]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="331" y="28" width="100" height="21" uuid="f7d8f200-6f14-4187-817c-751c63e66911"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Vencimento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="456" y="28" width="100" height="21" uuid="0f00ecab-3f3f-479e-aae1-6be20c68f56b"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Valor da Parcela]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="87" y="28" width="80" height="21" uuid="afcde4c0-da02-4f74-85f8-a7b9624bb046"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Valor da Venda]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="181" y="28" width="60" height="21" uuid="e71a1025-7837-41d9-8931-d1020fae8b22"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Parc.]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="262" y="28" width="41" height="21" uuid="04e4ff6f-ba15-41fe-a034-490492f3df1a"/>
+					<textElement textAlignment="Center">
+						<font isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nr Parc]]></text>
+				</staticText>
+				<line>
+					<reportElement x="2" y="3" width="554" height="1" uuid="70b40cb7-810c-4958-8351-6560e49689e0"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="32">
+				<textField pattern="R$ ##0.00">
+					<reportElement x="456" y="0" width="100" height="20" uuid="b8c4d11e-6639-42ee-b8ff-fc41cda526fb"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{parcela_valorparcela_1}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="355" y="0" width="100" height="20" uuid="bf1278ec-3958-4e82-aa1a-1a14b6589056"/>
+					<textElement textAlignment="Right">
+						<font size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total do Cliente:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="1" y="20" width="554" height="1" uuid="a3ad805f-d30d-4c04-91cd-e0ec6fcef433"/>
+				</line>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<staticText>
+				<reportElement x="121" y="78" width="324" height="20" uuid="8548cd08-7377-4b99-9aba-ba96b8e9313c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE CONVÊNIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="0" width="319" height="18" uuid="3b9f6e7b-0e27-4a4e-b1a7-1a718b9331a2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[LOJA PAPA TUDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="18" width="319" height="18" uuid="271588e9-7fbd-4f12-b500-687d527744da"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="36" width="319" height="18" uuid="522c2915-d370-4f1f-8da4-2fe480da3415"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Rua Bento martins, 3066 fone (55) 3411-8906]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="121" y="54" width="319" height="18" uuid="c7b511b4-92aa-405a-bd88-9ce144357195"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Uruguaiana-RS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="87" y="131" width="223" height="20" uuid="f248adc3-e130-41ec-82df-352c91cf877f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{convenio_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="87" y="151" width="223" height="20" uuid="bbd0810b-4075-4f78-8096-0720d91157aa"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{convenio_responsavel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="398" y="131" width="100" height="20" uuid="81f0eee2-3186-469d-b6c2-d2aceb72c227"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{convenio_telefone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="131" width="67" height="20" uuid="c0cf9aad-1f46-4f19-ad9c-d9b2e1c398e4"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Convênio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="151" width="85" height="20" uuid="fc0337f8-89f6-40af-ac70-e1b8a345cb2a"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Responsável:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="131" width="43" height="20" uuid="7e80f2bd-02f6-4f10-a8c8-dec4799a0f13"/>
+				<textElement>
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Fone:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="27">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="1" y="0" width="79" height="20" uuid="d118ec83-7057-471d-8a35-2cb727a40c65"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{venda_data}]]></textFieldExpression>
+			</textField>
+			<textField pattern="R$ ##0.00">
+				<reportElement x="85" y="0" width="82" height="20" uuid="ba880368-2ac7-4864-87e3-515da6516b01"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{venda_valor}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="333" y="0" width="96" height="20" uuid="ac9c1111-c1ea-4dad-ac83-a9bcfc66ee2b"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{parcela_vencimento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="R$ ##0.00">
+				<reportElement x="455" y="0" width="100" height="20" uuid="141b554e-ef7b-4be0-b88f-90865b84c62d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{parcela_valorparcela}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="39" height="20" uuid="6905d73f-9c97-485e-a10b-df98e50c97a6"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{venda_nrparcelas}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#ª">
+				<reportElement x="269" y="0" width="34" height="20" uuid="acb82359-3c94-4c19-91bd-41df59ea2058"/>
+				<textFieldExpression><![CDATA[$F{parcela_nrparcela}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" uuid="47dcdb08-026d-43fb-8098-eb5690041e32"/>
+			</rectangle>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="0" width="221" height="20" uuid="676cea4e-777b-456d-8c32-5b1edd20a7aa"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="223" height="20" uuid="d25f1063-acea-4738-9672-2639139febd8"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="0" width="40" height="20" uuid="44a86fff-110b-46aa-8994-9adce3616b82"/>
+				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="98">
+			<textField evaluationTime="Report" pattern="R$ ##0.00">
+				<reportElement x="311" y="13" width="100" height="20" uuid="19debf56-fa6e-4a4f-a1d7-65d6a5320eed"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{parcela_valorparcela_2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="153" y="13" width="150" height="20" uuid="f887d920-bf5f-4044-81bb-54e9b5627f4e"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total do Convênio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="46" width="331" height="20" uuid="65be7158-b8aa-4041-8780-5acdf1215c0c"/>
+				<text><![CDATA[Obs. Após a data de vencimento haverá acréscimo de 5%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="72" width="478" height="20" uuid="908fae97-e1e0-4109-890a-02875687c26f"/>
+				<text><![CDATA[Ass.;____________________________________________  Recebi em:  ____/______/_______]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

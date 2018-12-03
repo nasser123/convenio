@@ -1,0 +1,45 @@
+2018-12-02 19:45:45,183 [main]  INFO testecategoria:41 – teste info
+2018-12-02 19:48:50,488 [main]  INFO testecategoria:41 – teste info
+2018-12-02 19:50:12,942 [main]  INFO testecategoria:41 – Abertura de sistema
+2018-12-02 19:53:26,280 [main]  INFO testecategoria:41 – Abertura de sistema
+2018-12-02 20:00:49,092 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:03:02,352 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:05:56,678 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:09:11,021 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:09:21,224 [AWT-EventQueue-0]  INFO testecategoria:365 – gravou
+2018-12-02 20:21:15,923 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:21:20,642 [main] ERROR testecategoria:131 – não foi encontrado arquivo de configuração .\config.ini (O sistema não pode encontrar o arquivo especificado)
+2018-12-02 20:23:31,724 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:23:55,166 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:24:21,105 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:30:40,326 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:31:15,340 [AWT-EventQueue-0]  INFO testecategoria:45 – Gravou: 348:FULANO DE TAL 2
+2018-12-02 20:47:40,912 [main]  INFO testecategoria:42 – Abertura de sistema
+2018-12-02 20:48:02,068 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:160.0-Cliente: beans.Cliente[ idcliente=345 ]-celina
+2018-12-02 20:49:36,767 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 55.0 para: false
+2018-12-02 20:49:36,783 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 416.67 para: false
+2018-12-02 20:49:36,783 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 515.0 para: false
+2018-12-02 20:49:36,783 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false
+2018-12-02 20:49:36,783 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 64.5 para: true
+2018-12-02 20:49:36,783 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 53.33 para: true
+2018-12-02 20:49:38,174 [AWT-EventQueue-0]  INFO testecategoria:365 – gravou
+2018-12-02 21:28:04,047 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 21:29:34,419 [AWT-EventQueue-0]  WARN testecategoria:88 – Tentativa de exclusao do cliente: 141:Aline Arriaga Maia dos Santos-Cliente possui vendas cadastradas
+2018-12-02 21:34:48,023 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 21:35:07,506 [AWT-EventQueue-0]  INFO testecategoria:45 – Gravou: 349:TTTTTTTT
+2018-12-02 22:37:35,875 [AWT-EventQueue-0]  INFO testecategoria:45 – Gravou: 350:POIDSOPIDSOIPÉSAPOSAF
+2018-12-02 22:44:06,335 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 22:44:47,988 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 22:52:35,509 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 55.0 para: false-Cliente:341
+2018-12-02 22:52:35,525 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 416.67 para: false-Cliente:341
+2018-12-02 22:52:35,525 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 515.0 para: false-Cliente:341
+2018-12-02 22:52:35,541 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 64.5 para: false-Cliente:345
+2018-12-02 22:52:39,415 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-02 22:52:49,493 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 55.0 para: true-Cliente:341
+2018-12-02 22:52:49,509 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 416.67 para: true-Cliente:341
+2018-12-02 22:52:49,509 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 515.0 para: true-Cliente:341
+2018-12-02 22:52:49,509 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 64.5 para: true-Cliente:345
+2018-12-02 22:52:54,055 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-02 22:58:44,603 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 23:05:03,297 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-02 23:10:41,860 [main]  INFO testecategoria:38 – Abertura de sistema

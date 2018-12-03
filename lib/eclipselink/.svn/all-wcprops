@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/9/convenio/lib/eclipselink
+END
+org.eclipse.persistence.jpa.jpql_1.0.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/9/convenio/lib/eclipselink/org.eclipse.persistence.jpa.jpql_1.0.0.jar
+END
+eclipselink-2.3.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/9/convenio/lib/eclipselink/eclipselink-2.3.0.jar
+END
+javax.persistence-2.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/9/convenio/lib/eclipselink/javax.persistence-2.0.jar
+END

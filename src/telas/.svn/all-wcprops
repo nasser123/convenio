@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/2/convenio/src/telas
+END
+TelaRelatorioClientesPorConvenio.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/18/convenio/src/telas/TelaRelatorioClientesPorConvenio.java
+END
+TelaRelatorioParcelasConvenio.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorioParcelasConvenio.java
+END
+TelaRelatorioClientesPorConvenio.form
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorioClientesPorConvenio.form
+END
+TelaRelatorioParcelasConvenio.form
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorioParcelasConvenio.form
+END
+TelaPrincipal.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/19/convenio/src/telas/TelaPrincipal.java
+END
+TelaPrincipal.form
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/19/convenio/src/telas/TelaPrincipal.form
+END
+TelaRelatorios.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorios.java
+END
+TelaVendaCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/18/convenio/src/telas/TelaVendaCliente.java
+END
+TelaRelatorios.form
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorios.form
+END
+TelaVendaCliente.form
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/17/convenio/src/telas/TelaVendaCliente.form
+END
+TelaCadastroConvenio.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/18/convenio/src/telas/TelaCadastroConvenio.java
+END
+TelaRelatorioVendasPorPeriodo.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorioVendasPorPeriodo.java
+END
+TelaCadastroConvenio.form
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/18/convenio/src/telas/TelaCadastroConvenio.form
+END
+TelaPesquisaCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/19/convenio/src/telas/TelaPesquisaCliente.java
+END
+TelaRelatorioVendasPorPeriodo.form
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/17/convenio/src/telas/TelaRelatorioVendasPorPeriodo.form
+END
+TelaCadastroVenda.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/19/convenio/src/telas/TelaCadastroVenda.java
+END
+TelaPesquisaCliente.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/19/convenio/src/telas/TelaPesquisaCliente.form
+END
+TelaRelacaoClientes.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/19/convenio/src/telas/TelaRelacaoClientes.java
+END
+TelaCadastroCliente.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/18/convenio/src/telas/TelaCadastroCliente.java
+END
+TelaCadastroVenda.form
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/17/convenio/src/telas/TelaCadastroVenda.form
+END
+TelaRelacaoClientes.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/19/convenio/src/telas/TelaRelacaoClientes.form
+END
+TelaCadastroCliente.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/18/convenio/src/telas/TelaCadastroCliente.form
+END
+TelaPadrao.java
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/17/convenio/src/telas/TelaPadrao.java
+END
+TelaPagamentos.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/19/convenio/src/telas/TelaPagamentos.java
+END
+TelaPagamentos.form
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/19/convenio/src/telas/TelaPagamentos.form
+END
+TelaPadrao.form
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/convenio/src/telas/TelaPadrao.form
+END

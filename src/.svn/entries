@@ -1,0 +1,69 @@
+10
+
+dir
+2
+https://conveniototal.googlecode.com/svn/convenio/src
+https://conveniototal.googlecode.com/svn
+
+
+
+2012-10-15T22:41:37.791505Z
+2
+nasser123rs@gmail.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+deff4a65-ffbf-2074-42f5-d0bcd4f365bd
+
+
+
+
+
+
+0
+
+META-INF
+dir
+
+beans
+dir
+
+controller
+dir
+
+
+
+add
+
+convenio
+dir
+
+icones
+dir
+
+imagens
+dir
+
+relatorios
+dir
+
+renderizadores
+dir
+
+telas
+dir
+
+util
+dir
+

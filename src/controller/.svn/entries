@@ -1,0 +1,63 @@
+10
+
+dir
+0
+https://conveniototal.googlecode.com/svn/convenio/src/controller
+https://conveniototal.googlecode.com/svn
+add
+
+
+
+
+
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+deff4a65-ffbf-2074-42f5-d0bcd4f365bd
+
+ClienteController.java
+file
+
+
+
+add
+
+ConvenioController.java
+file
+
+
+
+add
+
+IDao.java
+file
+
+
+
+add
+
+ParcelaController.java
+file
+
+
+
+add
+
+VendaController.java
+file
+
+
+
+add
+
