@@ -9,9 +9,11 @@ import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import util.Datas;
 
 /**
  *
@@ -59,6 +61,8 @@ public class Venda implements Serializable {
     private Cliente idcliente;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idvenda")
     private List<Parcela> parcelaList;
+    @Transient
+    private String sData;
 
     public Venda() {
     }
@@ -174,6 +178,10 @@ public class Venda implements Serializable {
         changeSupport.firePropertyChange("data", oldData, data);
     }
 
+    public String getsData() {
+        return Datas.getDataString(data);
+    }
+
     public boolean existeParcelaPaga() {
         for (int i = 0; i < this.parcelaList.size(); i++) {
             if (parcelaList.get(i).isPago()) {
@@ -182,16 +190,32 @@ public class Venda implements Serializable {
         }
         return false;
     }
-    
-    public Float getPendente(){
+
+    public Float getPendente() {
         Float p = 0f;
-        for (int i = 0 ; i < parcelaList.size(); i++){
-            if(!parcelaList.get(i).isPago())
+        for (int i = 0; i < parcelaList.size(); i++) {
+            if (!parcelaList.get(i).isPago()) {
                 p = p + parcelaList.get(i).getValorparcela();
-            
+            }
+
         }
-        
+
         return p;
+    }
+
+    public Float getSomaParcelas() {
+        Float p = 0f;
+        for (int i = 0; i < parcelaList.size(); i++) {
+            p = p + parcelaList.get(i).getValorparcela();
+        }
+        return p;
+    }
+
+    public boolean verificaParcelas(){
+        if (!Objects.equals(getSomaParcelas(), getValor())) {
+            return false;
+        }
+        return true;
     }
 
     public void addPropertyChangeListener(PropertyChangeListener listener) {

@@ -54,9 +54,9 @@ public class TelaSobreJDialog extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Sistema de Convênio");
 
-        jLabel5.setText("Versão do Sistema: 0.9");
+        jLabel5.setText("Versão do Sistema: 0.9.1");
 
-        jLabel2.setText("Data de Compiação: 29/11/2018");
+        jLabel2.setText("Data de Compiação: 09/12/2018");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

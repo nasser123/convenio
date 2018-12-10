@@ -62,10 +62,13 @@ public class ConfigTelas {
             ico = ImageIO.read(jp.getClass().getResource("/imagens/vendas64.png"));
             jp.setIconImage(ico);
         } catch (IllegalArgumentException iae) {
+            ConfigurationFactory.getLOG().warn(iae.getMessage());
             System.out.println("Erro ao carregar icone!");
         } catch (java.lang.NullPointerException npe) {
+            ConfigurationFactory.getLOG().warn(npe.getMessage());
             System.out.println("Erro ao carregar icone!");
         } catch (IOException e) {
+            ConfigurationFactory.getLOG().warn(e.getMessage());
             System.out.println("Erro ao carregar icone!");
         }
 

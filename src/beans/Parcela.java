@@ -23,13 +23,19 @@ import util.ValidarValores;
 @Table(name = "parcela")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Parcela.findAll", query = "SELECT p FROM Parcela p"),
-    @NamedQuery(name = "Parcela.findByIdparcela", query = "SELECT p FROM Parcela p WHERE p.idparcela = :idparcela"),
-    @NamedQuery(name = "Parcela.findByIdvenda", query = "SELECT p FROM Parcela p WHERE p.idvenda = :idvenda"),
-    @NamedQuery(name = "Parcela.filtroConvenioCompetencia", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim"),
-    @NamedQuery(name = "Parcela.findByDate", query = "SELECT p FROM Parcela p WHERE p.vencimento = :vencimento"),
+    @NamedQuery(name = "Parcela.findAll", query = "SELECT p FROM Parcela p")
+    ,
+    @NamedQuery(name = "Parcela.findByIdparcela", query = "SELECT p FROM Parcela p WHERE p.idparcela = :idparcela")
+    ,
+    @NamedQuery(name = "Parcela.findByIdvenda", query = "SELECT p FROM Parcela p WHERE p.idvenda = :idvenda")
+    ,
+    @NamedQuery(name = "Parcela.filtroConvenioCompetencia", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim")
+    ,
+    @NamedQuery(name = "Parcela.findByDate", query = "SELECT p FROM Parcela p WHERE p.vencimento = :vencimento")
+    ,
     @NamedQuery(name = "Parcela.findByNrparcela", query = "SELECT p FROM Parcela p WHERE p.nrparcela = :nrparcela")})
 public class Parcela implements Serializable {
+
     @Transient
     private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
     @Column(name = "vencimento")
@@ -70,6 +76,7 @@ public class Parcela implements Serializable {
         this.pago = pago;
         changeSupport.firePropertyChange("pago", oldPago, pago);
     }
+
     public Parcela() {
     }
 
@@ -80,25 +87,25 @@ public class Parcela implements Serializable {
     public Integer getIdparcela() {
         return idparcela;
     }
-    
-    public List<Parcela> getParcelas(Float valor, Date data, Integer nrparcelas, boolean proximomes, Convenio convenio){
+
+    public List<Parcela> getParcelas(Float valor, Date data, Integer nrparcelas, boolean proximomes, Convenio convenio) {
         List<Parcela> listaParcelas = new ArrayList();
         ArrayList<Float> valores = new ArrayList();
         valores = ValidarValores.calculaParcelas(valor, nrparcelas);
-        for(int i = 1; i < nrparcelas+1 ; i++ ){
+        for (int i = 1; i < nrparcelas + 1; i++) {
             Parcela p = new Parcela();
             p.setNrparcela(i);
             p.setVencimento(calculaVencimento(data, i, proximomes, convenio));
-            p.setValorparcela(valores.get(i-1));
+            p.setValorparcela(valores.get(i - 1));
             listaParcelas.add(p);
-            
+
         }
-        
+
         return listaParcelas;
-    
+
     }
-    
-    private Date calculaVencimento(Date dataVenda, Integer nrParcela, boolean proximomes, Convenio convenio){
+
+    private Date calculaVencimento(Date dataVenda, Integer nrParcela, boolean proximomes, Convenio convenio) {
         Date data = dataVenda;
         Date dataDesconto = null;
         boolean proxMes = proximomes;
@@ -114,27 +121,32 @@ public class Parcela implements Serializable {
         if (proxMes == true) {
             nProxMes = 1;
         }
+        if (convenio.getDatalimite() != 0) {
+            if (nDiaVenda <= convenio.getDatalimite()) {
+                nMesDesconto = nMesVenda + nPrestacao + nProxMes;
+            } else {
+                nMesDesconto = nMesVenda + nPrestacao + 1 + nProxMes;
+            }
 
-        if (nDiaVenda <= convenio.getDatalimite()) {
-            nMesDesconto = nMesVenda + nPrestacao + nProxMes;
+            if (nMesDesconto > 12) {
+                nMesDesconto = nMesDesconto - 12;
+                nAnoDesconto++;
+            }
         } else {
-            nMesDesconto = nMesVenda + nPrestacao + 1 + nProxMes;
-        }
+            nMesDesconto = nMesVenda + nPrestacao + nProxMes;
+            if (nMesDesconto > 12) {
+                nMesDesconto = nMesDesconto - 12;
+                nAnoDesconto++;
+            }
 
-        if (nMesDesconto > 12) {
-            nMesDesconto = nMesDesconto - 12;
-            nAnoDesconto++;
         }
 
         String sDataDesconto = nDiaDesconto + "/" + nMesDesconto + "/" + nAnoDesconto;
         //System.out.println(sDataDesconto);
         dataDesconto = Datas.transformaStringDate(sDataDesconto);
         return dataDesconto;
-                
+
     }
-    
-    
-    
 
     public void setIdparcela(Integer idparcela) {
         Integer oldIdparcela = this.idparcela;
@@ -197,7 +209,6 @@ public class Parcela implements Serializable {
         changeSupport.firePropertyChange("valorparcela", oldValorparcela, valorparcela);
     }
 
-    
     public Date getVencimento() {
         return vencimento;
     }
@@ -215,7 +226,7 @@ public class Parcela implements Serializable {
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         changeSupport.removePropertyChangeListener(listener);
     }
-    
+
 //    public double totalParcelas(List<Parcela> parcelas){
 //        double valorParcelas = 0.0;
 //        for(int i = 0; i < parcelas.size(); i++){
@@ -224,5 +235,4 @@ public class Parcela implements Serializable {
 //        }
 //        return valorParcelas;
 //    }
-    
 }

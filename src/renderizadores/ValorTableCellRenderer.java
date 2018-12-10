@@ -12,6 +12,7 @@ import java.awt.Component;
 import java.text.DecimalFormat;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
+import util.ConfigurationFactory;
 
 public class ValorTableCellRenderer extends DefaultTableCellRenderer {
 
@@ -29,7 +30,7 @@ public class ValorTableCellRenderer extends DefaultTableCellRenderer {
             try{
             setText(decimalFormat.format(value));
             }catch(java.lang.IllegalArgumentException ie){
-                ie.printStackTrace();
+                ConfigurationFactory.getLOG().warn(ie.getMessage());
             }
         
         return this;

@@ -65,17 +65,22 @@ public class VendaController implements IDao {
     public boolean alterar(Object venda, boolean mensagem) throws SQLException {
         if (venda instanceof Venda) {
             Venda v = (Venda) venda;
-
-            if (!entity.getTransaction().isActive()) {
-                entity.getTransaction().begin();
+            if (v.verificaParcelas()) {
+                if (!entity.getTransaction().isActive()) {
+                    entity.getTransaction().begin();
+                }
+                entity.merge(v);
+                entity.getTransaction().commit();
+                if (mensagem) {
+                    JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
+                }
+                return true;
+            }else{
+                    JOptionPane.showMessageDialog(null, "Soma das parcelas é diferente do total da venda.");
+                    return false;
             }
-            entity.merge(v);
-            entity.getTransaction().commit();
-            if (mensagem) {
-                JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
-            }
-            return true;
         }
+
         return false;
     }
 
@@ -105,7 +110,7 @@ public class VendaController implements IDao {
                     return false;
                 }
             }
-        } 
+        }
         return false;
     }
 
@@ -141,8 +146,7 @@ public class VendaController implements IDao {
         }
         return null;
     }
-    
-    
+
     @Override
     public List<? extends Object> pesquisarTodos() throws SQLException {
         List<Venda> vendaList = new ArrayList();

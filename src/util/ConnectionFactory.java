@@ -73,6 +73,7 @@ public class ConnectionFactory {
             try {
                 entityManager = emf.createEntityManager();
             } catch (Exception e) {
+                ConfigurationFactory.getLOG().warn(e.getMessage());
                 JOptionPane.showMessageDialog(null, "Sem acesso ao banco de dados");
             }
 
@@ -112,6 +113,7 @@ public class ConnectionFactory {
                     gravou = true;
                 }
             } catch (IOException ioe) {
+                ConfigurationFactory.getLOG().warn(ioe.getMessage() + ":Não foi possivel gravar backup");
                 gravou = false;
             }
         } else {
@@ -174,14 +176,15 @@ public class ConnectionFactory {
                 Runtime bkp = Runtime.getRuntime();
                 System.out.println(dump);
                 bkp.exec(dump);
-                JOptionPane.showMessageDialog(null, "gravou");
+                JOptionPane.showMessageDialog(null, "Banco de dados restaurado com sucesso");
                 if (entityManager != null) {
                     entityManager.getEntityManagerFactory().getCache().evictAll();
                     entityManager.clear();
                 }
                 return true;
             } catch (IOException ioe) {
-                JOptionPane.showMessageDialog(null, "não gravou");
+                ConfigurationFactory.getLOG().warn(ioe.getMessage() + ":Não foi possivel restaurar backup");
+                JOptionPane.showMessageDialog(null, "Não foi possivel restaurar backup");
                 return false;
             }
         }

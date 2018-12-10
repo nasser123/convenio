@@ -596,20 +596,24 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             //this.c.setRenda(Double.parseDouble(jFormattedTextFieldRenda.getValue().toString()));
             this.c.setRenda(ValidarValores.converterDoubleDoisDecimais(jFormattedTextFieldRenda.getText()));
         } catch (NumberFormatException nfe) {
-            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Renda'! nfe ");
+            ConfigurationFactory.getLOG().warn(nfe.getMessage());
+            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Renda'!");
             validado = false;
         } catch (NullPointerException npe) {
-            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Renda'! npe");
+            ConfigurationFactory.getLOG().warn(npe.getMessage());
+            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Renda'!");
             validado = false;
         }
 
         try {
             this.c.setLimite(ValidarValores.converterDoubleDoisDecimais(jFormattedTextFieldLimite.getText()));
         } catch (NumberFormatException nfe) {
-            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Limite'! nfe");
+            ConfigurationFactory.getLOG().warn(nfe.getMessage());
+            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Limite'!");
             validado = false;
         } catch (NullPointerException npe) {
-            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Limite'! npe");
+            ConfigurationFactory.getLOG().warn(npe.getMessage());
+            JOptionPane.showMessageDialog(rootPane, "Preecha o campo 'Limite'!");
             validado = false;
         }
 

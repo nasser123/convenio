@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import net.sf.jasperreports.engine.JRException;
+import util.ConfigurationFactory;
 import util.ConnectionFactory;
 import util.ReportUtils;
 
@@ -59,7 +60,7 @@ public class ExecutaRelatorio {
                     ConnectionFactory.getConnection());
 
         } catch (JRException exc) {
-            exc.printStackTrace();
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
 
     }
@@ -80,7 +81,7 @@ public class ExecutaRelatorio {
             // abre o relatório
             ReportUtils.openReport("Relatório de Parcelas por Convênio", inputStream, parametros, ConnectionFactory.getConnection());
         } catch (JRException exc) {
-            exc.printStackTrace();
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
 
 
@@ -95,7 +96,7 @@ public class ExecutaRelatorio {
             // abre o relatório
             ReportUtils.openReport("Relatório de Vendas por Período", inputStream, parametros, ConnectionFactory.getConnection());
         } catch (JRException exc) {
-            exc.printStackTrace();
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
     public void abrirRelatorioClientesPorConvenio(Integer convenio) {
@@ -106,7 +107,7 @@ public class ExecutaRelatorio {
             // abre o relatório
             ReportUtils.openReport("Relatório de Clientes por Convenio", inputStream, parametros, ConnectionFactory.getConnection());
         } catch (JRException exc) {
-            exc.printStackTrace();
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
 
@@ -149,7 +150,7 @@ public class ExecutaRelatorio {
                     ConnectionFactory.getConnection());
 
         } catch (JRException exc) {
-            exc.printStackTrace();
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
 
     }

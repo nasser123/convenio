@@ -69,6 +69,7 @@ public class ConnectionFactory {
                 entityManager = emf.createEntityManager();
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Sem acesso ao banco de dados");
+                ConfigurationFactory.getLOG().warn(e.getMessage());
             }
 
             return entityManager;

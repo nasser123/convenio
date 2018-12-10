@@ -43,3 +43,60 @@
 2018-12-02 22:58:44,603 [main]  INFO testecategoria:38 – Abertura de sistema
 2018-12-02 23:05:03,297 [main]  INFO testecategoria:38 – Abertura de sistema
 2018-12-02 23:10:41,860 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 17:19:00,493 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 17:21:08,053 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1.0-Cliente: 341-nasser rahman
+2018-12-09 17:22:33,639 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 17:23:21,856 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:5.0-Cliente: 342-SASD
+2018-12-09 17:24:03,388 [AWT-EventQueue-0]  INFO testecategoria:45 – Gravou: 352:TESTE NOVO CLIENTE
+2018-12-09 18:09:02,112 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:11:42,627 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:11:59,553 [AWT-EventQueue-0]  INFO testecategoria:57 – Alterou: 20:TOTALTECH
+2018-12-09 18:15:46,266 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:16:20,676 [AWT-EventQueue-0]  INFO testecategoria:57 – Alterou: 20:TOTALTECH
+2018-12-09 18:17:42,661 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:18:17,061 [AWT-EventQueue-0]  INFO testecategoria:57 – Alterou: 20:TOTALTECH
+2018-12-09 18:22:17,650 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:22:39,920 [AWT-EventQueue-0]  INFO testecategoria:57 – Alterou: 20:TOTALTECH
+2018-12-09 18:23:43,333 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:150.0-Cliente: 341-nasser rahman
+2018-12-09 18:24:10,397 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:130.0-Cliente: 341-nasser rahman
+2018-12-09 18:24:20,366 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 18:26:08,246 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:46:44,211 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 18:49:09,396 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:49:06,844 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:49:13,891 [main]  WARN testecategoria:76 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2018-12-09 20:49:47,097 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:49:54,643 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 20:50:34,719 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:51:55,603 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:52:53,087 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:54:50,939 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:56:14,760 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 20:59:48,283 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:01:02,437 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:04:40,385 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:06:59,117 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:08:14,207 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:09:39,626 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:12:30,655 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:14:13,883 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:17:35,968 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:20:11,345 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:28:36,161 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:31:07,229 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:46:26,704 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 21:46:35,110 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 21:54:34,617 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 22:01:03,483 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 22:04:44,471 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 22:09:28,065 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 22:11:13,577 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 22:12:20,340 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:250.0-Cliente: 341-nasser rahman
+2018-12-09 22:12:22,512 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 22:13:49,470 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:53.9-Cliente: 341-nasser rahman
+2018-12-09 22:13:51,571 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 22:13:53,728 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""

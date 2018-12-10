@@ -43,7 +43,13 @@ public class TelaCadastroConvenio extends javax.swing.JFrame {
         jTextFieldNome.setText(this.convenio.getNome());
         jTextFieldResponsavel.setText(this.convenio.getResponsavel());
         jTextFieldTelefone.setText(this.convenio.getTelefone());
-        jComboBoxDataLimite.setSelectedIndex(this.convenio.getDatalimite() - 1);
+
+        if (this.convenio.getDatalimite() == 0) {
+            jComboBoxDataLimite.setSelectedIndex(28);
+        } else {
+            jComboBoxDataLimite.setSelectedIndex(this.convenio.getDatalimite() - 1);
+        }
+
         jComboBoxNrParcelas.setSelectedIndex(this.convenio.getNrparcelas() - 1);
         jComboBoxVencimento.setSelectedIndex(this.convenio.getVencimento() - 1);
         if (this.convenio.getSituacao().equals("ativo")) {
@@ -163,7 +169,7 @@ public class TelaCadastroConvenio extends javax.swing.JFrame {
 
         jLabel9.setText("Data Limite");
 
-        jComboBoxDataLimite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28" }));
+        jComboBoxDataLimite.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29,30,31" }));
 
         jComboBoxSituacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ativo", "inativo", "bloqueado" }));
 
@@ -317,7 +323,13 @@ public class TelaCadastroConvenio extends javax.swing.JFrame {
         this.convenio.setTelefone(jTextFieldTelefone.getText());
         this.convenio.setNrparcelas(jComboBoxNrParcelas.getSelectedIndex() + 1);
         this.convenio.setVencimento(jComboBoxVencimento.getSelectedIndex() + 1);
+        int teste = jComboBoxDataLimite.getSelectedIndex();
+        if(teste < 28){
         this.convenio.setDatalimite(jComboBoxDataLimite.getSelectedIndex() + 1);
+        }else{
+            this.convenio.setDatalimite(0);
+        }
+        
 
         if (jComboBoxSituacao.getSelectedIndex() == 0) {
             this.convenio.setSituacao("ativo");

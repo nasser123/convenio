@@ -31,6 +31,7 @@ public class ValidarValores {
             valorDecimal = part[1];
 
         } catch (ArrayIndexOutOfBoundsException aioe) {
+            ConfigurationFactory.getLOG().warn(aioe.getMessage() + ":Erro ao converter valor");
             valorDecimal = "00";
         }
         
@@ -39,7 +40,7 @@ public class ValidarValores {
             preco = Double.parseDouble(completa);
 
         } catch (NumberFormatException nfe) {
-            
+            ConfigurationFactory.getLOG().warn(nfe.getMessage() + ":Erro ao converter valor");
         }
 
         return preco;
@@ -72,8 +73,8 @@ public class ValidarValores {
         float ultimaParcela = 0.0f;
 
         parcela = valorTotal / nrParcelas;
-
-        double d = round(parcela, 2);
+//trocado
+        double d = round(parcela, 0);
         float f = (float) d;
         parcela = f;
         for (int i = 0; i < nrParcelas - 1; i++) {
