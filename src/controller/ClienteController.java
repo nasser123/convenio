@@ -30,21 +30,26 @@ public class ClienteController implements IDao {
     public boolean inserir(Object cliente) throws SQLException {
         if (cliente instanceof Cliente) {
             Cliente c = (Cliente) cliente;
-            if (ehValido(c)) {
-                if (!existeCliente(c)) {
-                    if (!entity.getTransaction().isActive()) {
-                        entity.getTransaction().begin();
+            if (c.getCpf() == "") {
+                JOptionPane.showMessageDialog(null, "Preencha campo CPF/CNPJ");
+            } else {
+                if (ehValido(c)) {
+                    if (!existeCliente(c)) {
+                        if (!entity.getTransaction().isActive()) {
+                            entity.getTransaction().begin();
+                        }
+                        entity.persist(c);
+                        entity.getTransaction().commit();
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Já existe cliente com esse nome/CPF/CNPJ.");
+                        return false;
                     }
-                    entity.persist(c);
-                    entity.getTransaction().commit();
-                } else {
-                    JOptionPane.showMessageDialog(null, "Já existe cliente com esse nome/CPF/CNPJ.");
-                    return false;
+                    JOptionPane.showMessageDialog(null, "Cliente salvo com sucesso.");
+                    ConfigurationFactory.getLOG().info("Gravou: " + c.getIdcliente() + ":" + c.getNome());
+                    return true;
                 }
-                JOptionPane.showMessageDialog(null, "Cliente salvo com sucesso.");
-                ConfigurationFactory.getLOG().info("Gravou: " + c.getIdcliente() + ":" + c.getNome());
-                return true;
             }
+
         }
         return false;
     }
@@ -161,6 +166,7 @@ public class ClienteController implements IDao {
         }
 
         query = entity.createNamedQuery("Cliente.findByCpf");
+
         query.setParameter("cpf", cliente.getCpf());
         if (!query.getResultList().isEmpty()) {
             if (query.getResultList().size() == 1) {

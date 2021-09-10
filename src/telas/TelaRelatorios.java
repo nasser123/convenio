@@ -5,6 +5,7 @@
 package telas;
 
 import beans.Convenio;
+import static convenio.Convenio.EMPRESA;
 import java.util.Date;
 import java.util.HashMap;
 import relatorios.ExecutaRelatorio;
@@ -396,7 +397,7 @@ public class TelaRelatorios extends javax.swing.JFrame {
             Object periodo = dataIni;
             Object periodofinal = dataFim;
 
-            t.abrirRelatorioParcelasConvenio(convenio, periodo, periodofinal);
+            t.abrirRelatorioParcelasConvenio(convenio, periodo, periodofinal, EMPRESA.getIdEmpresa());
 
         } else {
 

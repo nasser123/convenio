@@ -145,7 +145,7 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
         if(gravou)
             JOptionPane.showMessageDialog(rootPane, "Arquivo gravado com sucesso");
         else
-            JOptionPane.showMessageDialog(rootPane, "Não foi possível gravar arquivo");
+            JOptionPane.showMessageDialog(rootPane, "Não foi possível gerar backup");
     }//GEN-LAST:event_jButtonGeraBackupActionPerformed
 
     private void jButtonRestauraBackupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRestauraBackupActionPerformed

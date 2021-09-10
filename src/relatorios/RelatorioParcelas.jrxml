@@ -3,6 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="EMPRESA" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT
      parcela.`idparcela` AS parcela_idparcela,
@@ -15,12 +16,20 @@
      venda.`valor` AS venda_valor,
      venda.`idcliente` AS venda_idcliente,
      venda.`data` AS venda_data,
-     venda.`nrparcelas` AS venda_nrparcelas
+     venda.`nrparcelas` AS venda_nrparcelas,
+     Empresa.`idEmpresa` AS Empresa_idEmpresa,
+     Empresa.`razaosocial` AS Empresa_razaosocial,
+     Empresa.`fantasia` AS Empresa_fantasia,
+     Empresa.`cnpj` AS Empresa_cnpj,
+     Empresa.`endereco` AS Empresa_endereco,
+     Empresa.`telefone` AS Empresa_telefone,
+     Empresa.`cidade` AS Empresa_cidade
 FROM
-     parcela, cliente, venda 
-where
-     parcela.`idvenda` =  venda.`idvenda` and
-     cliente.`idcliente` = venda.`idcliente`
+     `parcela` parcela INNER JOIN `venda` venda ON parcela.`idvenda` = venda.`idvenda`
+     INNER JOIN `cliente` cliente ON venda.`idcliente` = cliente.`idcliente`,
+     `Empresa` Empresa
+WHERE 
+	Empresa.`idEmpresa` = $P{EMPRESA}
 ORDER BY
      parcela_vencimento ASC,
      cliente_nome ASC]]>
@@ -36,6 +45,13 @@ ORDER BY
 	<field name="venda_idcliente" class="java.lang.Integer"/>
 	<field name="venda_data" class="java.sql.Date"/>
 	<field name="venda_nrparcelas" class="java.lang.Integer"/>
+	<field name="Empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="Empresa_razaosocial" class="java.lang.String"/>
+	<field name="Empresa_fantasia" class="java.lang.String"/>
+	<field name="Empresa_cnpj" class="java.lang.String"/>
+	<field name="Empresa_endereco" class="java.lang.String"/>
+	<field name="Empresa_telefone" class="java.lang.String"/>
+	<field name="Empresa_cidade" class="java.lang.String"/>
 	<variable name="TotalPrestacoes" class="java.lang.String"/>
 	<variable name="variable1" class="java.lang.Number" calculation="Count">
 		<variableExpression><![CDATA[$F{parcela_idparcela}]]></variableExpression>
@@ -53,33 +69,40 @@ ORDER BY
 				<text><![CDATA[RELATÓRIO DE CONVÊNIO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="121" y="0" width="319" height="18" uuid="d352a397-2ac0-45b8-90d0-3a6bb88b610c"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[LOJA PAPA TUDO]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="121" y="18" width="319" height="18" uuid="b0f165b2-159d-4bea-b2b0-25212ce85d9a"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
 				</textElement>
 				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="121" y="36" width="319" height="18" uuid="98a43b55-0764-42ae-906f-5dda3f28922f"/>
+			<textField>
+				<reportElement x="121" y="0" width="318" height="20" uuid="30b64257-968b-4a75-aada-a590c06c0e75"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Rua Bento martins, 3066 fone (55) 3411-8906]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="121" y="54" width="319" height="18" uuid="77abb07e-897c-4fea-8f6e-4c869031e424"/>
+				<textFieldExpression><![CDATA[$F{Empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="36" width="197" height="20" uuid="eb60709a-c9ca-46a6-a1d5-36c4bcf8ff18"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="339" y="36" width="100" height="20" uuid="77317bfc-2417-4437-a924-1caab5697b4d"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="58" width="318" height="20" uuid="87453205-6251-483f-91dc-54dfd1b03c8d"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+					<font isBold="true" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Uruguaiana-RS]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{Empresa_cidade}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>

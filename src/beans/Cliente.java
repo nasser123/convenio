@@ -7,12 +7,12 @@ package beans;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import util.Datas;
 
 /**
  *
@@ -100,6 +100,15 @@ public class Cliente implements Serializable {
     private Convenio idconvenio;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "idcliente")
     private List<Venda> vendaList;
+    
+    //campos fora do banco de dados
+    @Transient
+    private BigDecimal totalFichas;
+    @Transient
+    private BigDecimal totalPagamentos;
+    @Transient
+    private BigDecimal totalAberto;
+    
 
     public Cliente() {
     }

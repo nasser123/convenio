@@ -108,7 +108,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Data de Compia&#xe7;&#xe3;o: 09/12/2018"/>
+            <Property name="text" type="java.lang.String" value="Data de Compia&#xe7;&#xe3;o: 15/12/2018"/>
           </Properties>
         </Component>
       </SubComponents>

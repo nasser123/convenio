@@ -10,9 +10,12 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import org.ini4j.Profile.Section;
 
@@ -90,61 +93,115 @@ public class ConnectionFactory {
         String sistema = System.getProperty("os.arch");
         if (existeExecutavel("mysqldump.exe")) {
             try {
-                File file = new File("Backup");
-                file.mkdir();
-                Date data = Datas.getCurrentTime();
-                String nomeBkp = "Backup(" + Datas.getDataString(data) + "-" + System.currentTimeMillis() + ").sql";
-                String dump = "cmd.exe /c " + ConfigurationFactory.DBFILE.getCanonicalPath()
-                        + File.separator + ConfigurationFactory.ARCHITECTURE + File.separator + "mysqldump "
-                        + " --user=" + ConfigurationFactory.DBUSER
-                        + " --password=" + ConfigurationFactory.DBPASSWORD
-                        + " --host=" + ConfigurationFactory.DBHOST
-                        + "  " + ConfigurationFactory.DATABASE + " > Backup\\" + nomeBkp;
+//                JFileChooser diretorio = new JFileChooser();
+//                diretorio.setCurrentDirectory(new File("./Backup"));
+//                diretorio.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+//                File arquivo;
+//                int i = diretorio.showSaveDialog(null);
+//
+//                if (i == 1) {
+//
+//                } else {
+//                    arquivo = diretorio.getSelectedFile();
+                    //File arquivo = ConfigurationFactory.BACKUP;
+//                    System.out.println(arquivo.getCanonicalPath());
+//                    System.out.println(ConfigurationFactory.DBFILE.getCanonicalPath());
 
-                Runtime bkp = Runtime.getRuntime();
-                bkp.exec(dump);
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException ex) {
-                    ConfigurationFactory.getLOG().warn(ex.getMessage());
-                }
-                boolean tamanho = arquivoPreenchido(nomeBkp);
-                if (tamanho) {
-                    gravou = true;
-                }
+                    File file = new File("Backup");
+                    file.mkdir();
+                    Date data = Datas.getCurrentTime();
+                    //String nomeBkp = "Backup(" + Datas.getDataString(data) + "-" + System.currentTimeMillis() + ").sql";
+                    String nomeBkp = "Backup(" + Datas.getDataHora() + ").sql";
+                    //String caminhoCompleto = arquivo.getCanonicalPath() + "\\" + nomeBkp;
+                    String caminhoCompleto;
+                    File testeDiretorio = new File(ConfigurationFactory.BACKUP);
+                    if (testeDiretorio.isDirectory()){
+                        caminhoCompleto = ConfigurationFactory.BACKUP + "\\" + nomeBkp;
+                    }else{
+                        caminhoCompleto = "." + "\\" + nomeBkp;
+                    }
+                    
+                    if (ConfigurationFactory.DBPASSWORD.equals("")) {
+                        String dump = "cmd.exe /c " + ConfigurationFactory.DBFILE.getCanonicalPath()
+                                + File.separator + sistema + File.separator + "mysqldump "
+                                + " --user=" + ConfigurationFactory.DBUSER
+                                + " --host=" + ConfigurationFactory.DBHOST
+  //                              + "  " + ConfigurationFactory.DATABASE + " > " + arquivo.getCanonicalPath() + "\\" + nomeBkp;
+                           + "  " + ConfigurationFactory.DATABASE + " > " + caminhoCompleto;
+                        Runtime bkp = Runtime.getRuntime();
+                        System.out.println(dump);
+                        bkp.exec(dump);
+
+                    } else {
+                        String dump = "cmd.exe /c " + ConfigurationFactory.DBFILE.getCanonicalPath()
+                                + File.separator + sistema + File.separator + "mysqldump "
+                                + " --user=" + ConfigurationFactory.DBUSER
+                                + " --password=" + ConfigurationFactory.DBPASSWORD
+                                + " --host=" + ConfigurationFactory.DBHOST
+                                //+ "  " + ConfigurationFactory.DATABASE + " > " + arquivo.getCanonicalPath() + "\\" + nomeBkp;
+                        + "  " + ConfigurationFactory.DATABASE + " > " + caminhoCompleto ;
+
+                        Runtime bkp = Runtime.getRuntime();
+                        System.out.println(dump);
+                        bkp.exec(dump);
+
+                    }
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        ConfigurationFactory.getLOG().warn(ex.getMessage());
+                    }
+                    boolean tamanho = arquivoPreenchido(caminhoCompleto);
+                    if (tamanho) {
+                        gravou = true;
+                    }
+//                }
             } catch (IOException ioe) {
                 ConfigurationFactory.getLOG().warn(ioe.getMessage() + ":Não foi possivel gravar backup");
                 gravou = false;
             }
         } else {
-
+            JOptionPane.showMessageDialog(null, "Não foi possível encontrar arquivo mysqldump");
             return gravou;
         }
         return gravou;
     }
 
     private static boolean arquivoPreenchido(String arquivo) {
-        File file = new File("./Backup/" + arquivo);
+        File file = new File(arquivo);
         if (file.isFile()) {
             long tamanho = file.length();
             if (tamanho > 0) {
                 return true;
             } else {
                 file.delete();
+                ConfigurationFactory.getLOG().warn("Arquivo de backup tamanho zero.");
                 return false;
             }
         } else {
+            ConfigurationFactory.getLOG().warn("Arquivo de backup não gerado.");
             return false;
         }
 
     }
 
     private static boolean existeExecutavel(String arquivo) {
+        String arquitetura = System.getProperty("os.arch");
         File testeMySqlDump = new File(ConfigurationFactory.DBFILE.getAbsolutePath()
-                + File.separator + ConfigurationFactory.ARCHITECTURE + File.separator + arquivo);
+                + File.separator + arquitetura + File.separator + arquivo);
+        
+        
+        try {
+            System.out.println(testeMySqlDump.getCanonicalPath());
+        } catch (IOException ex) {
+            Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
         if (testeMySqlDump.isFile()) {
             return true;
         } else {
+            ConfigurationFactory.getLOG().warn("Não encontrado arquivo mysqldump.");
             return false;
         }
     }

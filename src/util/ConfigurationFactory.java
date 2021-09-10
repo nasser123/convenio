@@ -33,8 +33,10 @@ public class ConfigurationFactory {
     public static String DBDIR;
     public static File DBFILE;
     public static String ARCHITECTURE;
+    public static String BACKUP;
     private static Section config;
     public static Logger LOG;
+    public static String DBEMPRESA;
 
     public static Logger getLOG() {
         if (LOG == null) {
@@ -80,6 +82,8 @@ public class ConfigurationFactory {
             ARCHITECTURE = System.getProperty("os.arch");
             DBDIR = "mysql";
             DBFILE = new File(DBDIR);
+            BACKUP = config.get("db.backup");
+            DBEMPRESA = config.get("db.empresa");
         }
         if (DBDIR == null) {
             DBDIR = "mysql";
@@ -119,6 +123,8 @@ public class ConfigurationFactory {
             DBPASSWORD = config.get("db.password");
             DBDIR = "mysql";
             DBFILE = new File(DBDIR);
+            BACKUP = config.get("db.backup");
+            DBEMPRESA = config.get("db.empresa");
         }
         return config;
     }
@@ -175,6 +181,9 @@ public class ConfigurationFactory {
             buffW.newLine();
             buffW.write("db.dir=" + DBDIR);
             buffW.newLine();
+            buffW.write("db.empresa=" + DBEMPRESA);
+            buffW.newLine();
+           
 
             buffR.close();
             buffW.close();

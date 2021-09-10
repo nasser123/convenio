@@ -408,7 +408,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         Venda v = (Venda)jComboBox1.getSelectedItem();
-        new TelaParcelasEditar(v).setVisible(true);
+        new TelaParcelasEditar(v, "TelaVendaCliente").setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
 

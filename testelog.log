@@ -100,3 +100,288 @@ Error Code: 0
 2018-12-09 22:13:49,470 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:53.9-Cliente: 341-nasser rahman
 2018-12-09 22:13:51,571 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
 2018-12-09 22:13:53,728 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-09 23:10:34,799 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-09 23:10:59,180 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2018-12-09 23:42:44,144 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 55.0 para: true-Cliente:341
+2018-12-09 23:42:44,160 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 416.0 para: false-Cliente:341
+2018-12-09 23:42:44,160 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 515.0 para: false-Cliente:341
+2018-12-09 23:42:44,160 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 64.5 para: true-Cliente:345
+2018-12-09 23:42:45,347 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-10 00:22:29,724 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-10 00:23:00,991 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 55.0 para: false-Cliente:341
+2018-12-10 00:23:01,020 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 416.0 para: false-Cliente:341
+2018-12-10 00:23:01,021 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 515.0 para: false-Cliente:341
+2018-12-10 00:23:01,023 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:23:01,026 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 1.0 para: false-Cliente:341
+2018-12-10 00:23:01,028 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 50.0 para: false-Cliente:341
+2018-12-10 00:23:01,029 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 43.33 para: false-Cliente:341
+2018-12-10 00:23:01,030 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:23:01,032 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 18.0 para: false-Cliente:341
+2018-12-10 00:23:01,035 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 64.5 para: false-Cliente:345
+2018-12-10 00:23:01,037 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 53.33 para: true-Cliente:345
+2018-12-10 00:23:05,624 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-10 00:24:29,691 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 55.0 para: false-Cliente:341
+2018-12-10 00:24:29,700 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 416.0 para: false-Cliente:341
+2018-12-10 00:24:29,702 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 515.0 para: false-Cliente:341
+2018-12-10 00:24:29,706 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:24:29,708 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 1.0 para: false-Cliente:341
+2018-12-10 00:24:29,709 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 50.0 para: false-Cliente:341
+2018-12-10 00:24:29,711 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 43.33 para: false-Cliente:341
+2018-12-10 00:24:29,712 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:24:29,714 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 18.0 para: false-Cliente:341
+2018-12-10 00:24:29,715 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 64.5 para: false-Cliente:345
+2018-12-10 00:24:29,716 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 53.33 para: false-Cliente:345
+2018-12-10 00:24:31,085 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-10 00:24:54,457 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 55.0 para: false-Cliente:341
+2018-12-10 00:24:54,466 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 416.0 para: false-Cliente:341
+2018-12-10 00:24:54,467 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 515.0 para: true-Cliente:341
+2018-12-10 00:24:54,468 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:24:54,469 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 1.0 para: false-Cliente:341
+2018-12-10 00:24:54,471 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 50.0 para: false-Cliente:341
+2018-12-10 00:24:54,472 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 43.33 para: false-Cliente:341
+2018-12-10 00:24:54,473 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:24:54,474 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 18.0 para: false-Cliente:341
+2018-12-10 00:24:54,475 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 64.5 para: true-Cliente:345
+2018-12-10 00:24:54,476 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 53.33 para: false-Cliente:345
+2018-12-10 00:24:55,733 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-10 00:26:06,757 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 55.0 para: false-Cliente:341
+2018-12-10 00:26:06,764 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 416.0 para: false-Cliente:341
+2018-12-10 00:26:06,766 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 515.0 para: false-Cliente:341
+2018-12-10 00:26:06,767 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:26:06,768 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 1.0 para: false-Cliente:341
+2018-12-10 00:26:06,768 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 50.0 para: false-Cliente:341
+2018-12-10 00:26:06,769 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 43.33 para: false-Cliente:341
+2018-12-10 00:26:06,770 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 45.0 para: false-Cliente:341
+2018-12-10 00:26:06,771 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 18.0 para: false-Cliente:341
+2018-12-10 00:26:06,772 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 64.5 para: true-Cliente:345
+2018-12-10 00:26:06,773 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 53.33 para: false-Cliente:345
+2018-12-10 00:26:08,292 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2018-12-11 20:23:53,738 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 20:40:00,236 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 20:47:00,662 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 20:50:58,395 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 20:51:13,603 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 341-nasser rahman
+2018-12-11 20:51:44,762 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 20:52:34,850 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 342-SASD
+2018-12-11 20:53:10,534 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 20:53:28,502 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 20:54:26,851 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 343-fulano de tal
+2018-12-11 20:55:51,829 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 20:59:28,875 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 21:01:29,652 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:130.0-Cliente: 343-fulano de tal
+2018-12-11 21:02:24,899 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:03:18,672 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 21:04:10,168 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:150.0-Cliente: 341-nasser rahman
+2018-12-11 21:06:55,852 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:07:02,422 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 21:07:30,852 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:130.0-Cliente: 333-Debora Simone Brasil Mendes
+2018-12-11 21:08:17,289 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:50:38,346 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:140.0-Cliente: 342-SASD
+2018-12-11 21:52:25,882 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:54:04,490 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 21:55:26,025 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 343-fulano de tal
+2018-12-11 21:56:06,304 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:58:03,798 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:58:04,364 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 21:59:49,526 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:03:22,290 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 141-ALINE ARRIAGA MAIA DOS SANTOS
+2018-12-11 22:03:46,579 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:03:49,301 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:04:38,753 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:06:16,606 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:300.0-Cliente: 341-nasser rahman
+2018-12-11 22:08:30,147 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:400.0-Cliente: 344-nijma rahman
+2018-12-11 22:08:56,241 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:08:59,473 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:09:00,377 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:09:00,985 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-11 22:09:55,079 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:14:33,745 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:17:46,088 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:20:28,777 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:22:38,127 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:24:00,614 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:31:29,527 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:32:15,365 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:33:40,227 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:36:06,308 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 22:42:06,095 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 23:04:40,194 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 23:31:49,105 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 23:37:06,864 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 23:39:13,497 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-11 23:39:24,553 [AWT-EventQueue-0]  WARN testecategoria:171 – Arquivo de backup não gerado.
+2018-12-11 23:40:58,831 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:10:40,209 [AWT-EventQueue-0]  WARN testecategoria:77 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2018-12-15 12:15:45,299 [AWT-EventQueue-0]  WARN testecategoria:35 – 1:Erro ao converter valor
+2018-12-15 12:15:50,825 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1000.0-Cliente: 341-nasser rahman
+2018-12-15 12:16:05,661 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 12:16:11,060 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:17:40,670 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:17:58,925 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 12:22:07,341 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:22:22,551 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:22:30,928 [AWT-EventQueue-0]  WARN testecategoria:183 – Não encontrado arquivo mysqldump.
+2018-12-15 12:25:07,306 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:25:13,188 [AWT-EventQueue-0]  WARN testecategoria:194 – Não encontrado arquivo mysqldump.
+2018-12-15 12:25:40,774 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:29:20,427 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:29:26,337 [AWT-EventQueue-0]  WARN testecategoria:194 – Não encontrado arquivo mysqldump.
+2018-12-15 12:30:45,253 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:31:59,596 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:32:07,803 [AWT-EventQueue-0]  WARN testecategoria:194 – Não encontrado arquivo mysqldump.
+2018-12-15 12:33:43,464 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:34:59,060 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:35:18,359 [AWT-EventQueue-0]  WARN testecategoria:169 – Arquivo de backup tamanho zero.
+2018-12-15 12:36:06,337 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 12:36:18,472 [AWT-EventQueue-0]  WARN testecategoria:169 – Arquivo de backup tamanho zero.
+2018-12-15 16:07:22,149 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:07:28,727 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2018-12-15 16:15:16,777 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:17:36,798 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:46:07,429 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:46:15,101 [AWT-EventQueue-0]  WARN testecategoria:171 – Arquivo de backup tamanho zero.
+2018-12-15 16:46:25,987 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:47:28,079 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:47:37,157 [AWT-EventQueue-0]  WARN testecategoria:171 – Arquivo de backup tamanho zero.
+2018-12-15 16:47:53,724 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:48:04,068 [AWT-EventQueue-0]  WARN testecategoria:171 – Arquivo de backup tamanho zero.
+2018-12-15 16:50:21,160 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:56:42,974 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:57:02,677 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:59:07,987 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 16:59:55,285 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 17:00:01,129 [AWT-EventQueue-0]  WARN testecategoria:197 – Não encontrado arquivo mysqldump.
+2018-12-15 17:44:46,806 [AWT-EventQueue-0]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2018-12-15 17:51:38,024 [AWT-EventQueue-0]  WARN testecategoria:35 – 1:Erro ao converter valor
+2018-12-15 17:51:42,430 [AWT-EventQueue-0]  WARN testecategoria:44 – multiple points:Erro ao converter valor
+2018-12-15 18:07:06,580 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1500.3-Cliente: 341-nasser rahman
+2018-12-15 18:07:25,688 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:09:21,900 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 18:21:11,266 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 18:21:37,426 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1500.3-Cliente: 351-DSAFASDFASF
+2018-12-15 18:22:22,101 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:13.99-Cliente: 341-nasser rahman
+2018-12-15 18:22:32,632 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:22:36,570 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:22:40,038 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:22:58,756 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:12.99-Cliente: 342-SASD
+2018-12-15 18:23:08,037 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:24:03,901 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:24:06,494 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:24:17,857 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 18:24:33,232 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:13.99-Cliente: 222-Aline Silva Monteiro
+2018-12-15 18:24:42,591 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:25:33,328 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 18:26:49,218 [AWT-EventQueue-0]  INFO testecategoria:64 – Alterado: 341:NASSER RAHMAN
+2018-12-15 18:28:44,265 [main]  INFO testecategoria:38 – Abertura de sistema
+2018-12-15 18:29:17,873 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2018-12-15 18:29:19,326 [AWT-EventQueue-0]  INFO testecategoria:45 – Gravou: 353:CELINA KORT
+2018-12-15 18:29:41,872 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:129.99-Cliente: 353-CELINA KORT
+2018-12-15 18:34:31,716 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2018-12-15 18:47:35,057 [main]  INFO testecategoria:38 – Abertura de sistema
+2019-08-29 00:26:19,869 [main]  INFO testecategoria:38 – Abertura de sistema
+2019-08-29 00:26:21,198 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+Error Code: 1251
+2019-08-29 00:26:57,991 [AWT-EventQueue-0]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+Error Code: 1251
+2021-09-09 19:35:09,584 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 19:35:19,479 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2021-09-09 19:35:53,235 [AWT-EventQueue-0]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+Error Code: 0
+2021-09-09 19:55:41,340 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 19:55:56,872 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:01:16,461 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:01:54,372 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 325.0 para: true-Cliente:341
+2021-09-09 20:02:00,802 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2021-09-09 20:03:16,723 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:07:55,123 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:10:30,629 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:10:40,747 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 20:10:46,966 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:14:25,193 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 55.0 para: true-Cliente:341
+2021-09-09 20:14:25,244 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 420.0 para: true-Cliente:341
+2021-09-09 20:14:25,246 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 515.0 para: true-Cliente:341
+2021-09-09 20:14:25,247 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 64.5 para: true-Cliente:345
+2021-09-09 20:14:25,248 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 53.33 para: true-Cliente:345
+2021-09-09 20:14:25,249 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 33.0 para: true-Cliente:345
+2021-09-09 20:14:32,021 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2021-09-09 20:15:29,219 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 55.0 para: true-Cliente:341
+2021-09-09 20:15:29,219 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 420.0 para: true-Cliente:341
+2021-09-09 20:15:29,219 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 515.0 para: true-Cliente:341
+2021-09-09 20:15:29,219 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 3 no valor de: 64.5 para: true-Cliente:345
+2021-09-09 20:15:29,220 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 53.33 para: true-Cliente:345
+2021-09-09 20:15:29,220 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 2 no valor de: 33.0 para: true-Cliente:345
+2021-09-09 20:15:30,930 [AWT-EventQueue-0]  INFO testecategoria:383 – gravou
+2021-09-09 20:16:51,775 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:17:21,803 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:19:31,941 [main]  INFO testecategoria:38 – Abertura de sistema
+2021-09-09 20:19:41,359 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:20:34,794 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:20:53,378 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:21:03,085 [AWT-EventQueue-0]  INFO testecategoria:111 – Excluida venda id: 40- Cliente: ALINE ARRIAGA MAIA DOS SANTOS no valor de: 33.33 realizada no dia : 25-11-2018
+2021-09-09 20:21:29,624 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 20:21:43,037 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-09 20:21:43,123 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1000.0-Cliente: 341-nasser othman teste rahman
+2021-09-09 20:21:51,583 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 20:22:06,467 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:22:18,781 [AWT-EventQueue-0]  INFO testecategoria:111 – Excluida venda id: 54- Cliente: nasser othman teste rahman no valor de: 1000.0 realizada no dia : 9-9-2021
+2021-09-09 20:22:34,214 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 20:22:46,471 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-09 20:22:46,619 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1000.0-Cliente: 345-celina
+2021-09-09 20:22:51,981 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 20:22:57,947 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 20:23:11,838 [AWT-EventQueue-0]  INFO testecategoria:111 – Excluida venda id: 55- Cliente: celina no valor de: 1000.0 realizada no dia : 9-9-2021
+2021-09-09 20:52:42,027 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 20:53:32,101 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 20:56:17,756 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 20:59:22,767 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 21:00:55,281 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 21:02:10,269 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 21:03:01,617 [main]  INFO testecategoria:41 – Abertura de sistema
+2021-09-09 21:04:52,642 [main]  INFO testecategoria:42 – Abertura de sistema
+2021-09-09 21:47:37,471 [main]  INFO testecategoria:42 – Abertura de sistema
+2021-09-09 21:49:01,918 [main]  INFO testecategoria:42 – Abertura de sistema
+2021-09-09 21:51:14,698 [main]  INFO testecategoria:42 – Abertura de sistema
+2021-09-09 21:51:45,668 [main]  INFO testecategoria:42 – Abertura de sistema
+2021-09-09 21:57:11,124 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 21:58:33,062 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 21:59:31,399 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:02:10,376 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:08:06,488 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:08:35,400 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:10:50,572 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:14:10,937 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:44:59,550 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:47:19,978 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:55:43,072 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 22:56:19,028 [AWT-EventQueue-0]  WARN testecategoria:104 – Error executing SQL statement for : report name
+2021-09-09 22:56:34,371 [AWT-EventQueue-0]  WARN testecategoria:104 – Error executing SQL statement for : report name
+2021-09-09 22:57:04,419 [AWT-EventQueue-0]  WARN testecategoria:104 – Error executing SQL statement for : report name
+2021-09-09 23:32:44,421 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 23:35:02,313 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-09 23:36:40,615 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-09 23:37:03,604 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 23:37:23,816 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-09 23:37:24,024 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:325.0-Cliente: 345-celina
+2021-09-09 23:37:36,106 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-09 23:42:04,496 [main]  INFO testecategoria:44 – Abertura de sistema

@@ -20,14 +20,15 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
     Integer idVenda;
     Float totalParcelas;
     Float diferenca;
+    String telaAnterior;
 
     /**
      * Creates new form TelaPadrao
      *
      * @param venda
      */
-    public TelaParcelasEditar(Venda venda) {
-
+    public TelaParcelasEditar(Venda venda, String telaAnterior) {
+        this.telaAnterior = telaAnterior;
         idVenda = venda.getIdvenda();
         initComponents();
         totalParcelas = venda1.getSomaParcelas();
@@ -369,6 +370,10 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         VendaController vc = new VendaController();
         try {
             vc.alterar(venda1, true);
+            if(this.telaAnterior.equals("TelaCadastroVenda")){
+                new TelaCadastroVenda().setVisible(true);
+                this.dispose();
+            }
         } catch (SQLException ex) {
             ConfigurationFactory.getLOG().warn(ex.getMessage());
         }
@@ -381,7 +386,12 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        new TelaVendaCliente(venda1.getIdcliente()).setVisible(true);
+
+        if (this.telaAnterior.equals("TelaVendaCliente")) {
+            new TelaVendaCliente(venda1.getIdcliente()).setVisible(true);
+        }else if(this.telaAnterior.equals("TelaCadastroVenda")){
+        new TelaCadastroVenda().setVisible(true);
+        }
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -5,6 +5,7 @@
 package telas;
 
 import beans.Convenio;
+import static convenio.Convenio.EMPRESA;
 import javax.swing.JOptionPane;
 import relatorios.ExecutaRelatorio;
 import util.ConfigTelas;
@@ -192,7 +193,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
        
         if(jRadioButtonPorConvenio.isSelected()){
            Convenio c = (Convenio)jComboBoxConvenios.getSelectedItem();
-           er.abrirRelatorioClientesPorConvenio(c.getIdconvenio());
+           er.abrirRelatorioClientesPorConvenio(c.getIdconvenio(), EMPRESA.getIdEmpresa());
        
        }else{
             JOptionPane.showMessageDialog(rootPane, "Não implementado ainda");

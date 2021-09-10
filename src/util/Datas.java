@@ -97,7 +97,7 @@ public class Datas {
     }
 
     /**
-     * Rebece uma String de uma data no seguinte formato: "dd/MM/yyyy" e outra
+     * Recebe uma String de uma data no seguinte formato: "dd/MM/yyyy" e outra
      * String no seguinte formato: "HH:mm:ss" e converte para Date.
      *
      * @param date uma String de uma data no formato "dd/MM/yyyy"
@@ -113,11 +113,30 @@ public class Datas {
         return new Date(System.currentTimeMillis());
     }
 
+    /**
+     * Gera string no formato "dd-MM-yyyy-HH-mm-ss"
+     *@return data e hora atual em String
+     */
+    public static String getDataHora() {
+        String texto;
+        texto = new SimpleDateFormat("dd-MM-yyyy-HH-mm-ss").format(System.currentTimeMillis());
+        return texto;
+    }
+
+    /**
+     * Retorna 
+     * @param d the value of d
+     */
     public static String getDiferenca(long d) {
         DateFormat date = new SimpleDateFormat(TIME);
         return date.format(d);
     }
 
+    /**
+    * Retorna o dia referente à data
+    * @param d Dia (Date)
+    * @return Integer dia
+    */
     public static Integer getDia(Date d) {
         DateFormat date = new SimpleDateFormat(DIA);
         return Integer.parseInt(date.format(d));
@@ -218,13 +237,13 @@ public class Datas {
             return null;
         }
     }
-    
-    public static String getDataString(Date data){
+
+    public static String getDataString(Date data) {
         String retorno = "";
-        retorno = getDia(data) + "-" +
-                getMes(data)  + "-" +
-                getAno(data);
+        retorno = getDia(data) + "-"
+                + getMes(data) + "-"
+                + getAno(data);
         return retorno;
-    
+
     }
 }

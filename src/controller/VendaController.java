@@ -50,12 +50,15 @@ public class VendaController implements IDao {
                 }
                 p = parcelas.get(i);
                 p.setIdvenda(v);
-                msg = msg + p.getNrparcela().toString() + "ª parcela: " + p.getValorparcela().toString() + " - " + Datas.getDate(p.getVencimento()) + "\n";
+               // msg = msg + p.getNrparcela().toString() + "ª parcela: " + p.getValorparcela().toString() + " - " + Datas.getDate(p.getVencimento()) + "\n";
                 entity.persist(p);
                 entity.getTransaction().commit();
             }
-            JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.\n " + msg);
+            //JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.\n " + msg);
             ConfigurationFactory.getLOG().info("Venda cadastrada:" + v.getValor().toString() + "-Cliente: " + v.getIdcliente().getIdcliente() + "-" + v.getIdcliente().getNome());
+
+            entity.getEntityManagerFactory().getCache().evictAll();
+            entity.clear();
             return true;
         }
         return false;
@@ -75,9 +78,9 @@ public class VendaController implements IDao {
                     JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
                 }
                 return true;
-            }else{
-                    JOptionPane.showMessageDialog(null, "Soma das parcelas é diferente do total da venda.");
-                    return false;
+            } else {
+                JOptionPane.showMessageDialog(null, "Soma das parcelas é diferente do total da venda.");
+                return false;
             }
         }
 
@@ -95,6 +98,7 @@ public class VendaController implements IDao {
                 entity.remove(v);
                 entity.getTransaction().commit();
                 JOptionPane.showMessageDialog(null, "Venda excluida com sucesso.");
+                ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + "- Cliente: " + v.getIdcliente().getNome() +" no valor de: " + v.getValor().toString() + " realizada no dia : " + v.getsData());
                 return true;
             } else {
                 if (!v.existeParcelaPaga()) {
@@ -104,6 +108,7 @@ public class VendaController implements IDao {
                     entity.remove(v);
                     entity.getTransaction().commit();
                     JOptionPane.showMessageDialog(null, "Venda excluida com sucesso.");
+                    ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + "- Cliente: " + v.getIdcliente().getNome() +" no valor de: " + v.getValor().toString() + " realizada no dia : " + v.getsData());
                     return true;
                 } else {
                     JOptionPane.showMessageDialog(null, "Não foi possível excluir a venda. Já existem parcela(s) paga(s)");

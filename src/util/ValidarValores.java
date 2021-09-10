@@ -4,6 +4,7 @@
  */
 package util;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 /**
@@ -22,8 +23,17 @@ public class ValidarValores {
         // DecimalFormat fmt = new DecimalFormat("0.00");
         String valorInteiro = "";
         String valorDecimal = "";
+        Integer indexPonto = valorStr.indexOf(".");
+       
+        String[] part = new String[2]; 
+        if(indexPonto != (-1)){
+           part = valorStr.split("[.]");
+        }else{
+           part = valorStr.split("[,]");
+        } 
         
-        String[] part = valorStr.split("[,]");
+        
+        //String[] part = valorStr.split("[.]");
         
         double preco = 0.0;
         try {
@@ -69,12 +79,14 @@ public class ValidarValores {
         ArrayList<Float> parcelas = new ArrayList();
         int nrParcelas = np;
         float valorTotal = v;
-        float parcela = 0.0f;
+        Float parcela = 0.0f;
         float ultimaParcela = 0.0f;
 
         parcela = valorTotal / nrParcelas;
 //trocado
-        double d = round(parcela, 0);
+        Integer inteiro = parcela.intValue();
+        Double doub = parcela.doubleValue();
+        double d = round(parcela, 2);
         float f = (float) d;
         parcela = f;
         for (int i = 0; i < nrParcelas - 1; i++) {

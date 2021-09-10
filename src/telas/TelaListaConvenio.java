@@ -6,6 +6,7 @@ package telas;
 
 import beans.Convenio;
 import controller.ConvenioController;
+import static convenio.Convenio.EMPRESA;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import relatorios.ExecutaRelatorio;
@@ -417,7 +418,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         if (jComboBoxConvenio.getSelectedIndex() != -1) {
             Convenio c = (Convenio) jComboBoxConvenio.getSelectedItem();
             ExecutaRelatorio er = new ExecutaRelatorio();
-            er.abrirRelatorioClientesPorConvenio(c.getIdconvenio());
+            er.abrirRelatorioClientesPorConvenio(c.getIdconvenio(), EMPRESA.getIdEmpresa());
         }
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
 

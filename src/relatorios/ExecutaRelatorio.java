@@ -65,7 +65,7 @@ public class ExecutaRelatorio {
 
     }
 
-    public void abrirRelatorioParcelasConvenio(Object convenio, Object periodo, Object periodofinal) {
+    public void abrirRelatorioParcelasConvenio(Object convenio, Object periodo, Object periodofinal, Object empresa) {
 
 
         //InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasConvenio.jasper");
@@ -76,6 +76,7 @@ public class ExecutaRelatorio {
         parametros.put("CONVENIO", convenio);
         parametros.put("PERIODO", periodo);
         parametros.put("PERIODOFINAL", periodofinal);
+        parametros.put("EMPRESA", empresa);
 
         try {
             // abre o relatório
@@ -87,11 +88,15 @@ public class ExecutaRelatorio {
 
     }
 
-    public void abrirRelatorioVendaPorPeriodo(Object dataIni, Object dataFim) {
+    public void abrirRelatorioVendaPorPeriodo(Object dataIni, Object dataFim, Object ordem1, Object empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioVenda.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
         parametros.put("dataInicial", dataIni);
         parametros.put("dataFinal", dataFim);
+        parametros.put("ordem1", ordem1);
+        parametros.put("EMPRESA", empresa);
+        
+        
         try {
             // abre o relatório
             ReportUtils.openReport("Relatório de Vendas por Período", inputStream, parametros, ConnectionFactory.getConnection());
@@ -99,10 +104,11 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
-    public void abrirRelatorioClientesPorConvenio(Integer convenio) {
+    public void abrirRelatorioClientesPorConvenio(Integer convenio, Integer empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioClientesPorConvenio.jasper");
         Map<String, Integer> parametros = new HashMap<String, Integer>();
         parametros.put("CONVENIO", convenio);
+        parametros.put("EMPRESA", empresa);
         try {
             // abre o relatório
             ReportUtils.openReport("Relatório de Clientes por Convenio", inputStream, parametros, ConnectionFactory.getConnection());

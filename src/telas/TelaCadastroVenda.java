@@ -458,12 +458,12 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
     }
 
     private float verificaValor() {
-        String valorStr = null;
-        double d = 0;
+        //String valorStr = null;
+        //double d = 0;
 
         if (jFormattedTextFieldValor != null) {
-            valorStr = jFormattedTextFieldValor.getText();
-            d = ValidarValores.converterDoubleDoisDecimais(valorStr);
+            String valorStr = jFormattedTextFieldValor.getValue().toString();
+            double d = ValidarValores.converterDoubleDoisDecimais(valorStr);
             valor = (float) d;
             this.valorValido = true;
             if (valor == 0.0f) {
@@ -522,7 +522,9 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
                 boolean gravou = false;
                 gravou = vc.inserir(v);
                 if (gravou) {
-                    new TelaCadastroVenda().setVisible(true);
+                    //new TelaCadastroVenda().setVisible(true);
+                    
+                    new TelaParcelasEditar(v, "TelaCadastroVenda").setVisible(true);
                     this.dispose();
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "Não gravou");

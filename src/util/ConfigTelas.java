@@ -59,7 +59,7 @@ public class ConfigTelas {
     public void carregaIcone(JFrame jp) {
         BufferedImage ico = null;
         try {
-            ico = ImageIO.read(jp.getClass().getResource("/imagens/vendas64.png"));
+            ico = ImageIO.read(jp.getClass().getResource("/imagens/vendas32.png"));
             jp.setIconImage(ico);
         } catch (IllegalArgumentException iae) {
             ConfigurationFactory.getLOG().warn(iae.getMessage());
@@ -115,14 +115,14 @@ public class ConfigTelas {
          * this.janela.getSize().width + "\n" +
                 this.janela.getSize().height);
          */
-        jp.setTitle("Sistema de Convênio Papa Tudo");
+        jp.setTitle("Sistema de Crediario");
 
         jp.setResizable(false);
 
         //Altera o icone padrão do java
         BufferedImage ico = null;
         try {
-            ico = ImageIO.read(jp.getClass().getResource("/imagens/vendas64.png"));
+            ico = ImageIO.read(jp.getClass().getResource("/imagens/vendas32.png"));
             jp.setIconImage(ico);
         } catch (IllegalArgumentException iae) {
             System.out.println("Erro ao carregar icone!");
@@ -148,7 +148,7 @@ public class ConfigTelas {
         conj.add(AWTKeyStroke.getAWTKeyStroke(KeyEvent.VK_ENTER, 0));
         jd.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, conj);
     
-        jd.setTitle("Convênio");
+        jd.setTitle("SisCred");
     }
 
 }

@@ -6,6 +6,7 @@
 	<parameter name="CONVENIO" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="EMPRESA" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT
      cliente.`idcliente` AS cliente_idcliente,
@@ -33,11 +34,20 @@
      convenio.`telefone` AS convenio_telefone,
      convenio.`situacao` AS convenio_situacao,
      cliente.`situacao` AS cliente_situacao,
-     convenio.`idconvenio` AS convenio_idconvenio
+     convenio.`idconvenio` AS convenio_idconvenio,
+     Empresa.`idEmpresa` AS Empresa_idEmpresa,
+     Empresa.`razaosocial` AS Empresa_razaosocial,
+     Empresa.`fantasia` AS Empresa_fantasia,
+     Empresa.`cnpj` AS Empresa_cnpj,
+     Empresa.`endereco` AS Empresa_endereco,
+     Empresa.`telefone` AS Empresa_telefone,
+     Empresa.`cidade` AS Empresa_cidade
 FROM
-     `cliente` cliente INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`
+     `cliente` cliente INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`,
+     `Empresa` Empresa
 WHERE
-     convenio.`idconvenio` = $P{CONVENIO}]]>
+     convenio.`idconvenio` = $P{CONVENIO}
+     and Empresa.`idEmpresa` = $P{EMPRESA}]]>
 	</queryString>
 	<field name="cliente_idcliente" class="java.lang.Integer"/>
 	<field name="cliente_idconvenio" class="java.lang.Integer"/>
@@ -65,6 +75,13 @@ WHERE
 	<field name="convenio_situacao" class="java.lang.String"/>
 	<field name="cliente_situacao" class="java.lang.String"/>
 	<field name="convenio_idconvenio" class="java.lang.Integer"/>
+	<field name="Empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="Empresa_razaosocial" class="java.lang.String"/>
+	<field name="Empresa_fantasia" class="java.lang.String"/>
+	<field name="Empresa_cnpj" class="java.lang.String"/>
+	<field name="Empresa_endereco" class="java.lang.String"/>
+	<field name="Empresa_telefone" class="java.lang.String"/>
+	<field name="Empresa_cidade" class="java.lang.String"/>
 	<group name="cliente_idcliente">
 		<groupExpression><![CDATA[$F{cliente_idcliente}]]></groupExpression>
 	</group>
@@ -81,33 +98,40 @@ WHERE
 				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="210" y="40" width="319" height="18" uuid="67667bcb-236a-455e-801e-6dd1cf7bae88"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Rua Bento martins, 3066 fone (55) 3411-8906]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="210" y="58" width="319" height="18" uuid="8a064623-6524-48ff-a4e6-7e6c1aac5c7d"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Uruguaiana-RS]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="210" y="82" width="324" height="20" uuid="04d70f5d-c13a-4d72-ae4e-a90554205487"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[RELATÓRIO DE CLIENTES]]></text>
 			</staticText>
-			<staticText>
-				<reportElement x="210" y="4" width="319" height="18" uuid="45a9fba4-fb1d-4c50-9f58-aae3fda123ed"/>
+			<textField>
+				<reportElement x="210" y="2" width="319" height="20" uuid="67075618-3e20-4241-8788-ab6de61d2e86"/>
 				<textElement textAlignment="Center">
-					<font size="12" isBold="true" isItalic="true" isStrikeThrough="false"/>
+					<font size="12" isBold="true" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[LOJA PAPA TUDO]]></text>
-			</staticText>
+				<textFieldExpression><![CDATA[$F{Empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="40" width="150" height="20" uuid="59baed98-d20a-472e-af8a-49e1c2c2495a"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="373" y="40" width="156" height="20" uuid="30c016ae-3137-4dc8-ba19-f1d4f3061774"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_telefone}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="60" width="319" height="20" uuid="d610751c-aff1-4b64-a0ba-e771ac36d2e4"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_cidade}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
@@ -261,11 +285,11 @@ WHERE
 				<reportElement x="41" y="0" width="183" height="16" uuid="d08db56e-853e-43d8-9f62-2c7edf2d5760"/>
 				<textFieldExpression><![CDATA[$F{cliente_nome}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="224" y="0" width="150" height="16" uuid="30005b4a-c8ac-46b8-858a-6201e98e45fb"/>
 				<textFieldExpression><![CDATA[$F{cliente_endereco}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="374" y="0" width="39" height="16" uuid="fd70d782-3969-462b-acea-e699c1c45657"/>
 				<textFieldExpression><![CDATA[$F{cliente_endereconr}]]></textFieldExpression>
 			</textField>
@@ -278,17 +302,17 @@ WHERE
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA[$F{cliente_limite}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="527" y="0" width="75" height="16" uuid="a7c6caba-ebf1-49d3-bb71-817c8e9eb933"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cliente_cpf}]]></textFieldExpression>
 			</textField>
-			<textField>
+			<textField isBlankWhenNull="true">
 				<reportElement x="747" y="0" width="55" height="16" uuid="9df76737-665a-4dbb-987c-dabfb266e345"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cliente_situacao}]]></textFieldExpression>
 			</textField>
-			<textField pattern="dd/MM/yyyy">
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
 				<reportElement x="602" y="0" width="77" height="16" uuid="86f12d83-d3a3-4be0-a71b-03335e29bdce"/>
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cliente_datanasc}]]></textFieldExpression>

@@ -4,10 +4,14 @@
  */
 package telas;
 
+import beans.Empresa;
+import static convenio.Convenio.EMPRESA;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.sql.Connection;
 import javax.imageio.ImageIO;
 import javax.persistence.EntityManager;
+import javax.swing.JOptionPane;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
@@ -59,10 +63,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jButtonConvenios = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuCadastros = new javax.swing.JMenu();
         jMenuConvenio = new javax.swing.JMenuItem();
         jMenuItemCliente = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuVendas = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemVendaCliente = new javax.swing.JMenuItem();
@@ -125,6 +131,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
+        jButton3.setText("Sair");
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -139,7 +155,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addGap(51, 51, 51)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonConvenios, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -155,9 +173,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addComponent(jButtonClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonConvenios, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(76, Short.MAX_VALUE))
         );
 
@@ -180,6 +200,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuCadastros.add(jMenuItemCliente);
+
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/16x16/7161_16x16.png"))); // NOI18N
+        jMenuItem2.setText("Empresa");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenuCadastros.add(jMenuItem2);
 
         jMenuBar1.add(jMenuCadastros);
 
@@ -369,6 +398,29 @@ public class TelaPrincipal extends javax.swing.JFrame {
         new TelaSobreJDialog(this, true).setVisible(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItemSobreActionPerformed
 
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        int sair = JOptionPane.showConfirmDialog(rootPane, "Você tem certeza que deseja sair do programa?");
+        if (sair == 0) {
+            int backup = JOptionPane.showConfirmDialog(rootPane, "Você deseja realizar backup?");
+            if(backup == 0){
+                Connection con = ConnectionFactory.getConnection();
+                boolean gravou = ConnectionFactory.geraBackup();
+                if(gravou){
+                    JOptionPane.showMessageDialog(rootPane, "Arquivo gravado com sucesso");
+                }else{
+                    JOptionPane.showMessageDialog(rootPane, "Não foi possível gravar o arquivo");
+                }
+            }
+            
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        TelaCadastroEmpresa tce = new TelaCadastroEmpresa(EMPRESA);
+        tce.setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -413,6 +465,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonClientes;
     private javax.swing.JButton jButtonConvenios;
     private javax.swing.JLabel jLabel1;
@@ -421,6 +474,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuConfiguracao;
     private javax.swing.JMenuItem jMenuConvenio;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItemBackup;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemClientes;

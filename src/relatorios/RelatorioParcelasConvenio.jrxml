@@ -10,6 +10,7 @@
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
 	<parameter name="PERIODOFINAL" class="java.util.Date"/>
+	<parameter name="EMPRESA" class="java.lang.Integer"/>
 	<queryString>
 		<![CDATA[SELECT
      cliente.`nome` AS cliente_nome,
@@ -23,17 +24,27 @@
      parcela.`pago` AS parcela_pago,
      convenio.`responsavel` AS convenio_responsavel,
      convenio.`telefone` AS convenio_telefone,
-     venda.`nrparcelas` AS venda_nrparcelas
+     venda.`nrparcelas` AS venda_nrparcelas,
+     Empresa.`idEmpresa` AS Empresa_idEmpresa,
+     Empresa.`razaosocial` AS Empresa_razaosocial,
+     Empresa.`fantasia` AS Empresa_fantasia,
+     Empresa.`cnpj` AS Empresa_cnpj,
+     Empresa.`endereco` AS Empresa_endereco,
+     Empresa.`telefone` AS Empresa_telefone,
+     Empresa.`cidade` AS Empresa_cidade
 FROM
      `parcela` parcela INNER JOIN `venda` venda ON parcela.`idvenda` = venda.`idvenda`
      INNER JOIN `cliente` cliente ON venda.`idcliente` = cliente.`idcliente`
-     INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`
+     INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`,
+     `Empresa` Empresa
 WHERE
-     parcela.`vencimento` >= $P{PERIODO} and
-     parcela.`vencimento` <= $P{PERIODOFINAL}
+     parcela.`vencimento` >= $P{PERIODO}
+     and parcela.`vencimento` <= $P{PERIODOFINAL}
      and cliente.`idconvenio` = $P{CONVENIO}
-
-ORDER BY cliente.`nome`, venda.`data`]]>
+     and Empresa.`idEmpresa` = $P{EMPRESA}
+ORDER BY
+     cliente.`nome` ASC,
+     venda.`data` ASC]]>
 	</queryString>
 	<field name="cliente_nome" class="java.lang.String"/>
 	<field name="convenio_nome" class="java.lang.String"/>
@@ -47,6 +58,13 @@ ORDER BY cliente.`nome`, venda.`data`]]>
 	<field name="convenio_responsavel" class="java.lang.String"/>
 	<field name="convenio_telefone" class="java.lang.String"/>
 	<field name="venda_nrparcelas" class="java.lang.Integer"/>
+	<field name="Empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="Empresa_razaosocial" class="java.lang.String"/>
+	<field name="Empresa_fantasia" class="java.lang.String"/>
+	<field name="Empresa_cnpj" class="java.lang.String"/>
+	<field name="Empresa_endereco" class="java.lang.String"/>
+	<field name="Empresa_telefone" class="java.lang.String"/>
+	<field name="Empresa_cidade" class="java.lang.String"/>
 	<variable name="TotalPrestacoes" class="java.lang.String"/>
 	<variable name="parcela_valorparcela_1" class="java.lang.Double" resetType="Group" resetGroup="Cliente_group" calculation="Sum">
 		<variableExpression><![CDATA[$F{parcela_valorparcela}]]></variableExpression>
@@ -159,32 +177,11 @@ ORDER BY cliente.`nome`, venda.`data`]]>
 				<text><![CDATA[RELATÓRIO DE CONVÊNIO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="121" y="0" width="319" height="18" uuid="3b9f6e7b-0e27-4a4e-b1a7-1a718b9331a2"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="true" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[LOJA PAPA TUDO]]></text>
-			</staticText>
-			<staticText>
 				<reportElement x="121" y="18" width="319" height="18" uuid="271588e9-7fbd-4f12-b500-687d527744da"/>
 				<textElement textAlignment="Center">
 					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
 				</textElement>
 				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="121" y="36" width="319" height="18" uuid="522c2915-d370-4f1f-8da4-2fe480da3415"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Rua Bento martins, 3066 fone (55) 3411-8906]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="121" y="54" width="319" height="18" uuid="c7b511b4-92aa-405a-bd88-9ce144357195"/>
-				<textElement textAlignment="Center">
-					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
-				</textElement>
-				<text><![CDATA[Uruguaiana-RS]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="87" y="102" width="223" height="20" uuid="f248adc3-e130-41ec-82df-352c91cf877f"/>
@@ -228,6 +225,34 @@ ORDER BY cliente.`nome`, venda.`data`]]>
 				</textElement>
 				<text><![CDATA[Fone:]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="122" y="-2" width="318" height="20" uuid="4319abfa-df8b-4655-8b48-3a19c8291b4c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="58" width="318" height="20" uuid="8e4923c2-ce00-4c02-8a2f-eca64facf3a1"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="36" width="188" height="20" uuid="29367bd1-e9eb-4a11-a86e-a83f207b17fe"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="36" width="107" height="20" uuid="80c517dd-6571-4e76-a3ea-82889b83eaf0"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_telefone}]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<detail>
