@@ -23,18 +23,19 @@ import util.ValidarValores;
 @Table(name = "parcela")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Parcela.findAll", query = "SELECT p FROM Parcela p")
-    ,
-    @NamedQuery(name = "Parcela.findByIdparcela", query = "SELECT p FROM Parcela p WHERE p.idparcela = :idparcela")
-    ,
-    @NamedQuery(name = "Parcela.findByIdvenda", query = "SELECT p FROM Parcela p WHERE p.idvenda = :idvenda")
-    ,
-    @NamedQuery(name = "Parcela.filtroConvenioCompetencia", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim")
-    ,
-    @NamedQuery(name = "Parcela.findByDate", query = "SELECT p FROM Parcela p WHERE p.vencimento = :vencimento")
-    ,
+    @NamedQuery(name = "Parcela.findAll", query = "SELECT p FROM Parcela p"),
+    @NamedQuery(name = "Parcela.findByIdparcela", query = "SELECT p FROM Parcela p WHERE p.idparcela = :idparcela"),
+    @NamedQuery(name = "Parcela.findByIdvenda", query = "SELECT p FROM Parcela p WHERE p.idvenda = :idvenda"),
+    @NamedQuery(name = "Parcela.filtroConvenioCompetencia", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim"),
+    @NamedQuery(name = "Parcela.findByDate", query = "SELECT p FROM Parcela p WHERE p.vencimento = :vencimento"),
     @NamedQuery(name = "Parcela.findByNrparcela", query = "SELECT p FROM Parcela p WHERE p.nrparcela = :nrparcela")})
 public class Parcela implements Serializable {
+
+    @Column(name = "pago")
+    private Boolean pago;
+    @Column(name = "datapgto")
+    @Temporal(TemporalType.DATE)
+    private Date datapgto;
 
     @Transient
     private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
@@ -56,8 +57,6 @@ public class Parcela implements Serializable {
     @ManyToOne(optional = false)
     private Venda idvenda;
 
-    @Column(name = "pago")
-    private boolean pago;
 
     public PropertyChangeSupport getChangeSupport() {
         return changeSupport;
@@ -67,15 +66,6 @@ public class Parcela implements Serializable {
         this.changeSupport = changeSupport;
     }
 
-    public boolean isPago() {
-        return pago;
-    }
-
-    public void setPago(boolean pago) {
-        boolean oldPago = this.pago;
-        this.pago = pago;
-        changeSupport.firePropertyChange("pago", oldPago, pago);
-    }
 
     public Parcela() {
     }
@@ -235,4 +225,23 @@ public class Parcela implements Serializable {
 //        }
 //        return valorParcelas;
 //    }
+
+    public Boolean getPago() {
+        return pago;
+    }
+    public Boolean isPago() {
+        return pago;
+    }
+
+    public void setPago(Boolean pago) {
+        this.pago = pago;
+    }
+
+    public Date getDatapgto() {
+        return datapgto;
+    }
+
+    public void setDatapgto(Date datapgto) {
+        this.datapgto = datapgto;
+    }
 }

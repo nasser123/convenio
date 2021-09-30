@@ -20,18 +20,20 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Nasser
  */
 @Entity
-@Table(name = "Empresa")
+@Table(name = "empresa")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Empresa.findAll", query = "SELECT e FROM Empresa e"), 
-    @NamedQuery(name = "Empresa.findByIdEmpresa", query = "SELECT e FROM Empresa e WHERE e.idEmpresa = :idEmpresa"), 
-    @NamedQuery(name = "Empresa.findByCodigo", query = "SELECT e FROM Empresa e WHERE e.idEmpresa = :idEmpresa"),
+    @NamedQuery(name = "Empresa.findAll", query = "SELECT e FROM Empresa e"),
+    @NamedQuery(name = "Empresa.findByIdEmpresa", query = "SELECT e FROM Empresa e WHERE e.idEmpresa = :idEmpresa"),
     @NamedQuery(name = "Empresa.findByRazaosocial", query = "SELECT e FROM Empresa e WHERE e.razaosocial = :razaosocial"),
-    @NamedQuery(name = "Empresa.findByFantasia", query = "SELECT e FROM Empresa e WHERE e.fantasia = :fantasia"), 
-    @NamedQuery(name = "Empresa.findByCnpj", query = "SELECT e FROM Empresa e WHERE e.cnpj = :cnpj"),
-    @NamedQuery(name = "Empresa.findByEndereco", query = "SELECT e FROM Empresa e WHERE e.endereco = :endereco"),
-    @NamedQuery(name = "Empresa.findByTelefone", query = "SELECT e FROM Empresa e WHERE e.telefone = :telefone"),
-    @NamedQuery(name = "Empresa.findByCidade", query = "SELECT e FROM Empresa e WHERE e.cidade = :cidade")})
+    @NamedQuery(name = "Empresa.findByFantasia", query = "SELECT e FROM Empresa e WHERE e.fantasia = :fantasia")
+    , @NamedQuery(name = "Empresa.findByCnpj", query = "SELECT e FROM Empresa e WHERE e.cnpj = :cnpj")
+    , @NamedQuery(name = "Empresa.findByEndereco", query = "SELECT e FROM Empresa e WHERE e.endereco = :endereco")
+    , @NamedQuery(name = "Empresa.findByTelefone", query = "SELECT e FROM Empresa e WHERE e.telefone = :telefone")
+    , @NamedQuery(name = "Empresa.findByCidade", query = "SELECT e FROM Empresa e WHERE e.cidade = :cidade")
+    , @NamedQuery(name = "Empresa.findByValidanf", query = "SELECT e FROM Empresa e WHERE e.validanf = :validanf")
+    , @NamedQuery(name = "Empresa.findByBloqinadimplente", query = "SELECT e FROM Empresa e WHERE e.bloqinadimplente = :bloqinadimplente")
+    , @NamedQuery(name = "Empresa.findByBloqlimite", query = "SELECT e FROM Empresa e WHERE e.bloqlimite = :bloqlimite")})
 public class Empresa implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -51,6 +53,12 @@ public class Empresa implements Serializable {
     private String telefone;
     @Column(name = "cidade")
     private String cidade;
+    @Column(name = "validanf")
+    private Boolean validanf;
+    @Column(name = "bloqinadimplente")
+    private Boolean bloqinadimplente;
+    @Column(name = "bloqlimite")
+    private Boolean bloqlimite;
 
     public Empresa() {
     }
@@ -115,6 +123,30 @@ public class Empresa implements Serializable {
         this.cidade = cidade;
     }
 
+    public Boolean getValidanf() {
+        return validanf;
+    }
+
+    public void setValidanf(Boolean validanf) {
+        this.validanf = validanf;
+    }
+
+    public Boolean getBloqinadimplente() {
+        return bloqinadimplente;
+    }
+
+    public void setBloqinadimplente(Boolean bloqinadimplente) {
+        this.bloqinadimplente = bloqinadimplente;
+    }
+
+    public Boolean getBloqlimite() {
+        return bloqlimite;
+    }
+
+    public void setBloqlimite(Boolean bloqlimite) {
+        this.bloqlimite = bloqlimite;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -137,7 +169,7 @@ public class Empresa implements Serializable {
 
     @Override
     public String toString() {
-        return "beans.Empresa[ idEmpresa=" + idEmpresa + " ]";
+        return "beans.Empresa_1[ idEmpresa=" + idEmpresa + " ]";
     }
     
 }

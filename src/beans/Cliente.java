@@ -41,6 +41,9 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Cliente.findByRenda", query = "SELECT c FROM Cliente c WHERE c.renda = :renda")})
 public class Cliente implements Serializable {
 
+    @Column(name = "celular")
+    private String celular;
+
     @Column(name = "situacao")
     private String situacao;
     @Lob
@@ -412,5 +415,13 @@ public class Cliente implements Serializable {
 //                
 //    return v;
 //    }
+
+    public String getCelular() {
+        return celular;
+    }
+
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }
 
 }

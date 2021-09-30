@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="226" pageHeight="842" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e2d632ee-3715-419b-b1fd-1d8a324dab05">
+	<property name="ireport.zoom" value="2.357947691000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="IDVENDA" class="java.lang.Integer"/>
+	<parameter name="EMPRESA" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     venda.`idvenda` AS venda_idvenda,
+     venda.`data` AS venda_data,
+     venda.`nrparcelas` AS venda_nrparcelas,
+     venda.`notafiscal` AS venda_notafiscal,
+     venda.`valor` AS venda_valor,
+     venda.`idcliente` AS venda_idcliente,
+     parcela.`idparcela` AS parcela_idparcela,
+     parcela.`nrparcela` AS parcela_nrparcela,
+     parcela.`idvenda` AS parcela_idvenda,
+     parcela.`valorparcela` AS parcela_valorparcela,
+     parcela.`vencimento` AS parcela_vencimento,
+     parcela.`pago` AS parcela_pago,
+     Empresa.`idEmpresa` AS Empresa_idEmpresa,
+     Empresa.`razaosocial` AS Empresa_razaosocial,
+     Empresa.`fantasia` AS Empresa_fantasia,
+     Empresa.`cnpj` AS Empresa_cnpj,
+     Empresa.`endereco` AS Empresa_endereco,
+     Empresa.`telefone` AS Empresa_telefone,
+     Empresa.`cidade` AS Empresa_cidade,
+     cliente.`idcliente` AS cliente_idcliente,
+     cliente.`idconvenio` AS cliente_idconvenio,
+     cliente.`idsexo` AS cliente_idsexo,
+     cliente.`idestadocivil` AS cliente_idestadocivil,
+     cliente.`nome` AS cliente_nome,
+     cliente.`telefone` AS cliente_telefone,
+     cliente.`endereco` AS cliente_endereco,
+     cliente.`endereconr` AS cliente_endereconr,
+     cliente.`bairro` AS cliente_bairro,
+     cliente.`cpf` AS cliente_cpf,
+     cliente.`identidade` AS cliente_identidade,
+     cliente.`naturalidade` AS cliente_naturalidade,
+     cliente.`pai` AS cliente_pai,
+     cliente.`mae` AS cliente_mae,
+     cliente.`emprego` AS cliente_emprego,
+     cliente.`cargo` AS cliente_cargo,
+     cliente.`dataadmissao` AS cliente_dataadmissao,
+     cliente.`renda` AS cliente_renda,
+     cliente.`datanasc` AS cliente_datanasc,
+     cliente.`limite` AS cliente_limite,
+     cliente.`situacao` AS cliente_situacao,
+     cliente.`observacao` AS cliente_observacao,
+     convenio.`idconvenio` AS convenio_idconvenio,
+     convenio.`nome` AS convenio_nome,
+     convenio.`responsavel` AS convenio_responsavel,
+     convenio.`telefone` AS convenio_telefone,
+     convenio.`situacao` AS convenio_situacao,
+     convenio.`nrparcelas` AS convenio_nrparcelas,
+     convenio.`vencimento` AS convenio_vencimento,
+     convenio.`datalimite` AS convenio_datalimite
+FROM
+     `venda` venda INNER JOIN `parcela` parcela ON venda.`idvenda` = parcela.`idvenda`
+     INNER JOIN `cliente` cliente ON venda.`idcliente` = cliente.`idcliente`
+     INNER JOIN `convenio` convenio ON cliente.`idconvenio` = convenio.`idconvenio`,
+     `Empresa` Empresa
+WHERE
+     venda.`idvenda` = $P{IDVENDA}
+ AND Empresa.`idEmpresa` = $P{EMPRESA}
+ORDER BY
+     parcela.`idparcela` ASC]]>
+	</queryString>
+	<field name="venda_idvenda" class="java.lang.Integer"/>
+	<field name="venda_data" class="java.sql.Date"/>
+	<field name="venda_nrparcelas" class="java.lang.Integer"/>
+	<field name="venda_notafiscal" class="java.lang.Integer"/>
+	<field name="venda_valor" class="java.lang.Float"/>
+	<field name="venda_idcliente" class="java.lang.Integer"/>
+	<field name="parcela_idparcela" class="java.lang.Integer"/>
+	<field name="parcela_nrparcela" class="java.lang.Integer"/>
+	<field name="parcela_idvenda" class="java.lang.Integer"/>
+	<field name="parcela_valorparcela" class="java.lang.Float"/>
+	<field name="parcela_vencimento" class="java.sql.Date"/>
+	<field name="parcela_pago" class="java.lang.Boolean"/>
+	<field name="Empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="Empresa_razaosocial" class="java.lang.String"/>
+	<field name="Empresa_fantasia" class="java.lang.String"/>
+	<field name="Empresa_cnpj" class="java.lang.String"/>
+	<field name="Empresa_endereco" class="java.lang.String"/>
+	<field name="Empresa_telefone" class="java.lang.String"/>
+	<field name="Empresa_cidade" class="java.lang.String"/>
+	<field name="cliente_idcliente" class="java.lang.Integer"/>
+	<field name="cliente_idconvenio" class="java.lang.Integer"/>
+	<field name="cliente_idsexo" class="java.lang.Integer"/>
+	<field name="cliente_idestadocivil" class="java.lang.Integer"/>
+	<field name="cliente_nome" class="java.lang.String"/>
+	<field name="cliente_telefone" class="java.lang.String"/>
+	<field name="cliente_endereco" class="java.lang.String"/>
+	<field name="cliente_endereconr" class="java.lang.String"/>
+	<field name="cliente_bairro" class="java.lang.String"/>
+	<field name="cliente_cpf" class="java.lang.String"/>
+	<field name="cliente_identidade" class="java.lang.String"/>
+	<field name="cliente_naturalidade" class="java.lang.String"/>
+	<field name="cliente_pai" class="java.lang.String"/>
+	<field name="cliente_mae" class="java.lang.String"/>
+	<field name="cliente_emprego" class="java.lang.String"/>
+	<field name="cliente_cargo" class="java.lang.String"/>
+	<field name="cliente_dataadmissao" class="java.sql.Date"/>
+	<field name="cliente_renda" class="java.lang.Double"/>
+	<field name="cliente_datanasc" class="java.sql.Date"/>
+	<field name="cliente_limite" class="java.lang.Double"/>
+	<field name="cliente_situacao" class="java.lang.String"/>
+	<field name="cliente_observacao" class="java.lang.String"/>
+	<field name="convenio_idconvenio" class="java.lang.Integer"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="convenio_responsavel" class="java.lang.String"/>
+	<field name="convenio_telefone" class="java.lang.String"/>
+	<field name="convenio_situacao" class="java.lang.String"/>
+	<field name="convenio_nrparcelas" class="java.lang.Integer"/>
+	<field name="convenio_vencimento" class="java.lang.Integer"/>
+	<field name="convenio_datalimite" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="51" splitType="Stretch">
+			<textField>
+				<reportElement x="16" y="20" width="151" height="20" uuid="d2c0fa75-5781-4959-844a-9d3b7160bbbd"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="0" width="100" height="20" uuid="025cbeab-b883-45b7-848c-3b3b33d88ff6"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[CONVÊNIO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement x="159" y="0" width="27" height="15" uuid="c8a2a7a2-6e2e-41e5-b1ed-a8a954c2b847"/>
+				<textFieldExpression><![CDATA[$F{venda_idvenda}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="90" y="0" width="58" height="15" uuid="55617ca5-763d-435b-94ab-c792ed4c3daf"/>
+				<textFieldExpression><![CDATA[$F{venda_data}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="86" y="37" width="100" height="15" uuid="67d143a0-a3d2-4ec3-9ba5-4ede5e9687e1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{venda_valor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="0" width="79" height="15" uuid="3701193f-a059-441e-9f21-540de548d9f7"/>
+				<text><![CDATA[Data da compra:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="0" width="13" height="15" uuid="1ff4b535-9062-41d6-a8d0-533a6a69a84f"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="37" width="75" height="15" uuid="0b70c1f0-c244-4c7e-9289-1fdc3ff63d00"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor total:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="34" height="20" uuid="05798fe8-706a-4d9c-937d-5906d8a26651"/>
+				<text><![CDATA[Parc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="122" y="0" width="64" height="20" uuid="50b8bf43-b784-4668-8392-b65c0baed545"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="0" width="68" height="20" uuid="87cbc2de-ea46-412c-bbab-4dde7f1e84f9"/>
+				<text><![CDATA[Vencimento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="4" y="0" width="12" height="15" uuid="c7fcef99-0e93-4bb0-af6e-a643b5838f9d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{parcela_nrparcela}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="122" y="0" width="64" height="15" uuid="07698433-c164-4f2a-85dd-a90a73898672"/>
+				<textFieldExpression><![CDATA[$F{parcela_valorparcela}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="38" y="0" width="68" height="15" uuid="9bc7acc2-c0c9-49e0-aa36-49b8f8b25d79"/>
+				<textFieldExpression><![CDATA[$F{parcela_vencimento}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="16" y="0" width="9" height="15" uuid="f4ca04a7-2231-489d-bd5e-5a6d3a625511"/>
+				<text><![CDATA[ª]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<summary>
+		<band height="120">
+			<textField>
+				<reportElement x="36" y="49" width="131" height="15" uuid="7a32548f-f8a7-44fa-b65c-ce8a288ceef4"/>
+				<textFieldExpression><![CDATA[$F{cliente_nome}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="16" y="48" width="151" height="1" uuid="bf65f8ce-de12-4d0b-9003-5c7293803752"/>
+			</line>
+			<textField>
+				<reportElement x="9" y="64" width="22" height="15" uuid="c68a1ffc-e2af-445b-bed2-24f803f31467"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{convenio_idconvenio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="64" width="129" height="15" uuid="096d0aab-8e0c-49ed-8a4f-02336fc8415f"/>
+				<textFieldExpression><![CDATA[$F{convenio_nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="64" width="5" height="15" uuid="b8ae880c-6379-465e-8303-4a1881145568"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="113" width="186" height="1" uuid="53af2d32-241f-4c7d-9128-fb01eed69e0e"/>
+			</line>
+			<textField>
+				<reportElement x="9" y="49" width="22" height="15" uuid="5d6f22d9-8be5-471a-8516-90686ef4f754"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{cliente_idcliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="49" width="5" height="15" uuid="1645b432-add9-42bb-b267-716b464e1154"/>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField pattern="dd MMMMM yyyy">
+				<reportElement x="0" y="89" width="138" height="20" uuid="8f89f516-71d3-4a92-a0e0-944a4bba1478"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement x="138" y="89" width="48" height="20" uuid="35b8f91f-3632-40f3-994e-86a146b399b7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

@@ -23,20 +23,18 @@ import util.Datas;
 @Table(name = "venda")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Venda.findAll", query = "SELECT v FROM Venda v")
-    ,
-    @NamedQuery(name = "Venda.findByIdvenda", query = "SELECT v FROM Venda v WHERE v.idvenda = :idvenda")
-    ,
-    @NamedQuery(name = "Venda.findByData", query = "SELECT v FROM Venda v WHERE v.data = :data")
-    ,
-    @NamedQuery(name = "Venda.findByNrparcelas", query = "SELECT v FROM Venda v WHERE v.nrparcelas = :nrparcelas")
-    ,
-    @NamedQuery(name = "Venda.findByNotafiscal", query = "SELECT v FROM Venda v WHERE v.notafiscal = :notafiscal")
-    ,
-    @NamedQuery(name = "Venda.findByIdcliente", query = "SELECT v FROM Venda v WHERE v.idcliente = :idcliente")
-    ,
+    @NamedQuery(name = "Venda.findAll", query = "SELECT v FROM Venda v"),
+    @NamedQuery(name = "Venda.findByIdvenda", query = "SELECT v FROM Venda v WHERE v.idvenda = :idvenda"),
+    @NamedQuery(name = "Venda.findByData", query = "SELECT v FROM Venda v WHERE v.data = :data"),
+    @NamedQuery(name = "Venda.findByNrparcelas", query = "SELECT v FROM Venda v WHERE v.nrparcelas = :nrparcelas"),
+    @NamedQuery(name = "Venda.findByNotafiscal", query = "SELECT v FROM Venda v WHERE v.notafiscal = :notafiscal"),
+    @NamedQuery(name = "Venda.findByIdcliente", query = "SELECT v FROM Venda v WHERE v.idcliente = :idcliente"),
     @NamedQuery(name = "Venda.findByValor", query = "SELECT v FROM Venda v WHERE v.valor = :valor")})
 public class Venda implements Serializable {
+
+    @Lob
+    @Column(name = "observacao")
+    private String observacao;
 
     @Transient
     private PropertyChangeSupport changeSupport = new PropertyChangeSupport(this);
@@ -224,6 +222,14 @@ public class Venda implements Serializable {
 
     public void removePropertyChangeListener(PropertyChangeListener listener) {
         changeSupport.removePropertyChangeListener(listener);
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
     }
 
 }

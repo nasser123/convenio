@@ -402,3 +402,15 @@ Error Code: 0
 2021-09-29 20:55:07,848 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
 2021-09-29 20:55:08,201 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:320.0-Cliente: 341-NASSER OTHMAN TESTE RAHMAN
 2021-09-29 21:32:48,132 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:38:22,994 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:38:24,244 [main]  WARN testecategoria:79 – Exception [EclipseLink-8034] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.JPQLException
+Exception Description: Error compiling the query [Empresa_1.findByValidanf: SELECT e FROM Empresa_1 e WHERE e.validanf = :validanf]. Unknown entity type [Empresa_1].
+2021-09-30 00:40:01,506 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:40:02,818 [main]  WARN testecategoria:79 – Exception [EclipseLink-8034] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.JPQLException
+Exception Description: Error compiling the query [Empresa.findByEndereco: SELECT e FROM Empresa_1 e WHERE e.endereco = :endereco]. Unknown entity type [Empresa_1].
+2021-09-30 00:41:08,670 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:41:09,967 [main]  WARN testecategoria:79 – Exception [EclipseLink-8034] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.JPQLException
+Exception Description: Error compiling the query [Empresa.findAll: SELECT e FROM Empresa_1 e]. Unknown entity type [Empresa_1].
+2021-09-30 00:41:31,885 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:43:17,417 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-30 00:43:46,974 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
