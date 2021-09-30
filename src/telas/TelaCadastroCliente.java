@@ -207,6 +207,8 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jFormattedTextFieldAberto = new javax.swing.JFormattedTextField();
         jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jTextFieldTelefone1 = new javax.swing.JTextField();
         jButtonPesquisa = new javax.swing.JButton();
 
         jTextField3.setText("jTextField3");
@@ -328,11 +330,11 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextFieldNome);
-        jTextFieldNome.setBounds(90, 36, 360, 28);
+        jTextFieldNome.setBounds(90, 36, 250, 28);
 
         jLabel7.setText("Limite:");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(600, 16, 80, 20);
+        jLabel7.setBounds(630, 16, 80, 20);
 
         jLabel8.setText("Endereço:");
         jPanel2.add(jLabel8);
@@ -382,7 +384,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jLabel19);
         jLabel19.setBounds(410, 286, 160, 20);
         jPanel2.add(jTextFieldTelefone);
-        jTextFieldTelefone.setBounds(460, 36, 130, 28);
+        jTextFieldTelefone.setBounds(350, 36, 130, 28);
         jPanel2.add(jTextFieldEndereco);
         jTextFieldEndereco.setBounds(10, 144, 360, 28);
         jPanel2.add(jTextFieldEnderecoNr);
@@ -408,13 +410,18 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jFormattedTextFieldLimite.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.00"))));
         jFormattedTextFieldLimite.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldLimite.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jFormattedTextFieldLimiteFocusGained(evt);
+            }
+        });
         jFormattedTextFieldLimite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextFieldLimiteActionPerformed(evt);
             }
         });
         jPanel2.add(jFormattedTextFieldLimite);
-        jFormattedTextFieldLimite.setBounds(600, 36, 80, 30);
+        jFormattedTextFieldLimite.setBounds(630, 36, 80, 30);
         jPanel2.add(jDateChooser1);
         jDateChooser1.setBounds(380, 90, 150, 28);
 
@@ -434,7 +441,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel21.setText("Telefone:");
         jPanel2.add(jLabel21);
-        jLabel21.setBounds(460, 16, 120, 20);
+        jLabel21.setBounds(350, 16, 120, 20);
 
         jTextAreaObservacao.setColumns(20);
         jTextAreaObservacao.setRows(5);
@@ -489,6 +496,12 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jLabel25);
         jLabel25.setBounds(10, 410, 80, 20);
 
+        jLabel26.setText("Celular:");
+        jPanel2.add(jLabel26);
+        jLabel26.setBounds(490, 16, 120, 20);
+        jPanel2.add(jTextFieldTelefone1);
+        jTextFieldTelefone1.setBounds(490, 36, 130, 28);
+
         jButtonPesquisa.setBackground(new java.awt.Color(255, 255, 255));
         jButtonPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/1408_32x32.png"))); // NOI18N
         jButtonPesquisa.setText("Pesquisar");
@@ -534,7 +547,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
                     .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -698,6 +711,10 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jFormattedTextFieldAbertoActionPerformed
 
+    private void jFormattedTextFieldLimiteFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jFormattedTextFieldLimiteFocusGained
+        jFormattedTextFieldLimite.selectAll();
+    }//GEN-LAST:event_jFormattedTextFieldLimiteFocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -779,6 +796,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -804,6 +822,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNomePai;
     private javax.swing.JTextField jTextFieldRG;
     private javax.swing.JTextField jTextFieldTelefone;
+    private javax.swing.JTextField jTextFieldTelefone1;
     private java.util.List<beans.Sexo> sexoList;
     private renderizadores.SexoListCellRenderer sexoListCellRenderer1;
     private javax.persistence.Query sexoQuery;

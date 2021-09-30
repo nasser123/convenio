@@ -385,3 +385,20 @@ Error Code: 0
 2021-09-09 23:37:24,024 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:325.0-Cliente: 345-celina
 2021-09-09 23:37:36,106 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
 2021-09-09 23:42:04,496 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-29 20:34:50,024 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-29 20:34:58,428 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-29 20:35:18,255 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-29 20:35:23,419 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-29 20:35:23,867 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1200.0-Cliente: 341-NASSER OTHMAN TESTE RAHMAN
+2021-09-29 20:35:49,350 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-29 20:36:01,612 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-09-29 20:46:10,397 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-29 20:51:18,621 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-29 20:53:18,659 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-29 20:53:48,755 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-29 20:53:49,241 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:950.0-Cliente: 345-celina
+2021-09-29 20:54:28,393 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-29 20:54:47,300 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-09-29 20:55:07,848 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-09-29 20:55:08,201 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:320.0-Cliente: 341-NASSER OTHMAN TESTE RAHMAN
+2021-09-29 21:32:48,132 [main]  INFO testecategoria:44 – Abertura de sistema

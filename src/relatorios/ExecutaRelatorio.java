@@ -117,6 +117,18 @@ public class ExecutaRelatorio {
         }
     }
 
+    public void abrirRelatorioCupom(Integer idvenda, Integer empresa) {
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioCupom.jasper");
+        Map<String, Integer> parametros = new HashMap<String, Integer>();
+        parametros.put("IDVENDA", idvenda);
+        parametros.put("EMPRESA", empresa);
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Relatório de Clientes por Convenio", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+    }
     
     
     public void abrirRelatorioClientes(String relatorio, HashMap param) {

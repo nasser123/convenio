@@ -4,12 +4,18 @@
  */
 package telas;
 
+import beans.Convenio;
 import beans.Venda;
 import controller.VendaController;
+import static convenio.Convenio.EMPRESA;
 import java.sql.SQLException;
+import java.util.Date;
+import java.util.HashMap;
+import relatorios.ExecutaRelatorio;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
+import util.Datas;
 
 /**
  *
@@ -85,6 +91,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         jFormattedTextFieldTotal = new javax.swing.JFormattedTextField();
         jFormattedTextFieldSoma = new javax.swing.JFormattedTextField();
         jFormattedTextFieldDiferenca = new javax.swing.JFormattedTextField();
+        jButtonGravar1 = new javax.swing.JButton();
 
         venda1.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -226,6 +233,17 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         jFormattedTextFieldDiferenca.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         jFormattedTextFieldDiferenca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
+        jButtonGravar1.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGravar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/printer.png"))); // NOI18N
+        jButtonGravar1.setText("Imprimir");
+        jButtonGravar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonGravar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonGravar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGravar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -245,7 +263,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -265,16 +283,24 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jTextFieldNrParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel8)
-                                    .addGap(66, 66, 66)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel9)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel8)
+                                            .addGap(66, 66, 66))
+                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(jPanel1Layout.createSequentialGroup()
+                                            .addComponent(jLabel9)
+                                            .addGap(228, 228, 228))
                                         .addGroup(jPanel1Layout.createSequentialGroup()
                                             .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(46, 46, 46)
-                                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                            .addComponent(jButtonGravar1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(34, 34, 34)))))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -283,7 +309,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addComponent(jFormattedTextFieldDiferenca, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 25, Short.MAX_VALUE))))
+                        .addGap(0, 9, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,11 +351,12 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                     .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedTextFieldSoma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedTextFieldDiferenca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGravar1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(24, 24, 24))
         );
 
@@ -377,6 +404,10 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         } catch (SQLException ex) {
             ConfigurationFactory.getLOG().warn(ex.getMessage());
         }
+        
+        
+        
+        
 
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
@@ -394,6 +425,16 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         }
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonGravar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravar1ActionPerformed
+        ExecutaRelatorio t = new ExecutaRelatorio();
+        //int idvenda = venda1.getIdvenda();
+        HashMap<String, Object> parameterMap = new HashMap<String, Object>();
+
+        Integer idvenda = venda1.getIdvenda();
+        
+        t.abrirRelatorioCupom(idvenda, EMPRESA.getIdEmpresa());
+    }//GEN-LAST:event_jButtonGravar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -441,6 +482,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCancelar;
     private javax.swing.JButton jButtonGravar;
+    private javax.swing.JButton jButtonGravar1;
     private javax.swing.JFormattedTextField jFormattedTextFieldDiferenca;
     private javax.swing.JFormattedTextField jFormattedTextFieldSoma;
     private javax.swing.JFormattedTextField jFormattedTextFieldTotal;

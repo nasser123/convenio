@@ -3,22 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/beans/Empresa.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/controller/EmpresaController.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/controller/ClienteController.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/controller/VendaController.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/telas/TelaRelatorioClientesPorConvenio.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/telas/TelaPadrao.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/beans/Cliente.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/controller/ParcelaController.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/convenio/Convenio.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/telas/TelaVendaCliente.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/convenio/logtestes.properties</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/telas/TelaPrincipal.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/util/ConnectionFactory.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/util/ConfigurationFactory.java</file>
-            <file>file:/C:/Users/Nasser/Documents/NetBeansProjects/convenio/src/telas/TelaCadastroEmpresa.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
