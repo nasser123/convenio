@@ -60,6 +60,7 @@ public class ParcelaController {
     public boolean alterar(Object parcela, boolean mensagem) throws SQLException {
         if (parcela instanceof Parcela) {
             Parcela p = (Parcela) parcela;
+            
 
             if (!entity.getTransaction().isActive()) {
                 entity.getTransaction().begin();
@@ -68,7 +69,7 @@ public class ParcelaController {
             entity.getTransaction().commit();
             if (mensagem) {
                 JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
-                ConfigurationFactory.getLOG().info("Alterada parcela id: " + p.getIdparcela() + "-" + p.getNrparcela() +" no valor de: " + p.getValorparcela().toString() + " para: " + p.isPago());
+                ConfigurationFactory.getLOG().info("Alterada parcela id: " + p.getIdparcela() + "-" + p.getNrparcela() +" no valor de: " + p.getValorparcela().toString() + " para: " + p.isPago() + " Data:" + p.getDatapgto());
             }
             return true;
         }
@@ -84,7 +85,7 @@ public class ParcelaController {
                 entity.getTransaction().begin();
             }
             entity.merge(parcelaList.get(i));
-            ConfigurationFactory.getLOG().info("Alterada parcela: " + parcelaList.get(i).getNrparcela() +" no valor de: " + parcelaList.get(i).getValorparcela().toString() + " para: " + parcelaList.get(i).isPago() + "-Cliente:" + parcelaList.get(i).getIdvenda().getIdcliente().getIdcliente());
+            ConfigurationFactory.getLOG().info("Alterada parcela: " + parcelaList.get(i).getNrparcela() +" no valor de: " + parcelaList.get(i).getValorparcela().toString() + " para: " + parcelaList.get(i).isPago() + "-Cliente:" + parcelaList.get(i).getIdvenda().getIdcliente().getIdcliente()+ " Data:" + parcelaList.get(i).getDatapgto());
                     
             entity.getTransaction().commit();
         }

@@ -408,7 +408,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jDateChooserAdmissao);
         jDateChooserAdmissao.setBounds(410, 306, 150, 28);
 
-        jFormattedTextFieldLimite.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.00"))));
+        jFormattedTextFieldLimite.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         jFormattedTextFieldLimite.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldLimite.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {

@@ -36,6 +36,13 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Empresa.findByBloqlimite", query = "SELECT e FROM Empresa e WHERE e.bloqlimite = :bloqlimite")})
 public class Empresa implements Serializable {
 
+    @Column(name = "validanf")
+    private Short validanf;
+    @Column(name = "bloqinadimplente")
+    private Short bloqinadimplente;
+    @Column(name = "bloqlimite")
+    private Short bloqlimite;
+
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -53,12 +60,6 @@ public class Empresa implements Serializable {
     private String telefone;
     @Column(name = "cidade")
     private String cidade;
-    @Column(name = "validanf")
-    private Boolean validanf;
-    @Column(name = "bloqinadimplente")
-    private Boolean bloqinadimplente;
-    @Column(name = "bloqlimite")
-    private Boolean bloqlimite;
 
     public Empresa() {
     }
@@ -123,29 +124,6 @@ public class Empresa implements Serializable {
         this.cidade = cidade;
     }
 
-    public Boolean getValidanf() {
-        return validanf;
-    }
-
-    public void setValidanf(Boolean validanf) {
-        this.validanf = validanf;
-    }
-
-    public Boolean getBloqinadimplente() {
-        return bloqinadimplente;
-    }
-
-    public void setBloqinadimplente(Boolean bloqinadimplente) {
-        this.bloqinadimplente = bloqinadimplente;
-    }
-
-    public Boolean getBloqlimite() {
-        return bloqlimite;
-    }
-
-    public void setBloqlimite(Boolean bloqlimite) {
-        this.bloqlimite = bloqlimite;
-    }
 
     @Override
     public int hashCode() {
@@ -170,6 +148,30 @@ public class Empresa implements Serializable {
     @Override
     public String toString() {
         return "beans.Empresa_1[ idEmpresa=" + idEmpresa + " ]";
+    }
+
+    public Short getValidanf() {
+        return validanf;
+    }
+
+    public void setValidanf(Short validanf) {
+        this.validanf = validanf;
+    }
+
+    public Short getBloqinadimplente() {
+        return bloqinadimplente;
+    }
+
+    public void setBloqinadimplente(Short bloqinadimplente) {
+        this.bloqinadimplente = bloqinadimplente;
+    }
+
+    public Short getBloqlimite() {
+        return bloqlimite;
+    }
+
+    public void setBloqlimite(Short bloqlimite) {
+        this.bloqlimite = bloqlimite;
     }
     
 }

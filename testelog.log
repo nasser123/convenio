@@ -414,3 +414,136 @@ Exception Description: Error compiling the query [Empresa.findAll: SELECT e FROM
 2021-09-30 00:41:31,885 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-09-30 00:43:17,417 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-09-30 00:43:46,974 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-09-30 00:54:52,116 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:16:05,516 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:16:06,547 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Unknown initial character set index '255' received from server. Initial client character set can be forced via the 'characterEncoding' property.
+Error Code: 0
+2021-10-07 22:25:31,318 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:25:32,358 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Unknown initial character set index '255' received from server. Initial client character set can be forced via the 'characterEncoding' property.
+Error Code: 0
+2021-10-07 22:32:45,408 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:32:46,793 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:35:51,182 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:35:52,589 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:38:00,190 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:38:01,456 [main]  WARN testecategoria:79 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:42:53,777 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:42:55,043 [main]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:46:55,369 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:46:56,654 [main]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:49:28,567 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:49:29,804 [main]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:50:12,238 [AWT-EventQueue-0]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:50:17,763 [AWT-EventQueue-0]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:54:28,384 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:54:48,737 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:54:49,965 [main]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:55:46,565 [AWT-EventQueue-0]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:55:57,774 [AWT-EventQueue-0]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: The server time zone value 'Hora oficial do Brasil' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+Error Code: 0
+2021-10-07 22:57:04,406 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:57:05,275 [main]  WARN testecategoria:83 – Exception [EclipseLink-4003] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Exception Description: Configuration error.  Class [com.mysql.cj.jdbc.Driver] not found.
+2021-10-07 22:57:27,749 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 22:57:28,811 [main]  WARN testecategoria:83 – Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.3.0.v20110604-r9504): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Unknown initial character set index '255' received from server. Initial client character set can be forced via the 'characterEncoding' property.
+Error Code: 0
+2021-10-07 23:12:55,701 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 23:13:19,206 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 142:ANAELISE ARRIAGA NUNES
+2021-10-07 23:13:25,884 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-07 23:21:13,509 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 23:22:48,328 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-07 23:23:53,193 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 80.0 para: true-Cliente:355
+2021-10-07 23:23:53,208 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 62.5 para: true-Cliente:355
+2021-10-07 23:23:53,208 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 300.0 para: true-Cliente:356
+2021-10-07 23:23:54,933 [AWT-EventQueue-0]  INFO testecategoria:387 – gravou
+2021-10-07 23:26:24,486 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 19:59:08,635 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 20:03:54,972 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:14:45,544 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 20:15:24,610 [AWT-EventQueue-0]  INFO testecategoria:38 – Gravou: 23:TOTALTECH INFORMATICA
+2021-10-13 20:16:05,804 [AWT-EventQueue-0]  INFO testecategoria:38 – Gravou: 24:LOLIPOP
+2021-10-13 20:16:13,259 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:17:07,565 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:17:07,565 [AWT-EventQueue-0]  WARN testecategoria:53 – For input string: "1.000,00":Erro ao converter valor
+2021-10-13 20:17:09,205 [AWT-EventQueue-0]  INFO testecategoria:48 – Gravou: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:19:06,586 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:19:08,273 [AWT-EventQueue-0]  INFO testecategoria:48 – Gravou: 358:SAMER
+2021-10-13 20:19:30,825 [AWT-EventQueue-0]  WARN testecategoria:53 – For input string: "1.000,00":Erro ao converter valor
+2021-10-13 20:19:34,483 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:20:08,939 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:20:33,962 [AWT-EventQueue-0]  WARN testecategoria:53 – For input string: "1.000,00":Erro ao converter valor
+2021-10-13 20:20:40,041 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:21:49,085 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 20:22:02,563 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:22:08,735 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:22:58,167 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:23:00,354 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:23:59,102 [AWT-EventQueue-0]  WARN testecategoria:44 – com.mysql.cj.jdbc.Driver
+2021-10-13 20:23:59,398 [AWT-EventQueue-0]  WARN net.sf.jasperreports.engine.query.JRJdbcQueryExecuter:129 – The supplied java.sql.Connection object is null.
+2021-10-13 20:24:20,449 [AWT-EventQueue-0]  WARN testecategoria:44 – com.mysql.cj.jdbc.Driver
+2021-10-13 20:24:20,449 [AWT-EventQueue-0]  WARN net.sf.jasperreports.engine.query.JRJdbcQueryExecuter:129 – The supplied java.sql.Connection object is null.
+2021-10-13 20:24:47,955 [AWT-EventQueue-0]  INFO testecategoria:69 – Alterado: 357:NASSER OTHMAN RAHMANB
+2021-10-13 20:25:21,806 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:25:21,806 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:25:31,152 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:25:31,152 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:25:32,574 [AWT-EventQueue-0]  INFO testecategoria:48 – Gravou: 359:JUSSARA
+2021-10-13 20:25:41,952 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:26:04,768 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:26:11,269 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:26:11,300 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:500.0-Cliente: 359-JUSSARA
+2021-10-13 20:26:33,183 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:26:49,407 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:27:10,189 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-13 20:27:10,204 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:120.0-Cliente: 357-NASSER OTHMAN RAHMANB
+2021-10-13 20:27:17,130 [AWT-EventQueue-0]  WARN testecategoria:44 – com.mysql.cj.jdbc.Driver
+2021-10-13 20:27:17,130 [AWT-EventQueue-0]  WARN net.sf.jasperreports.engine.query.JRJdbcQueryExecuter:129 – The supplied java.sql.Connection object is null.
+2021-10-13 20:27:28,211 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:27:38,322 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:47:23,426 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 20:47:34,288 [AWT-EventQueue-0]  WARN testecategoria:44 – com.mysql.cj.jdbc.Driver
+2021-10-13 20:47:34,506 [AWT-EventQueue-0]  WARN net.sf.jasperreports.engine.query.JRJdbcQueryExecuter:129 – The supplied java.sql.Connection object is null.
+2021-10-13 20:49:12,549 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-13 20:50:11,500 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-13 20:50:17,519 [AWT-EventQueue-0]  WARN testecategoria:440 – For input string: ""
+2021-10-13 20:55:33,325 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 30.0 para: false-Cliente:357
+2021-10-13 20:55:34,856 [AWT-EventQueue-0]  INFO testecategoria:387 – gravou
+2021-10-14 03:52:25,252 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-14 03:52:32,535 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-14 03:52:45,193 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-14 03:52:45,224 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 358-SAMER
+2021-10-14 03:52:52,790 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-14 04:04:43,613 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 30.0 para: true-Cliente:357
+2021-10-14 04:04:43,613 [AWT-EventQueue-0]  INFO testecategoria:87 – Alterada parcela: 1 no valor de: 33.33 para: true-Cliente:358
+2021-10-14 04:04:45,456 [AWT-EventQueue-0]  INFO testecategoria:387 – gravou
+2021-10-14 04:14:44,192 [AWT-EventQueue-0]  INFO testecategoria:88 – Alterada parcela: 1 no valor de: 30.0 para: true-Cliente:357
+2021-10-14 04:14:44,208 [AWT-EventQueue-0]  INFO testecategoria:88 – Alterada parcela: 1 no valor de: 33.33 para: true-Cliente:358
+2021-10-14 04:14:47,535 [AWT-EventQueue-0]  INFO testecategoria:392 – gravou
+2021-10-14 04:22:38,664 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-14 04:23:05,340 [AWT-EventQueue-0]  INFO testecategoria:88 – Alterada parcela: 1 no valor de: 30.0 para: true-Cliente:357
+2021-10-14 04:23:05,355 [AWT-EventQueue-0]  INFO testecategoria:88 – Alterada parcela: 1 no valor de: 33.33 para: true-Cliente:358
+2021-10-14 04:23:08,185 [AWT-EventQueue-0]  INFO testecategoria:402 – gravou

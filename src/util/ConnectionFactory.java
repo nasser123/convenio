@@ -35,6 +35,7 @@ public class ConnectionFactory {
             try {
                 //aqui colocamos os dados de acesso ao banco
                 if (config.get("db.name").equalsIgnoreCase("mysql")) {
+                    //Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
                     Class.forName("com.mysql.jdbc.Driver").newInstance();
                     connection = DriverManager.getConnection("jdbc:mysql://" + config.get("db.host") + ":3306/" + config.get("db.database") + "?autoReconnect=true&allowMultiQueries=true&useUnicode=true&characterEncoding=utf8",
                             config.get("db.user"), config.get("db.password"));
@@ -71,6 +72,9 @@ public class ConnectionFactory {
             prop.put("javax.persistence.jdbc.url", "jdbc:mysql://" + config.get("db.host") + ":3306/" + config.get("db.database"));
             prop.put("javax.persistence.jdbc.password", config.get("db.password"));
             prop.put("javax.persistence.jdbc.driver", "com.mysql.jdbc.Driver");
+            //prop.put("javax.persistence.jdbc.driver", "com.mysql.cj.jdbc.Driver");
+            
+            
             prop.put("javax.persistence.jdbc.user", config.get("db.user"));
             emf = Persistence.createEntityManagerFactory("convenioPU", prop);
             try {
