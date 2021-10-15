@@ -60,7 +60,6 @@ public class ParcelaController {
     public boolean alterar(Object parcela, boolean mensagem) throws SQLException {
         if (parcela instanceof Parcela) {
             Parcela p = (Parcela) parcela;
-            
 
             if (!entity.getTransaction().isActive()) {
                 entity.getTransaction().begin();
@@ -69,7 +68,11 @@ public class ParcelaController {
             entity.getTransaction().commit();
             if (mensagem) {
                 JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
-                ConfigurationFactory.getLOG().info("Alterada parcela id: " + p.getIdparcela() + "-" + p.getNrparcela() +" no valor de: " + p.getValorparcela().toString() + " para: " + p.isPago() + " Data:" + p.getDatapgto());
+                ConfigurationFactory.getLOG().info("Alterada parcela id: " + p.getIdparcela() + 
+                        "-" + p.getNrparcela() + 
+                        " no valor de: " + p.getValorparcela().toString() + 
+                        " para: " + p.isPago() + 
+                        " Data:" + p.getDatapgto());
             }
             return true;
         }
@@ -85,8 +88,13 @@ public class ParcelaController {
                 entity.getTransaction().begin();
             }
             entity.merge(parcelaList.get(i));
-            ConfigurationFactory.getLOG().info("Alterada parcela: " + parcelaList.get(i).getNrparcela() +" no valor de: " + parcelaList.get(i).getValorparcela().toString() + " para: " + parcelaList.get(i).isPago() + "-Cliente:" + parcelaList.get(i).getIdvenda().getIdcliente().getIdcliente()+ " Data:" + parcelaList.get(i).getDatapgto());
-                    
+            ConfigurationFactory.getLOG().info(" Alterada parcela id: " + parcelaList.get(i).getIdparcela().toString() +
+                    "-" + parcelaList.get(i).getNrparcela() + 
+                    " no valor de: " + parcelaList.get(i).getValorparcela().toString() + 
+                    " para: " + parcelaList.get(i).isPago() + 
+                    "-Cliente:" + parcelaList.get(i).getIdvenda().getIdcliente().getIdcliente() + 
+                    " Data:" + parcelaList.get(i).getDatapgto());
+
             entity.getTransaction().commit();
         }
         if (mensagem) {
@@ -146,8 +154,7 @@ public class ParcelaController {
 
     }
 
-    
-    public List<Parcela> filtroConvenioCompetencia(Convenio convenio, Date dataIni, Date dataFim) {
+    public List<Parcela> filtroConvenioCompetencia(Convenio convenio, Date dataIni, Date dataFim, boolean todos) {
         entity.getEntityManagerFactory().getCache().evictAll();
         entity.clear();
 
@@ -156,11 +163,19 @@ public class ParcelaController {
         con = convenio;
         Date dataini = dataIni;
         Date datafim = dataFim;
+        Query query;
+        if (todos) {
+            query = entity.createNamedQuery("Parcela.filtroConvenioCompetencia");
+            query.setParameter("idconvenio", con);
+            query.setParameter("dataini", dataini);
+            query.setParameter("datafim", datafim);
+        } else {
+            query = entity.createNamedQuery("Parcela.filtroConvenioCompetenciaNaoPagos");
+            query.setParameter("idconvenio", con);
+            query.setParameter("dataini", dataini);
+            query.setParameter("datafim", datafim);
 
-        Query query = entity.createNamedQuery("Parcela.filtroConvenioCompetencia");
-        query.setParameter("idconvenio", con);
-        query.setParameter("dataini", dataini);
-        query.setParameter("datafim", datafim);
+        }
 
         if (!query.getResultList().isEmpty()) {
             parcelaList = query.getResultList();
@@ -169,8 +184,5 @@ public class ParcelaController {
         return null;
     }
 
-//    @Override
-//    public List<? extends Object> pesquisarTodosOrdenadoPor(String criterioOrdenamento) throws SQLException {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+
 }

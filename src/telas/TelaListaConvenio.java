@@ -54,6 +54,8 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         entityManager = ConnectionFactory.getEntityManager();
         convenioQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Convenio c");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(convenioQuery.getResultList());
+        valorTableCellRenderer1 = new renderizadores.ValorTableCellRenderer();
+        porcentagemTableCellRenderer1 = new renderizadores.PorcentagemTableCellRenderer();
         jPanel1 = new javax.swing.JPanel();
         jButtonVoltar = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
@@ -76,6 +78,10 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextFieldTelefone1 = new javax.swing.JTextField();
         jButtonEditar = new javax.swing.JButton();
+
+        valorTableCellRenderer1.setText("valorTableCellRenderer1");
+
+        porcentagemTableCellRenderer1.setText("porcentagemTableCellRenderer1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -203,9 +209,15 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${vencimento}"));
         columnBinding.setColumnName("Vencimento");
         columnBinding.setColumnClass(Integer.class);
+        columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${datalimite}"));
         columnBinding.setColumnName("Data Limite");
         columnBinding.setColumnClass(Integer.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${comissao}"));
+        columnBinding.setColumnName("Comissao");
+        columnBinding.setColumnClass(Double.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane1.setViewportView(jTable1);
@@ -218,6 +230,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(2).setMinWidth(120);
             jTable1.getColumnModel().getColumn(2).setPreferredWidth(120);
             jTable1.getColumnModel().getColumn(2).setMaxWidth(120);
+            jTable1.getColumnModel().getColumn(8).setCellRenderer(porcentagemTableCellRenderer1);
         }
 
         jButtonNovo.setBackground(new java.awt.Color(255, 255, 255));
@@ -280,7 +293,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
                                     .addComponent(jTextFieldNomeConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(84, 84, 84)
                         .addComponent(jComboBoxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 97, Short.MAX_VALUE))
+                        .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -309,7 +322,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
                                         .addComponent(jLabel6)
                                         .addComponent(jComboBoxSituacao, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 745, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 63, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -355,22 +368,18 @@ public class TelaListaConvenio extends javax.swing.JFrame {
                     .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(70, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 765, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 601, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         bindingGroup.bind();
@@ -538,6 +547,8 @@ public class TelaListaConvenio extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldResponsavel;
     private javax.swing.JTextField jTextFieldTelefone;
     private javax.swing.JTextField jTextFieldTelefone1;
+    private renderizadores.PorcentagemTableCellRenderer porcentagemTableCellRenderer1;
+    private renderizadores.ValorTableCellRenderer valorTableCellRenderer1;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

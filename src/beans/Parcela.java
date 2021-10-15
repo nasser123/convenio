@@ -27,6 +27,7 @@ import util.ValidarValores;
     @NamedQuery(name = "Parcela.findByIdparcela", query = "SELECT p FROM Parcela p WHERE p.idparcela = :idparcela"),
     @NamedQuery(name = "Parcela.findByIdvenda", query = "SELECT p FROM Parcela p WHERE p.idvenda = :idvenda"),
     @NamedQuery(name = "Parcela.filtroConvenioCompetencia", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim"),
+    @NamedQuery(name = "Parcela.filtroConvenioCompetenciaNaoPagos", query = "SELECT p FROM Parcela p WHERE p.idvenda.idcliente.idconvenio = :idconvenio and p.vencimento >= :dataini and p.vencimento < :datafim and p.pago = false"),
     @NamedQuery(name = "Parcela.findByDate", query = "SELECT p FROM Parcela p WHERE p.vencimento = :vencimento"),
     @NamedQuery(name = "Parcela.findByNrparcela", query = "SELECT p FROM Parcela p WHERE p.nrparcela = :nrparcela")})
 public class Parcela implements Serializable {
@@ -87,6 +88,7 @@ public class Parcela implements Serializable {
             p.setNrparcela(i);
             p.setVencimento(calculaVencimento(data, i, proximomes, convenio));
             p.setValorparcela(valores.get(i - 1));
+            p.setPago(false);
             listaParcelas.add(p);
 
         }

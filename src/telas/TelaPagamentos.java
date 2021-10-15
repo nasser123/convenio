@@ -5,9 +5,12 @@
 package telas;
 
 import beans.Convenio;
+import beans.Parcela;
 import controller.ParcelaController;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
@@ -32,11 +35,12 @@ public class TelaPagamentos extends javax.swing.JFrame {
         entityManager.clear();
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
-
+        this.jDateChooser1.setDate(Datas.getCurrentTime());
+        
         retornaTotalParcelas();
-
+        
     }
-
+    
     public void preencheListaParcelas() {
     }
 
@@ -57,6 +61,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
         parcelaQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT p FROM Parcela p");
         parcelaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(parcelaQuery.getResultList()));
         valorTableCellRenderer1 = new renderizadores.ValorTableCellRenderer();
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
@@ -78,6 +83,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jRadioButtonTodos = new javax.swing.JRadioButton();
+        jRadioButtonNaoPagos = new javax.swing.JRadioButton();
 
         convenioListCellRenderer1.setText("convenioListCellRenderer1");
 
@@ -247,7 +257,28 @@ public class TelaPagamentos extends javax.swing.JFrame {
             }
         });
 
+        jDateChooser1.setForeground(new java.awt.Color(255, 0, 51));
+        jDateChooser1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+
         jLabel5.setText("Data de Pagamento:");
+
+        jLabel6.setText("Convênio:");
+
+        jLabel7.setText("Competência:");
+
+        jLabel8.setText("Ano:");
+
+        buttonGroup1.add(jRadioButtonTodos);
+        jRadioButtonTodos.setSelected(true);
+        jRadioButtonTodos.setText("Todos");
+
+        buttonGroup1.add(jRadioButtonNaoPagos);
+        jRadioButtonNaoPagos.setText("Não Pagos");
+        jRadioButtonNaoPagos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonNaoPagosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -268,17 +299,30 @@ public class TelaPagamentos extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jComboBoxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(43, 43, 43)
-                                .addComponent(jMonthChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jYearChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBoxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(5, 5, 5)
+                                        .addComponent(jMonthChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jYearChooser, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButtonTodos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButtonNaoPagos)
+                                .addGap(92, 92, 92)
                                 .addComponent(jButtonFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 752, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -288,10 +332,10 @@ public class TelaPagamentos extends javax.swing.JFrame {
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                                     .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
                                     .addComponent(jFormattedTextFieldPago)
                                     .addComponent(jFormattedTextFieldPendente))
@@ -302,19 +346,27 @@ public class TelaPagamentos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jComboBoxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jMonthChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jYearChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonFiltrar)
-                        .addComponent(jCheckBox1)))
-                .addGap(32, 32, 32)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jComboBoxConvenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jMonthChooser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButtonFiltrar)
+                                .addComponent(jCheckBox1)
+                                .addComponent(jRadioButtonTodos)
+                                .addComponent(jRadioButtonNaoPagos))))
+                    .addComponent(jYearChooser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
@@ -329,8 +381,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5))))
-                .addGap(32, 32, 32)
+                            .addComponent(jLabel5)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 336, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(46, 46, 46)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 83, Short.MAX_VALUE)
@@ -357,19 +412,20 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFiltrarActionPerformed
-
+        
         int mes = jMonthChooser.getMonth();
         int ano = jYearChooser.getYear();
+        boolean todos = jRadioButtonTodos.isSelected();
         Date dataFim = Datas.getData("01/" + (mes + 2) + "/" + ano);
         Date dataIni = Datas.getData("01/" + (mes + 1) + "/" + ano);
-
+        
         Date vencimento;
-
+        
         convenio = (Convenio) jComboBoxConvenio.getSelectedItem();
         ParcelaController pc = new ParcelaController();
-
-        java.util.Collection data = pc.filtroConvenioCompetencia(convenio, dataIni, dataFim);
-
+        
+        java.util.Collection data = pc.filtroConvenioCompetencia(convenio, dataIni, dataFim, todos);
+        
         parcelaList.clear();
         if (data != null) {
             parcelaList.addAll(data);
@@ -380,7 +436,8 @@ public class TelaPagamentos extends javax.swing.JFrame {
 //        
         retornaTotalParcelas();
     }//GEN-LAST:event_jButtonFiltrarActionPerformed
-
+    
+    
     private void jComboBoxConvenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxConvenioActionPerformed
         jButtonFiltrarActionPerformed(evt);
     }//GEN-LAST:event_jComboBoxConvenioActionPerformed
@@ -390,9 +447,15 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1PropertyChange
 
     private void jButtonGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravarActionPerformed
-        for (int i = 0 ; i < parcelaList.size(); i++){
-            if(parcelaList.get(i).isPago() && !(parcelaList.get(i).getDatapgto() == jDateChooser1.getDate()))
-            parcelaList.get(i).setDatapgto(jDateChooser1.getDate());
+        for (int i = 0; i < parcelaList.size(); i++) {
+            if (parcelaList.get(i).isPago() && !(parcelaList.get(i).getDatapgto() == jDateChooser1.getDate())) {
+                parcelaList.get(i).setDatapgto(jDateChooser1.getDate());
+            }
+            if (!parcelaList.get(i).isPago() && (parcelaList.get(i).getDatapgto() != null)) {
+                parcelaList.get(i).setPago(false);
+                parcelaList.get(i).setDatapgto(null);
+            }
+            
         }
         
         ParcelaController pc = new ParcelaController();
@@ -400,10 +463,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
         try {
             pc.alterarListaParcelas(parcelaList, true);
             ConfigurationFactory.getLOG().info("gravou");
-
+            
         } catch (SQLException ex) {
             ConfigurationFactory.getLOG().error("erro na gravaçao");
         }
+        this.jButtonFiltrarActionPerformed(evt);
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
@@ -414,9 +478,9 @@ public class TelaPagamentos extends javax.swing.JFrame {
         Convenio con = (Convenio) jComboBoxConvenio.getSelectedItem();
         int mes = jMonthChooser.getMonth();
         int ano = jYearChooser.getYear();
-
+        
         new TelaRelatorioParcelasConvenio(con, mes, ano).setVisible(true);
-
+        
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
@@ -425,16 +489,29 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+       ArrayList<Parcela> parcTemp = new ArrayList();
+        parcTemp.addAll(parcelaList);
+        
         if (jCheckBox1.isSelected()) {
-            for (int i = 0; i < parcelaList.size(); i++) {
-                parcelaList.get(i).setPago(true);
+            for (int i = 0; i < parcTemp.size(); i++) {
+                parcTemp.get(i).setPago(true);
             }
         } else {
-            for (int i = 0; i < parcelaList.size(); i++) {
-                parcelaList.get(i).setPago(false);
+            for (int i = 0; i < parcTemp.size(); i++) {
+                parcTemp.get(i).setPago(false);
             }
         }
+        parcelaList.clear();
+        if (parcelaList != null) {
+            parcelaList.addAll(parcTemp);
+        } else {
+            jTable1.removeAll();
+        }
+        
+        
+        
         retornaTotalParcelas();
+        
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jCheckBox1PropertyChange
@@ -450,11 +527,15 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jCheckBox1PropertyChange
 
+    private void jRadioButtonNaoPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNaoPagosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButtonNaoPagosActionPerformed
+    
     public void retornaTotalParcelas() {
         Float total = 0f;
         Float pagos = 0f;
         Float naoPagos = 0f;
-
+        
         for (int i = 0; i < parcelaList.size(); i++) {
             total = total + parcelaList.get(i).getValorparcela();
             total = ValidarValores.round(total, 2);
@@ -466,11 +547,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
                 naoPagos = ValidarValores.round(naoPagos, 2);
             }
         }
-
+        
         jFormattedTextFieldTotal.setValue(total);
         jFormattedTextFieldPago.setValue(pagos);
         jFormattedTextFieldPendente.setValue(naoPagos);
-
+        
     }
 
     /**
@@ -508,13 +589,14 @@ public class TelaPagamentos extends javax.swing.JFrame {
          * Create and display the form
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
-
+            
             public void run() {
                 new TelaPagamentos().setVisible(true);
             }
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private java.util.List<beans.Convenio> convenioList;
     private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
     private javax.persistence.Query convenioQuery;
@@ -535,8 +617,13 @@ public class TelaPagamentos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private com.toedter.calendar.JMonthChooser jMonthChooser;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButtonNaoPagos;
+    private javax.swing.JRadioButton jRadioButtonTodos;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private com.toedter.calendar.JYearChooser jYearChooser;

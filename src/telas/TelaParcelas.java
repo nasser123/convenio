@@ -247,7 +247,7 @@ public class TelaParcelas extends javax.swing.JFrame {
         
         ParcelaController pc = new ParcelaController();
         parcelaList.clear();
-        parcelaList = pc.filtroConvenioCompetencia(con, dataIni, dataFim);
+        parcelaList = pc.filtroConvenioCompetencia(con, dataIni, dataFim, false);
         
 
         // TODO add your handling code here:

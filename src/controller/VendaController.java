@@ -55,7 +55,10 @@ public class VendaController implements IDao {
                 entity.getTransaction().commit();
             }
             //JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.\n " + msg);
-            ConfigurationFactory.getLOG().info("Venda cadastrada:" + v.getValor().toString() + "-Cliente: " + v.getIdcliente().getIdcliente() + "-" + v.getIdcliente().getNome());
+            ConfigurationFactory.getLOG().info("Venda cadastrada:" + v.getValor().toString() + 
+                    "-Cliente: " + v.getIdcliente().getIdcliente() + "-" + v.getIdcliente().getNome() +
+                    "-Nr parcelas:" + v.getNrparcelas() + 
+                    "-Data:" + v.getsData() );
 
             entity.getEntityManagerFactory().getCache().evictAll();
             entity.clear();
@@ -74,6 +77,10 @@ public class VendaController implements IDao {
                 }
                 entity.merge(v);
                 entity.getTransaction().commit();
+                ConfigurationFactory.getLOG().info("Venda Alterada:" + v.getValor().toString() + 
+                    "-Cliente: " + v.getIdcliente().getIdcliente() + "-" + v.getIdcliente().getNome() +
+                    "-Nr parcelas:" + v.getNrparcelas() + 
+                    "-Data:" + v.getsData() );
                 if (mensagem) {
                     JOptionPane.showMessageDialog(null, "Venda gravada com sucesso.");
                 }
@@ -98,7 +105,10 @@ public class VendaController implements IDao {
                 entity.remove(v);
                 entity.getTransaction().commit();
                 JOptionPane.showMessageDialog(null, "Venda excluida com sucesso.");
-                ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + "- Cliente: " + v.getIdcliente().getNome() +" no valor de: " + v.getValor().toString() + " realizada no dia : " + v.getsData());
+                ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + 
+                        "- Cliente: " + v.getIdcliente().getNome() +
+                        " no valor de: " + v.getValor().toString() + 
+                        " realizada no dia : " + v.getsData());
                 return true;
             } else {
                 if (!v.existeParcelaPaga()) {
@@ -108,7 +118,10 @@ public class VendaController implements IDao {
                     entity.remove(v);
                     entity.getTransaction().commit();
                     JOptionPane.showMessageDialog(null, "Venda excluida com sucesso.");
-                    ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + "- Cliente: " + v.getIdcliente().getNome() +" no valor de: " + v.getValor().toString() + " realizada no dia : " + v.getsData());
+                    ConfigurationFactory.getLOG().warn("Excluida venda id: " + v.getIdvenda() + 
+                            "- Cliente: " + v.getIdcliente().getNome() +
+                            " no valor de: " + v.getValor().toString() + 
+                            " realizada no dia : " + v.getsData());
                     return true;
                 } else {
                     JOptionPane.showMessageDialog(null, "Não foi possível excluir a venda. Já existem parcela(s) paga(s)");

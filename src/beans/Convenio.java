@@ -27,6 +27,12 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Convenio.findByTelefone", query = "SELECT c FROM Convenio c WHERE c.telefone = :telefone")})
 public class Convenio implements Serializable,  Comparable<Convenio> {
 
+    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    @Column(name = "comissao")
+    private Double comissao;
+
+    
+
     @Column(name = "vencimento")
     private Integer vencimento;
     @Column(name = "datalimite")
@@ -208,6 +214,21 @@ public class Convenio implements Serializable,  Comparable<Convenio> {
             this.datalimite = 25;
         changeSupport.firePropertyChange("datalimite", oldDatalimite, datalimite);
     }
+
+    public Double getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(Double comissao) {
+        Double oldComissao = this.comissao;
+        if(comissao != null)
+            this.comissao = comissao;
+        else
+            this.comissao = 5.0;
+        changeSupport.firePropertyChange("comissao", oldComissao, comissao);
+    }
+
+    
 
    
 
