@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio de Vendas por Cliente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51ef7cb7-9bc9-4a43-9765-f39e3997ac7b">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="23"/>
+	<parameter name="CLIENTE" class="java.lang.Integer"/>
+	<parameter name="EMPRESA" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT
+     cliente.`idcliente` AS cliente_idcliente,
+     cliente.`idconvenio` AS cliente_idconvenio,
+     cliente.`nome` AS cliente_nome,
+     convenio.`idconvenio` AS convenio_idconvenio,
+     convenio.`nome` AS convenio_nome,
+     convenio.`responsavel` AS convenio_responsavel,
+     empresa.`idEmpresa` AS empresa_idEmpresa,
+     empresa.`razaosocial` AS empresa_razaosocial,
+     empresa.`fantasia` AS empresa_fantasia,
+     empresa.`cnpj` AS empresa_cnpj,
+     parcela.`idparcela` AS parcela_idparcela,
+     parcela.`nrparcela` AS parcela_nrparcela,
+     parcela.`idvenda` AS parcela_idvenda,
+     parcela.`valorparcela` AS parcela_valorparcela,
+     parcela.`vencimento` AS parcela_vencimento,
+     parcela.`pago` AS parcela_pago,
+     parcela.`datapgto` AS parcela_datapgto,
+     venda.`idvenda` AS venda_idvenda,
+     venda.`data` AS venda_data,
+     venda.`nrparcelas` AS venda_nrparcelas,
+     venda.`notafiscal` AS venda_notafiscal,
+     venda.`valor` AS venda_valor,
+     venda.`idcliente` AS venda_idcliente,
+     empresa.`endereco` AS empresa_endereco,
+     empresa.`cidade` AS empresa_cidade,
+     empresa.`telefone` AS empresa_telefone
+FROM
+     `convenio` convenio INNER JOIN `cliente` cliente ON convenio.`idconvenio` = cliente.`idconvenio`
+     INNER JOIN `venda` venda ON cliente.`idcliente` = venda.`idcliente`
+     INNER JOIN `parcela` parcela ON venda.`idvenda` = parcela.`idvenda`,
+     `empresa` empresa
+WHERE
+     cliente.`idcliente` = $P{CLIENTE}
+ AND venda.`idvenda` = PARCELA.IDVENDA
+ AND cliente.`idcliente` = venda.`idcliente`
+ AND empresa.`idempresa` = $P{EMPRESA}
+order by 
+     venda.`data` ASC,
+     parcela.`idparcela`]]>
+	</queryString>
+	<field name="cliente_idcliente" class="java.lang.Integer"/>
+	<field name="cliente_idconvenio" class="java.lang.Integer"/>
+	<field name="cliente_nome" class="java.lang.String"/>
+	<field name="convenio_idconvenio" class="java.lang.Integer"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="convenio_responsavel" class="java.lang.String"/>
+	<field name="empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="empresa_razaosocial" class="java.lang.String"/>
+	<field name="empresa_fantasia" class="java.lang.String"/>
+	<field name="empresa_cnpj" class="java.lang.String"/>
+	<field name="parcela_idparcela" class="java.lang.Integer"/>
+	<field name="parcela_nrparcela" class="java.lang.Integer"/>
+	<field name="parcela_idvenda" class="java.lang.Integer"/>
+	<field name="parcela_valorparcela" class="java.lang.Float"/>
+	<field name="parcela_vencimento" class="java.sql.Date"/>
+	<field name="parcela_pago" class="java.lang.Integer"/>
+	<field name="parcela_datapgto" class="java.sql.Date"/>
+	<field name="venda_idvenda" class="java.lang.Integer"/>
+	<field name="venda_data" class="java.sql.Date"/>
+	<field name="venda_nrparcelas" class="java.lang.Integer"/>
+	<field name="venda_notafiscal" class="java.lang.Integer"/>
+	<field name="venda_valor" class="java.lang.Float"/>
+	<field name="venda_idcliente" class="java.lang.Integer"/>
+	<field name="empresa_endereco" class="java.lang.String"/>
+	<field name="empresa_cidade" class="java.lang.String"/>
+	<field name="empresa_telefone" class="java.lang.String"/>
+	<variable name="saldoParcela" class="java.lang.Double">
+		<variableExpression><![CDATA[$F{parcela_pago} == 1 ? 0.0 : $F{parcela_valorparcela}]]></variableExpression>
+	</variable>
+	<variable name="saldoVenda" class="java.lang.Double" resetType="Group" resetGroup="venda_idvenda" calculation="Sum">
+		<variableExpression><![CDATA[$V{saldoParcela}]]></variableExpression>
+	</variable>
+	<variable name="totalVenda" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{parcela_valorparcela}]]></variableExpression>
+	</variable>
+	<variable name="saldoTotal" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$V{saldoParcela}]]></variableExpression>
+	</variable>
+	<variable name="totalPago" class="java.lang.Double">
+		<variableExpression><![CDATA[$V{totalVenda} - $V{saldoTotal}]]></variableExpression>
+	</variable>
+	<group name="venda_idvenda">
+		<groupExpression><![CDATA[$F{venda_idvenda}]]></groupExpression>
+		<groupHeader>
+			<band height="90">
+				<textField>
+					<reportElement x="0" y="25" width="22" height="20" uuid="cb75537c-b7eb-4697-b9e6-cb95b4ea6d74"/>
+					<textElement>
+						<font size="12" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{venda_idvenda}]]></textFieldExpression>
+				</textField>
+				<textField pattern="dd/MM/yyyy">
+					<reportElement x="33" y="25" width="100" height="20" uuid="463365e8-ea45-453b-a0d8-215c14f1d5cb"/>
+					<textElement>
+						<font size="12" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{venda_data}]]></textFieldExpression>
+				</textField>
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="false">
+					<reportElement mode="Transparent" x="408" y="25" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="4bbdaf91-fa39-475d-8cbc-d6f13f129e29"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{venda_valor}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="65" width="33" height="20" uuid="53aa812c-4446-4d0b-b9d1-ebacb843a430"/>
+					<text><![CDATA[Cod]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="51" y="65" width="100" height="20" uuid="df2b8055-f83b-4be9-bf14-820a76dc2bab"/>
+					<text><![CDATA[Valor da Parcela]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="165" y="65" width="70" height="20" uuid="eef4d723-2df8-46de-9fc7-0eb6632c307b"/>
+					<text><![CDATA[Vencimento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="45" width="100" height="20" uuid="69480e43-32f7-472f-8c4f-03ea71fb1e7c"/>
+					<textElement>
+						<font isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Parcelas]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="245" y="65" width="46" height="20" uuid="2657cb89-0ef6-458c-99cd-dae18ec34041"/>
+					<text><![CDATA[Situação]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="303" y="65" width="82" height="20" uuid="2dc47e8a-e2f4-4b2e-b57f-5de5568d5ed8"/>
+					<text><![CDATA[Data Pagamento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="408" y="65" width="100" height="20" uuid="fec98268-31dd-4c78-80d7-ad8bb6494b00"/>
+					<textElement textAlignment="Right"/>
+					<text><![CDATA[Saldo]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="10" width="555" height="1" uuid="9f4fb279-8a90-4da9-975d-b447991b41c3"/>
+				</line>
+				<staticText>
+					<reportElement x="33" y="11" width="100" height="14" uuid="a9dbe74f-9de5-4789-aac9-d739f73e0c93"/>
+					<text><![CDATA[Data da compra]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="145" y="11" width="100" height="14" uuid="0eb49f58-ffa6-41d8-9c23-9f35cca1283a"/>
+					<text><![CDATA[NF]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="145" y="25" width="100" height="20" uuid="ce810c61-b216-47c6-b8dc-0be0a36757e4"/>
+					<textElement>
+						<font size="12" isBold="true" isItalic="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{venda_notafiscal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="408" y="10" width="100" height="15" uuid="fbadca98-059e-47a4-aa72-e09f7250d863"/>
+					<text><![CDATA[Valor]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="22">
+				<staticText>
+					<reportElement x="291" y="0" width="100" height="20" uuid="b15120c7-74f0-453d-874e-e52e5fbc3508"/>
+					<textElement>
+						<font size="12" isBold="true" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Saldo da Compra]]></text>
+				</staticText>
+				<textField pattern="¤ #,##0.00" isBlankWhenNull="false">
+					<reportElement mode="Transparent" x="408" y="2" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="af8e41a5-a933-4a51-afec-334e8e799b49"/>
+					<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+						<font fontName="SansSerif" size="10" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Single"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{saldoVenda}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="107" splitType="Stretch">
+			<textField>
+				<reportElement x="118" y="58" width="318" height="20" uuid="af148303-2066-44fc-8bba-3926bec2ef79"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_cidade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="0" width="318" height="20" uuid="855cdc03-95b1-4dfe-ab1b-303ac64f6278"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="38" width="107" height="20" uuid="34bf7d5d-a1f7-4b1a-ad20-cffdb23ad7d9"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_telefone}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="111" y="78" width="324" height="20" uuid="674d792d-5f72-4115-b313-92bb98eb51a6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RELATÓRIO DE VENDAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="20" width="319" height="18" uuid="d22e3c96-aabc-41ad-b440-1544629f0874"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="117" y="38" width="200" height="20" uuid="f33462e5-f30e-4223-8936-65a5fc2d0582"/>
+				<textFieldExpression><![CDATA[$F{empresa_endereco}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="22" height="20" uuid="a8322704-3fff-4f2d-85cf-152f9676c956"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_idcliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="0" width="202" height="20" uuid="7dbe4faf-4ace-44e9-a8ca-07eb07c80495"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cliente_nome}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="11" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="33" height="20" uuid="b034fae2-23e6-406e-81ee-2f4270599554"/>
+				<textFieldExpression><![CDATA[$F{parcela_idparcela}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="51" y="0" width="100" height="20" uuid="d8420643-9af3-49eb-9c2e-52b794659ff0"/>
+				<textFieldExpression><![CDATA[$F{parcela_valorparcela}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="165" y="0" width="70" height="20" uuid="385a5479-942a-45b5-91b0-6bb24d707f7a"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{parcela_vencimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="0" width="46" height="20" uuid="932281ea-5503-457e-8c81-7146394d5c67"/>
+				<textFieldExpression><![CDATA[( $F{parcela_pago} == 1 ? "PG" : "NPG" )]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="303" y="0" width="82" height="20" uuid="a66fcff3-41d7-4f68-b852-e3aaeac9fab8"/>
+				<textFieldExpression><![CDATA[$F{parcela_datapgto}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="408" y="0" width="100" height="20" uuid="8ea0560d-888d-45cf-8d6e-0c915028fac5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{saldoParcela}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="13" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="14" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="62" splitType="Stretch">
+			<staticText>
+				<reportElement x="185" y="0" width="100" height="20" uuid="76a7e4a7-7bf6-4ba4-82a5-2c16f077b96a"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="22" width="100" height="20" uuid="729d5948-7f29-4fab-bdbc-3545371bbb31"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Pago:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="42" width="100" height="20" uuid="463be99f-71c7-409c-9931-43b268aaff39"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Saldo:]]></text>
+			</staticText>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="291" y="0" width="100" height="20" uuid="babd388c-324d-436f-8f65-35a6eac2859c"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalVenda}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="291" y="42" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="6b1e4d4e-de58-489f-b00a-cd4a385c9b19"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{saldoTotal}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="291" y="22" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="aceea372-624e-4425-9e00-453bec370212"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalPago}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

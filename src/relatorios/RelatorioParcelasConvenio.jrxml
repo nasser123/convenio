@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7374f43b-7dd2-4834-86bc-b8fbcc99f03c">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="88"/>
 	<parameter name="CONVENIO" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -45,7 +45,8 @@ WHERE
      and Empresa.`idEmpresa` = $P{EMPRESA}
 ORDER BY
      cliente.`nome` ASC,
-     venda.`data` ASC]]>
+     venda.`data` ASC,
+     parcela.`idparcela` ASC]]>
 	</queryString>
 	<field name="cliente_nome" class="java.lang.String"/>
 	<field name="convenio_nome" class="java.lang.String"/>

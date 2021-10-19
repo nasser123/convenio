@@ -103,12 +103,12 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Vers&#xe3;o do Sistema: 0.9.1"/>
+            <Property name="text" type="java.lang.String" value="Vers&#xe3;o do Sistema: 0.9.2"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Data de Compia&#xe7;&#xe3;o: 15/12/2018"/>
+            <Property name="text" type="java.lang.String" value="Data de Compia&#xe7;&#xe3;o: 18/10/2021"/>
           </Properties>
         </Component>
       </SubComponents>

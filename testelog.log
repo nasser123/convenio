@@ -744,3 +744,52 @@ Error Code: 0
 2021-10-15 00:46:36,331 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-10-15 00:46:52,339 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-10-15 00:47:09,329 [AWT-EventQueue-0]  INFO testecategoria:57 – Alterou: 23:TOTALTECH INFORMATICA
+2021-10-15 20:10:58,593 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-15 20:23:21,686 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-15 20:24:20,204 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 22:56:48,738 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:00:39,265 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:02:34,974 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 210-1 no valor de: 30.0 para: true-Cliente:357 Data:Mon Oct 18 23:02:21 BRT 2021
+2021-10-18 23:02:34,989 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 214-1 no valor de: 33.33 para: true-Cliente:358 Data:Mon Oct 18 23:02:21 BRT 2021
+2021-10-18 23:02:34,989 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 217-1 no valor de: 37.5 para: true-Cliente:358 Data:Mon Oct 18 23:02:21 BRT 2021
+2021-10-18 23:02:34,989 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 221-1 no valor de: 40.0 para: true-Cliente:357 Data:Mon Oct 18 23:02:21 BRT 2021
+2021-10-18 23:02:34,989 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 226-1 no valor de: 100.0 para: true-Cliente:357 Data:Mon Oct 18 23:02:21 BRT 2021
+2021-10-18 23:02:37,879 [AWT-EventQueue-0]  INFO testecategoria:465 – gravou
+2021-10-18 23:03:17,904 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 211-2 no valor de: 30.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:17,920 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 215-2 no valor de: 33.33 para: false-Cliente:358 Data:null
+2021-10-18 23:03:17,920 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 218-2 no valor de: 37.5 para: false-Cliente:358 Data:null
+2021-10-18 23:03:17,920 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 222-2 no valor de: 40.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:17,920 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 227-2 no valor de: 100.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:19,435 [AWT-EventQueue-0]  INFO testecategoria:465 – gravou
+2021-10-18 23:03:27,002 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 211-2 no valor de: 30.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:27,002 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 215-2 no valor de: 33.33 para: false-Cliente:358 Data:null
+2021-10-18 23:03:27,002 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 218-2 no valor de: 37.5 para: false-Cliente:358 Data:null
+2021-10-18 23:03:27,002 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 222-2 no valor de: 40.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:27,002 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 227-2 no valor de: 100.0 para: false-Cliente:357 Data:null
+2021-10-18 23:03:28,158 [AWT-EventQueue-0]  INFO testecategoria:465 – gravou
+2021-10-18 23:04:12,821 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 212-3 no valor de: 30.0 para: false-Cliente:357 Data:null
+2021-10-18 23:04:12,821 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 216-3 no valor de: 33.34 para: false-Cliente:358 Data:null
+2021-10-18 23:04:12,821 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 219-3 no valor de: 37.5 para: false-Cliente:358 Data:null
+2021-10-18 23:04:12,821 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 223-3 no valor de: 40.0 para: false-Cliente:357 Data:null
+2021-10-18 23:04:12,836 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 228-3 no valor de: 100.0 para: false-Cliente:357 Data:null
+2021-10-18 23:04:14,117 [AWT-EventQueue-0]  INFO testecategoria:465 – gravou
+2021-10-18 23:04:29,575 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-18 23:22:59,688 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:25:28,178 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:26:10,496 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:30:33,829 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:32:28,283 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:41:39,248 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-18 23:52:54,304 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 00:13:03,938 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 00:14:45,509 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 00:28:58,322 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 00:33:06,414 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 00:36:34,093 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 01:03:19,425 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 01:03:27,855 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:03:41,828 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-19 01:03:41,859 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1300.0-Cliente: 359-JUSSARA-Nr parcelas:4-Data:19-10-2021
+2021-10-19 01:03:44,790 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:1300.0-Cliente: 359-JUSSARA-Nr parcelas:4-Data:19-10-2021
+2021-10-19 01:03:51,242 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:03:55,101 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""

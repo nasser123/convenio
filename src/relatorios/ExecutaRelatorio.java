@@ -67,10 +67,7 @@ public class ExecutaRelatorio {
 
     public void abrirRelatorioParcelasConvenio(Object convenio, Object periodo, Object periodofinal, Object empresa) {
 
-
-        //InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasConvenio.jasper");
         InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasConvenio.jasper");
-        
         Map<String, Object> parametros = new HashMap<String, Object>();
 
         parametros.put("CONVENIO", convenio);
@@ -88,6 +85,42 @@ public class ExecutaRelatorio {
 
     }
 
+    public void abrirRelatorioVendasClienteData(Object cliente, Object periodo, Object periodofinal, Object empresa) {
+
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasCliente.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+
+        parametros.put("CLIENTE", cliente);
+        parametros.put("PERIODO", periodo);
+        parametros.put("PERIODOFINAL", periodofinal);
+        parametros.put("EMPRESA", empresa);
+
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Relatório de Vendas por Cliente", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+
+
+    }
+    public void abrirRelatorioVendasCliente(Object cliente, Object empresa) {
+
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasPorCliente.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+
+        parametros.put("CLIENTE", cliente);
+        parametros.put("EMPRESA", empresa);
+
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Relatório de Vendas por Cliente", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+
+
+    }
     public void abrirRelatorioVendaPorPeriodo(Object dataIni, Object dataFim, Object ordem1, Object empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioVenda.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();

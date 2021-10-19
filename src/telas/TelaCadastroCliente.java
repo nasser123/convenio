@@ -654,7 +654,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             }
 
             if (retorno) {
-                new TelaRelacaoClientes().setVisible(true);
+                new TelaListaClientes().setVisible(true);
                 this.dispose();
             }
         }
@@ -662,7 +662,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
     private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
-        TelaRelacaoClientes trc = new TelaRelacaoClientes();
+        TelaListaClientes trc = new TelaListaClientes();
         trc.setVisible(true);
         this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_jButtonVoltarActionPerformed
@@ -698,7 +698,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButtonPesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPesquisaActionPerformed
-        TelaRelacaoClientes tlc = new TelaRelacaoClientes();
+        TelaListaClientes tlc = new TelaListaClientes();
         tlc.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonPesquisaActionPerformed

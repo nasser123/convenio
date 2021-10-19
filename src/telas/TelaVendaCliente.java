@@ -8,8 +8,10 @@ import beans.Cliente;
 import beans.Venda;
 import controller.ClienteController;
 import controller.VendaController;
+import static convenio.Convenio.EMPRESA;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
+import relatorios.ExecutaRelatorio;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
@@ -106,6 +108,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButtonEditar = new javax.swing.JButton();
+        jButtonRelatorio = new javax.swing.JButton();
 
         valorTableCellRenderer1.setText("valorTableCellRenderer1");
 
@@ -273,6 +276,18 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             }
         });
 
+        jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
+        jButtonRelatorio.setText("Relatório");
+        jButtonRelatorio.setToolTipText("");
+        jButtonRelatorio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonRelatorio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRelatorioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -300,7 +315,9 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                         .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(105, 105, 105)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
                         .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -333,7 +350,8 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                     .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(168, Short.MAX_VALUE))
         );
 
@@ -411,6 +429,13 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         new TelaParcelasEditar(v, "TelaVendaCliente").setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
+
+    private void jButtonRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelatorioActionPerformed
+        
+        ExecutaRelatorio er = new ExecutaRelatorio();
+            er.abrirRelatorioVendasCliente(c.getIdcliente(), EMPRESA.getIdEmpresa());
+        
+    }//GEN-LAST:event_jButtonRelatorioActionPerformed
 
     private void atualizaTabelas(java.awt.event.ActionEvent evt) {
         this.dispose();
@@ -507,6 +532,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonNovo;
     private javax.swing.JButton jButtonPesquisar;
+    private javax.swing.JButton jButtonRelatorio;
     private javax.swing.JButton jButtonVoltar;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;

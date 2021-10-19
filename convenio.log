@@ -1,0 +1,19 @@
+2021-10-19 01:23:27,552 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 01:23:34,969 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:23:47,103 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-19 01:23:47,135 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:123.0-Cliente: 358-SAMER-Nr parcelas:3-Data:19-10-2021
+2021-10-19 01:24:09,242 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:24:11,984 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:25:47,389 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:25:59,275 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-10-19 01:26:10,254 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:26:46,564 [AWT-EventQueue-0]  WARN testecategoria:428 – For input string: ""
+2021-10-19 01:31:21,380 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 210-1 no valor de: 30.0 para: true-Cliente:357 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 214-1 no valor de: 33.33 para: true-Cliente:358 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 217-1 no valor de: 37.5 para: true-Cliente:358 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 221-1 no valor de: 40.0 para: true-Cliente:357 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 226-1 no valor de: 100.0 para: true-Cliente:357 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 233-1 no valor de: 41.0 para: true-Cliente:358 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:31:36,166 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 236-1 no valor de: 111.0 para: true-Cliente:358 Data:Tue Oct 19 01:31:26 BRT 2021
+2021-10-19 01:32:06,301 [AWT-EventQueue-0]  INFO testecategoria:465 – gravou
