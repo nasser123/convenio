@@ -44,7 +44,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         entityManager = ConnectionFactory.getEntityManager();
-        convenioQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Convenio c");
+        convenioQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Convenio c ORDER by c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(convenioQuery.getResultList());
         convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
         jPanel1 = new javax.swing.JPanel();
@@ -63,6 +63,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonVolta.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVolta.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonVolta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVolta.setText("Voltar");
         jButtonVolta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -78,6 +79,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
         jLabel1.setText("Relatório de Clientes");
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
         jButtonRelatorio.setText("Relatório");
         jButtonRelatorio.setToolTipText("");
@@ -89,12 +91,15 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
             }
         });
 
+        jComboBoxConvenios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxConvenios.setRenderer(convenioListCellRenderer1);
 
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, convenioList, jComboBoxConvenios);
         bindingGroup.addBinding(jComboBoxBinding);
 
+        jRadioButtonCompleto.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButtonCompleto);
+        jRadioButtonCompleto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonCompleto.setText("Completo(Todos os convênios)");
         jRadioButtonCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +107,9 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
             }
         });
 
+        jRadioButtonPorConvenio.setBackground(new java.awt.Color(255, 255, 255));
         buttonGroup1.add(jRadioButtonPorConvenio);
+        jRadioButtonPorConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jRadioButtonPorConvenio.setText("Por convênio");
         jRadioButtonPorConvenio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +117,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
             }
         });
 
+        jLabelTituloSelecao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabelTituloSelecao.setText("Selecione o convênio abaixo");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -131,7 +139,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jRadioButtonCompleto)
                     .addComponent(jRadioButtonPorConvenio))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 148, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelTituloSelecao)
                     .addComponent(jComboBoxConvenios, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -150,7 +158,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButtonCompleto)
                     .addComponent(jComboBoxConvenios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonVolta, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))

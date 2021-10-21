@@ -92,6 +92,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(820, 660));
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVoltar.setText("Voltar");
         jButtonVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -103,6 +104,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         });
 
         jButtonExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7143_32x32.png"))); // NOI18N
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -122,6 +124,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         jLabel1.setText("Cadastro Convênio");
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
         jButtonRelatorio.setText("Relatório");
         jButtonRelatorio.setToolTipText("");
@@ -138,47 +141,59 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         });
 
         jTextFieldNomeConvenio.setEditable(false);
+        jTextFieldNomeConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldNomeConvenio.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.nome}"), jTextFieldNomeConvenio, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Nome do Convênio");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Responsável");
 
         jTextFieldResponsavel.setEditable(false);
+        jTextFieldResponsavel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldResponsavel.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.responsavel}"), jTextFieldResponsavel, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Telefone");
 
         jTextFieldTelefone.setEditable(false);
+        jTextFieldTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldTelefone.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.telefone}"), jTextFieldTelefone, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Código");
 
         jTextFieldCodigo.setEditable(false);
+        jTextFieldCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCodigo.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.idconvenio}"), jTextFieldCodigo, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jComboBoxSituacao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxSituacao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ativo", "inativo", "bloqueado" }));
         jComboBoxSituacao.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.situacao}"), jComboBoxSituacao, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Situação");
 
         jTable1.setAutoCreateRowSorter(true);
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTable1.setRowHeight(20);
         jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, convenioList, jTable1);
@@ -234,6 +249,7 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         }
 
         jButtonNovo.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7687_32x32.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -249,14 +265,17 @@ public class TelaListaConvenio extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement}"), jComboBoxConvenio, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Limite de Parcelas");
 
         jTextFieldTelefone1.setEditable(false);
+        jTextFieldTelefone1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldTelefone1.setEnabled(false);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement.nrparcelas}"), jTextFieldTelefone1, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jButtonEditar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/edit.png"))); // NOI18N
         jButtonEditar.setText("Editar");
         jButtonEditar.setHideActionText(true);

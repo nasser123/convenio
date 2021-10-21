@@ -81,6 +81,7 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVoltar.setText("Voltar");
         jButtonVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -92,6 +93,7 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         });
 
         jButtonSelecionar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonSelecionar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonSelecionar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/user_accept.png"))); // NOI18N
         jButtonSelecionar.setText("Selecionar");
         jButtonSelecionar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -111,6 +113,8 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         jLabel1.setText("Seleciona Cliente");
 
         jTable1.setAutoCreateRowSorter(true);
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTable1.setRowHeight(20);
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clienteList, jTable1);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idcliente}"));
@@ -126,11 +130,11 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         columnBinding.setColumnClass(Double.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idconvenio.nome}"));
-        columnBinding.setColumnName("Idconvenio");
+        columnBinding.setColumnName("Convenio");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefone}"));
-        columnBinding.setColumnName("Telefone");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${celular}"));
+        columnBinding.setColumnName("Celular");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${renda}"));
@@ -165,12 +169,14 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTable1, org.jdesktop.beansbinding.ELProperty.create("${selectedElement}"), jComboBoxSelecionado, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        jTextFieldCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCliente.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldClienteKeyTyped(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Cliente");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -183,8 +189,8 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jComboBoxSelecionado, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(151, 151, 151)
-                .addComponent(jButtonSelecionar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(149, 149, 149)
+                .addComponent(jButtonSelecionar)
                 .addGap(46, 46, 46)
                 .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 132, Short.MAX_VALUE))
@@ -208,7 +214,7 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTextFieldCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -250,6 +256,14 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
         if (this.telaRetorno == "TelaCadastroVenda") {
             TelaCadastroVenda tcv = new TelaCadastroVenda(this.cli);
             tcv.setVisible(true);
+        }
+        if(this.telaRetorno == "TelaRelatorioVendasCliente"){
+            TelaRelatorioVendasCliente trvc = new TelaRelatorioVendasCliente(this.cli);
+            trvc.setVisible(true);
+        }
+        if(this.telaRetorno == "TelaRelatorioComprovantePagamento"){
+            TelaRelatorioComprovantePagamento trcp = new TelaRelatorioComprovantePagamento(this.cli);
+            trcp.setVisible(true);
         }
 
         this.dispose();

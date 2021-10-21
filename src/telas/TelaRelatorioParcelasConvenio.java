@@ -54,7 +54,7 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
-        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c");
+        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c ORDER BY c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery.getResultList();
         convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
         jPanel1 = new javax.swing.JPanel();
@@ -74,6 +74,7 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButton1.setText("Voltar");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -89,6 +90,7 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
         jLabel1.setText("Relatório de Parcelas por convênio");
 
         jButton5.setBackground(new java.awt.Color(255, 255, 255));
+        jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
         jButton5.setText("Relatório");
         jButton5.setToolTipText("");
@@ -100,13 +102,18 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
             }
         });
 
+        jMonthChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jComboBoxConvenios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxConvenios.setRenderer(convenioListCellRenderer1);
 
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, convenioList, jComboBoxConvenios);
         bindingGroup.addBinding(jComboBoxBinding);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Selecione o período de vencimento");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Selecione o grupo de convênio");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -140,16 +147,16 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jYearChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                    .addComponent(jMonthChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jYearChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 25, Short.MAX_VALUE)
+                    .addComponent(jMonthChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBoxConvenios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jComboBoxConvenios, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)

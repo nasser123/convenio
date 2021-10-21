@@ -106,6 +106,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButton1.setText("Voltar");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -117,6 +118,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         });
 
         jButtonCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonCancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/6155_32x32.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -128,6 +130,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         });
 
         jButtonGravar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGravar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/save.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -143,41 +146,58 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         jLabel1.setText("Editar Parcelas");
 
         jTextFieldCliente.setEditable(false);
+        jTextFieldCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, org.jdesktop.beansbinding.ELProperty.create("${idcliente.nome}"), jTextFieldCliente, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
         jTextFieldConvenio.setEditable(false);
+        jTextFieldConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, org.jdesktop.beansbinding.ELProperty.create("${idcliente.idconvenio.nome}"), jTextFieldConvenio, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Cliente");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Convênio");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Data da Venda");
 
         jTextFieldNotaFiscal.setEditable(false);
+        jTextFieldNotaFiscal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldNotaFiscal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, org.jdesktop.beansbinding.ELProperty.create("${notafiscal}"), jTextFieldNotaFiscal, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Nota Fiscal");
 
         jTextFieldValor.setEditable(false);
+        jTextFieldValor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldValor.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, org.jdesktop.beansbinding.ELProperty.create("${valor}"), jTextFieldValor, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Valor Total da Venda");
 
         jTextFieldNrParcelas.setEditable(false);
+        jTextFieldNrParcelas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldNrParcelas.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, org.jdesktop.beansbinding.ELProperty.create("${nrparcelas}"), jTextFieldNrParcelas, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Nr de Parcelas");
+
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTable1.setRowHeight(20);
 
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${parcelaList}");
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, venda1, eLProperty, jTable1);
@@ -212,28 +232,37 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
         }
 
         jTextFieldData.setEditable(false);
+        jTextFieldData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextFieldData.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Valor total");
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Soma das Parcelas");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Diferença");
 
         jFormattedTextFieldTotal.setEditable(false);
         jFormattedTextFieldTotal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldTotal.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldTotal.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jFormattedTextFieldSoma.setEditable(false);
         jFormattedTextFieldSoma.setForeground(new java.awt.Color(51, 153, 255));
         jFormattedTextFieldSoma.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldSoma.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldSoma.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jFormattedTextFieldDiferenca.setEditable(false);
         jFormattedTextFieldDiferenca.setForeground(new java.awt.Color(255, 0, 0));
         jFormattedTextFieldDiferenca.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldDiferenca.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldDiferenca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jButtonGravar1.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGravar1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGravar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/printer.png"))); // NOI18N
         jButtonGravar1.setText("Imprimir");
         jButtonGravar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -283,24 +312,19 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                                             .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jTextFieldNrParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel8)
-                                            .addGap(66, 66, 66))
-                                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jLabel9)
-                                            .addGap(228, 228, 228))
-                                        .addGroup(jPanel1Layout.createSequentialGroup()
-                                            .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                            .addComponent(jButtonGravar1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(34, 34, 34)))))
+                                    .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jButtonGravar1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(28, 28, 28)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(34, 34, 34))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel8)
+                                    .addGap(52, 52, 52)
+                                    .addComponent(jLabel9)
+                                    .addGap(242, 242, 242)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -309,7 +333,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel10)
                                     .addComponent(jFormattedTextFieldDiferenca, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 9, Short.MAX_VALUE))))
+                        .addGap(0, 6, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,7 +375,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
                     .addComponent(jFormattedTextFieldTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedTextFieldSoma, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jFormattedTextFieldDiferenca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)

@@ -45,7 +45,7 @@ public class TelaRelatorios extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
-        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c");
+        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c ORDER BY c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(convenioQuery.getResultList());
         clienteQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Cliente c");
         clienteList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(clienteQuery.getResultList());

@@ -63,6 +63,7 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
         jLabel3.setText("Backup");
 
         jButtonGeraBackup.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGeraBackup.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGeraBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/download_database.png"))); // NOI18N
         jButtonGeraBackup.setText("Gerar Backup");
         jButtonGeraBackup.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -74,6 +75,7 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
         });
 
         jButtonRestauraBackup.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRestauraBackup.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRestauraBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/search_database.png"))); // NOI18N
         jButtonRestauraBackup.setText("Restaurar Backup");
         jButtonRestauraBackup.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -85,6 +87,7 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
         });
 
         jButtonSair.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonSair.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonSair.setText("Sair");
         jButtonSair.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -102,11 +105,11 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 590, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jButtonGeraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonGeraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jButtonRestauraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonRestauraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
-                .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,9 +118,9 @@ public class TelaBackupJDialog extends javax.swing.JDialog {
                 .addComponent(jLabel3)
                 .addGap(127, 127, 127)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonGeraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonRestauraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonGeraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonRestauraBackup, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSair, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 

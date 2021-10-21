@@ -52,7 +52,6 @@ public class ExecutaRelatorio {
         // mapa de parâmetros do relatório (ainda vamos aprender a usar)
         Map parametros = new HashMap();
 
-
         try {
 
             // abre o relatório
@@ -82,12 +81,11 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
 
-
     }
 
-    public void abrirRelatorioVendasClienteData(Object cliente, Object periodo, Object periodofinal, Object empresa) {
+    public void abrirRelatorioVendasClientePorPeriodo(Object cliente, Object periodo, Object periodofinal, Object empresa) {
 
-        InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasCliente.jasper");
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasPorClientePorPeriodo.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
 
         parametros.put("CLIENTE", cliente);
@@ -102,8 +100,8 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
 
-
     }
+
     public void abrirRelatorioVendasCliente(Object cliente, Object empresa) {
 
         InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasPorCliente.jasper");
@@ -118,9 +116,25 @@ public class ExecutaRelatorio {
         } catch (JRException exc) {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
-
-
     }
+
+    public void abrirRelatorioVendasClientePeriodo(Object dataIni, Object dataFim, Object cliente, Object empresa) {
+
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasPorCliente.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+        parametros.put("dataInicial", dataIni);
+        parametros.put("dataFinal", dataFim);
+        parametros.put("CLIENTE", cliente);
+        parametros.put("EMPRESA", empresa);
+
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Relatório de Vendas por Cliente por Periodo", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+    }
+
     public void abrirRelatorioVendaPorPeriodo(Object dataIni, Object dataFim, Object ordem1, Object empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioVenda.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
@@ -128,8 +142,7 @@ public class ExecutaRelatorio {
         parametros.put("dataFinal", dataFim);
         parametros.put("ordem1", ordem1);
         parametros.put("EMPRESA", empresa);
-        
-        
+
         try {
             // abre o relatório
             ReportUtils.openReport("Relatório de Vendas por Período", inputStream, parametros, ConnectionFactory.getConnection());
@@ -137,6 +150,7 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
+
     public void abrirRelatorioClientesPorConvenio(Integer convenio, Integer empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioClientesPorConvenio.jasper");
         Map<String, Integer> parametros = new HashMap<String, Integer>();
@@ -150,6 +164,33 @@ public class ExecutaRelatorio {
         }
     }
 
+    public void abrirRelatorioParcelasConvenioComprovante(Object datapgto, Object convenio, Object empresa) {
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasConvenioComprovante.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+        parametros.put("DATA_PGTO", datapgto);
+        parametros.put("CONVENIO", convenio);
+        parametros.put("EMPRESA", empresa);
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Comprovante de pagamento por Convenio", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+    }
+    
+    public void abrirRelatorioParcelasClienteComprovante(Object datapgto, Object cliente, Object empresa) {
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasClienteComprovante.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+        parametros.put("DATA_PGTO", datapgto);
+        parametros.put("CLIENTE", cliente);
+        parametros.put("EMPRESA", empresa);
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Comprovante de pagamento por Cliente", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+    }
     public void abrirRelatorioCupom(Integer idvenda, Integer empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioCupom.jasper");
         Map<String, Integer> parametros = new HashMap<String, Integer>();
@@ -162,8 +203,7 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
-    
-    
+
     public void abrirRelatorioClientes(String relatorio, HashMap param) {
 
         rel = relatorio;
@@ -192,7 +232,6 @@ public class ExecutaRelatorio {
         // mapa de parâmetros do relatório (ainda vamos aprender a usar)
         HashMap parametros = new HashMap();
         parametros = param;
-
 
         try {
 

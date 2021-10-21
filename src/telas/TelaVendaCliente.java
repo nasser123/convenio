@@ -21,7 +21,7 @@ import util.ConnectionFactory;
  * @author Produção
  */
 public class TelaVendaCliente extends javax.swing.JFrame {
-
+    
     Cliente c = new Cliente();
 
     /**
@@ -35,9 +35,9 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
         filtrar(this.c);
-
+        
     }
-
+    
     public TelaVendaCliente(Cliente c) {
         this.c = c;
         initComponents();
@@ -46,16 +46,16 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         ct.carregarConfig(this);
         this.jTextFieldCodigo.setText(this.c.getIdcliente().toString());
         this.jTextFieldNome.setText(this.c.getNome());
-
+        
         filtrar(this.c);
     }
-
+    
     public void filtrar(Cliente c) {
-
+        
         this.c = c;
-
+        
         VendaController vc = new VendaController();
-
+        
         java.util.Collection data;
         try {
             data = (java.util.Collection) vc.pesquisarPorIdCliente(this.c);
@@ -73,7 +73,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
         }
-
+        
     }
 
     /**
@@ -130,6 +130,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVoltar.setText("Voltar");
         jButtonVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -141,12 +142,14 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         });
 
         jButtonNovo.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7687_32x32.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonNovo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         jButtonExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7143_32x32.png"))); // NOI18N
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -166,6 +169,9 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jLabel1.setText("Vendas por Cliente");
 
         jTableVendas.setAutoCreateRowSorter(true);
+        jTableVendas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTableVendas.setRowHeight(20);
+        jTableVendas.setRowSorter(null);
         jTableVendas.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, vendaList, jTableVendas);
@@ -196,6 +202,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             jTableVendas.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
         }
 
+        jTextFieldCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldCodigoFocusLost(evt);
@@ -207,6 +214,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldNome.setEnabled(false);
         jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,6 +222,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             }
         });
 
+        jButtonPesquisar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/search_user.png"))); // NOI18N
         jButtonPesquisar.setText("Pesquisar");
         jButtonPesquisar.addActionListener(new java.awt.event.ActionListener() {
@@ -222,14 +231,19 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Código");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Cliente");
 
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, vendaList, jComboBox1);
         bindingGroup.addBinding(jComboBoxBinding);
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTableVendas, org.jdesktop.beansbinding.ELProperty.create("${selectedElement}"), jComboBox1, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
+
+        jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTable1.setRowHeight(20);
 
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${selectedElement.parcelaList}");
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTableVendas, eLProperty, jTable1);
@@ -262,6 +276,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         }
 
         jButtonEditar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonEditar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/edit.png"))); // NOI18N
         jButtonEditar.setText("Editar");
         jButtonEditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -277,6 +292,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         });
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
         jButtonRelatorio.setText("Relatório");
         jButtonRelatorio.setToolTipText("");
@@ -293,25 +309,16 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 963, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldCodigo)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 352, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(42, 42, 42)
-                                .addComponent(jButtonPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(64, 64, 64)
                         .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,11 +327,22 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                         .addGap(4, 4, 4)
                         .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 698, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButtonPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldCodigo))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTextFieldNome))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1))
+                        .addGap(932, 932, 932)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -341,18 +359,22 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                     .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonPesquisar))
                 .addGap(3, 3, 3)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(168, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(100, 100, 100))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(116, 116, 116))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -370,7 +392,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
 
         bindingGroup.bind();
 
-        setSize(new java.awt.Dimension(762, 586));
+        setSize(new java.awt.Dimension(759, 651));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -420,28 +442,27 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
         }
-
+        
 
     }//GEN-LAST:event_jTableVendasMouseClicked
 
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
-        Venda v = (Venda)jComboBox1.getSelectedItem();
+        Venda v = (Venda) jComboBox1.getSelectedItem();
         new TelaParcelasEditar(v, "TelaVendaCliente").setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelatorioActionPerformed
         
-        ExecutaRelatorio er = new ExecutaRelatorio();
-            er.abrirRelatorioVendasCliente(c.getIdcliente(), EMPRESA.getIdEmpresa());
+        new TelaRelatorioVendasCliente(this.c).setVisible(true);
         
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
-
+    
     private void atualizaTabelas(java.awt.event.ActionEvent evt) {
         this.dispose();
         new TelaVendaCliente().setVisible(true);
     }
-
+    
     private void verificaCliente() {
         Integer id = 0;
         boolean validado = true;
@@ -450,31 +471,31 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             try {
                 id = Integer.parseInt(jTextFieldCodigo.getText());
                 this.c = cc.pesquisarPorId(id);
-                if(this.c != null){
-                        preencheDados();
-                    }else{
-                        jTextFieldCodigo.requestFocus();
-                        jTextFieldCodigo.selectAll();
-                    }
-
+                if (this.c != null) {
+                    preencheDados();
+                } else {
+                    jTextFieldCodigo.requestFocus();
+                    jTextFieldCodigo.selectAll();
+                }
+                
             } catch (SQLException ex) {
                 ConfigurationFactory.getLOG().warn(ex.getMessage());
-
+                
             } catch (NumberFormatException nfe) {
                 //JOptionPane.showMessageDialog(rootPane, "Digite apenas números!");
                 ConfigurationFactory.getLOG().warn(nfe.getMessage());
                 jTextFieldCodigo.setText(null);
                 validado = false;
-
+                
             } catch (IndexOutOfBoundsException iobe) {
                 ConfigurationFactory.getLOG().warn(iobe.getMessage());
                 JOptionPane.showMessageDialog(rootPane, "Cliente não encontrado!");
                 validado = false;
             }
         }
-
+        
     }
-
+    
     private void preencheDados() {
         filtrar(c);
         jTextFieldCodigo.setText(this.c.getIdcliente().toString());
@@ -520,7 +541,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
          * Create and display the form
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
-
+            
             public void run() {
                 new TelaVendaCliente().setVisible(true);
             }

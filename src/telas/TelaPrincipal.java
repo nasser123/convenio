@@ -72,10 +72,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuVendas = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItemVendaCliente = new javax.swing.JMenuItem();
-        jMenuRelatorios = new javax.swing.JMenu();
-        jMenuItemParcelasConvenio = new javax.swing.JMenuItem();
+        jMenuComprovantePagamento = new javax.swing.JMenu();
         jMenuItemVendasPeriodo = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItemParcelasConvenio = new javax.swing.JMenuItem();
         jMenuItemClientes = new javax.swing.JMenuItem();
+        jMenuItemComprovantePagamento = new javax.swing.JMenuItem();
         jMenuConfiguracao = new javax.swing.JMenu();
         jMenuItemBackup = new javax.swing.JMenuItem();
         jMenuItemConfiguracao = new javax.swing.JMenuItem();
@@ -91,6 +93,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Sistema de Controle de Convênios");
 
+        jButtonClientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/64x64/user_accept.png"))); // NOI18N
         jButtonClientes.setText("Clientes");
         jButtonClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -101,6 +104,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButtonConvenios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonConvenios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/64x64/phone_book.png"))); // NOI18N
         jButtonConvenios.setText("Convênios");
         jButtonConvenios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -111,6 +115,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/64x64/vendas64.png"))); // NOI18N
         jButton1.setText("Pagamentos");
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -121,6 +126,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/64x64/add_to_shopping_cart.png"))); // NOI18N
         jButton2.setText("Vendas");
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -131,6 +137,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButton3.setText("Sair");
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -161,7 +168,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 575, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 81, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,11 +185,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         jMenuCadastros.setText("Cadastros");
+        jMenuCadastros.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jMenuConvenio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuConvenio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/phone_book_edit.png"))); // NOI18N
         jMenuConvenio.setText("Convenio");
         jMenuConvenio.addActionListener(new java.awt.event.ActionListener() {
@@ -192,6 +201,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuCadastros.add(jMenuConvenio);
 
+        jMenuItemCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/user_accept.png"))); // NOI18N
         jMenuItemCliente.setText("Cliente");
         jMenuItemCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -201,6 +211,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuCadastros.add(jMenuItemCliente);
 
+        jMenuItem2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/16x16/7161_16x16.png"))); // NOI18N
         jMenuItem2.setText("Empresa");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -213,7 +224,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuBar1.add(jMenuCadastros);
 
         jMenuVendas.setText("Vendas");
+        jMenuVendas.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
 
+        jMenuItem1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/add_to_shopping_cart.png"))); // NOI18N
         jMenuItem1.setText("Nova Venda");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -223,6 +236,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuVendas.add(jMenuItem1);
 
+        jMenuItemVendaCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemVendaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/shopping_cart_accept.png"))); // NOI18N
         jMenuItemVendaCliente.setText("Venda por Cliente");
         jMenuItemVendaCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -234,46 +248,70 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenuVendas);
 
-        jMenuRelatorios.setText("Relatórios");
-        jMenuRelatorios.addActionListener(new java.awt.event.ActionListener() {
+        jMenuComprovantePagamento.setText("Relatórios");
+        jMenuComprovantePagamento.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuComprovantePagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuRelatoriosActionPerformed(evt);
+                jMenuComprovantePagamentoActionPerformed(evt);
             }
         });
 
-        jMenuItemParcelasConvenio.setText("Parcelas por Convênio");
-        jMenuItemParcelasConvenio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemParcelasConvenioActionPerformed(evt);
-            }
-        });
-        jMenuRelatorios.add(jMenuItemParcelasConvenio);
-
+        jMenuItemVendasPeriodo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemVendasPeriodo.setText("Vendas por Período");
         jMenuItemVendasPeriodo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemVendasPeriodoActionPerformed(evt);
             }
         });
-        jMenuRelatorios.add(jMenuItemVendasPeriodo);
+        jMenuComprovantePagamento.add(jMenuItemVendasPeriodo);
 
+        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItem4.setText("Vendas por Cliente");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItem4);
+
+        jMenuItemParcelasConvenio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItemParcelasConvenio.setText("Parcelas por Convênio");
+        jMenuItemParcelasConvenio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemParcelasConvenioActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItemParcelasConvenio);
+
+        jMenuItemClientes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemClientes.setText("Clientes");
         jMenuItemClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemClientesActionPerformed(evt);
             }
         });
-        jMenuRelatorios.add(jMenuItemClientes);
+        jMenuComprovantePagamento.add(jMenuItemClientes);
 
-        jMenuBar1.add(jMenuRelatorios);
+        jMenuItemComprovantePagamento.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItemComprovantePagamento.setText("Comprovante de Pagamento");
+        jMenuItemComprovantePagamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemComprovantePagamentoActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItemComprovantePagamento);
+
+        jMenuBar1.add(jMenuComprovantePagamento);
 
         jMenuConfiguracao.setText("Ferramentas");
+        jMenuConfiguracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuConfiguracao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuConfiguracaoActionPerformed(evt);
             }
         });
 
+        jMenuItemBackup.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemBackup.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/database.png"))); // NOI18N
         jMenuItemBackup.setText("Backup");
         jMenuItemBackup.addActionListener(new java.awt.event.ActionListener() {
@@ -283,6 +321,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuConfiguracao.add(jMenuItemBackup);
 
+        jMenuItemConfiguracao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemConfiguracao.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/sistema.png"))); // NOI18N
         jMenuItemConfiguracao.setText("Configuração");
         jMenuItemConfiguracao.addActionListener(new java.awt.event.ActionListener() {
@@ -292,6 +331,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuConfiguracao.add(jMenuItemConfiguracao);
 
+        jMenuItemSobre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/24x24/support.png"))); // NOI18N
         jMenuItemSobre.setText("Sobre");
         jMenuItemSobre.addActionListener(new java.awt.event.ActionListener() {
@@ -309,15 +349,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setSize(new java.awt.Dimension(617, 560));
@@ -329,10 +365,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tlc.setVisible(true);
     }//GEN-LAST:event_jButtonClientesActionPerformed
 
-    private void jMenuRelatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuRelatoriosActionPerformed
+    private void jMenuComprovantePagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuComprovantePagamentoActionPerformed
+             new TelaRelatorioComprovantePagamento().setVisible(true);
+             
 
-
-    }//GEN-LAST:event_jMenuRelatoriosActionPerformed
+    }//GEN-LAST:event_jMenuComprovantePagamentoActionPerformed
 
     private void jMenuItemParcelasConvenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemParcelasConvenioActionPerformed
         TelaRelatorioParcelasConvenio trpc = new TelaRelatorioParcelasConvenio();
@@ -421,6 +458,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         tce.setVisible(true);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jMenuItemComprovantePagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemComprovantePagamentoActionPerformed
+        new TelaRelatorioComprovantePagamento().setVisible(true);
+    }//GEN-LAST:event_jMenuItemComprovantePagamentoActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+       new TelaRelatorioVendasCliente().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -471,19 +516,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastros;
+    private javax.swing.JMenu jMenuComprovantePagamento;
     private javax.swing.JMenu jMenuConfiguracao;
     private javax.swing.JMenuItem jMenuConvenio;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemBackup;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemClientes;
+    private javax.swing.JMenuItem jMenuItemComprovantePagamento;
     private javax.swing.JMenuItem jMenuItemConfiguracao;
     private javax.swing.JMenuItem jMenuItemParcelasConvenio;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenuItem jMenuItemVendaCliente;
     private javax.swing.JMenuItem jMenuItemVendasPeriodo;
-    private javax.swing.JMenu jMenuRelatorios;
     private javax.swing.JMenu jMenuVendas;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

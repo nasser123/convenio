@@ -89,6 +89,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVoltar.setText("Voltar");
         jButtonVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -100,6 +101,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
         });
 
         jButtonEditar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonEditar.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/edit.png"))); // NOI18N
         jButtonEditar.setText("Editar");
         jButtonEditar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -115,6 +117,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
         });
 
         jButtonNovo.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonNovo.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7687_32x32.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -126,6 +129,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
         });
 
         jButtonExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonExcluir.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7143_32x32.png"))); // NOI18N
         jButtonExcluir.setText("Excluir");
         jButtonExcluir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -145,6 +149,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
         jLabel1.setText("Relação de Clientes");
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
         jButtonRelatorio.setText("Relatório");
         jButtonRelatorio.setToolTipText("");
@@ -157,7 +162,28 @@ public class TelaListaClientes extends javax.swing.JFrame {
         });
 
         jTableClientes.setAutoCreateRowSorter(true);
+        jTableClientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Código", "Nome", "Cpf", "Celular", "Telefone", "Limite", "Convênio", "Situação"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jTableClientes.setColumnSelectionAllowed(true);
+        jTableClientes.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTableClientes.setIntercellSpacing(new java.awt.Dimension(2, 2));
+        jTableClientes.setRowHeight(20);
+        jTableClientes.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, clienteList, jTableClientes);
         org.jdesktop.swingbinding.JTableBinding.ColumnBinding columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idcliente}"));
@@ -172,12 +198,12 @@ public class TelaListaClientes extends javax.swing.JFrame {
         columnBinding.setColumnName("Cpf");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefone}"));
-        columnBinding.setColumnName("Telefone");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${celular}"));
+        columnBinding.setColumnName("Celular");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
-        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${idsexo.descricao}"));
-        columnBinding.setColumnName("Sexo");
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${telefone}"));
+        columnBinding.setColumnName("Telefone");
         columnBinding.setColumnClass(String.class);
         columnBinding.setEditable(false);
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${limite}"));
@@ -206,7 +232,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
             jTableClientes.getColumnModel().getColumn(1).setPreferredWidth(300);
             jTableClientes.getColumnModel().getColumn(2).setPreferredWidth(110);
             jTableClientes.getColumnModel().getColumn(3).setPreferredWidth(110);
-            jTableClientes.getColumnModel().getColumn(4).setMinWidth(80);
+            jTableClientes.getColumnModel().getColumn(4).setPreferredWidth(110);
             jTableClientes.getColumnModel().getColumn(5).setPreferredWidth(60);
             jTableClientes.getColumnModel().getColumn(6).setMinWidth(200);
             jTableClientes.getColumnModel().getColumn(7).setPreferredWidth(60);
@@ -217,14 +243,17 @@ public class TelaListaClientes extends javax.swing.JFrame {
         binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTableClientes, org.jdesktop.beansbinding.ELProperty.create("${selectedElement}"), jComboBoxSelecionado, org.jdesktop.beansbinding.BeanProperty.create("selectedItem"));
         bindingGroup.addBinding(binding);
 
+        jTextFieldFiltro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldFiltro.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextFieldFiltroKeyTyped(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Cliente");
 
+        jButtonNovaVenda.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonNovaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/add_to_shopping_cart.png"))); // NOI18N
         jButtonNovaVenda.setText("Nova Venda");
         jButtonNovaVenda.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -239,6 +268,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
             }
         });
 
+        jButtonListaVenda.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jButtonListaVenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/shopping_cart.png"))); // NOI18N
         jButtonListaVenda.setText("Lista");
         jButtonListaVenda.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -265,22 +295,21 @@ public class TelaListaClientes extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(jComboBoxSelecionado, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxSelecionado, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(126, 126, 126)
+                                .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonNovaVenda)
+                                .addGap(87, 87, 87)
+                                .addComponent(jButtonListaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                                .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonExcluir, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonNovaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonListaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                                .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap())
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

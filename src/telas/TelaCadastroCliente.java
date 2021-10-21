@@ -145,7 +145,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         estadoCivilListCellRenderer1 = new renderizadores.EstadoCivilListCellRenderer();
         sexoListCellRenderer1 = new renderizadores.SexoListCellRenderer();
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
-        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c");
+        convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c ORDER BY c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery.getResultList();
         sexoQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT s FROM Sexo s");
         sexoList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : sexoQuery.getResultList();
@@ -170,7 +170,6 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jTextFieldNome = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -196,7 +195,6 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jFormattedTextFieldLimite = new javax.swing.JFormattedTextField();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel20 = new javax.swing.JLabel();
-        jFormattedTextFieldRenda = new javax.swing.JFormattedTextField();
         jLabel21 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextAreaObservacao = new javax.swing.JTextArea();
@@ -209,6 +207,8 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
         jTextFieldTelefone1 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jFormattedTextFieldRenda = new javax.swing.JFormattedTextField();
         jButtonPesquisa = new javax.swing.JButton();
 
         jTextField3.setText("jTextField3");
@@ -226,6 +226,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/8416_32x32.png"))); // NOI18N
         jButtonVoltar.setText("Voltar");
         jButtonVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -237,6 +238,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         });
 
         jButtonGravar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonGravar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/save.png"))); // NOI18N
         jButtonGravar.setText("Gravar");
         jButtonGravar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -248,6 +250,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         });
 
         jButtonCancelar.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonCancelar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/6155_32x32.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -265,11 +268,13 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(null);
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Código:");
         jPanel2.add(jLabel2);
         jLabel2.setBounds(10, 16, 70, 20);
 
         jTextFieldCodigo.setEditable(false);
+        jTextFieldCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCodigo.setEnabled(false);
         jTextFieldCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,132 +289,173 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jTextFieldCodigo);
         jTextFieldCodigo.setBounds(10, 36, 62, 28);
 
+        jComboBoxConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxConvenio.setRenderer(convenioListCellRenderer1);
 
         org.jdesktop.swingbinding.JComboBoxBinding jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, convenioList, jComboBoxConvenio);
         bindingGroup.addBinding(jComboBoxBinding);
 
         jPanel2.add(jComboBoxConvenio);
-        jComboBoxConvenio.setBounds(10, 90, 180, 28);
+        jComboBoxConvenio.setBounds(10, 90, 220, 28);
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Sexo:");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(200, 70, 60, 20);
+        jLabel3.setBounds(240, 70, 50, 20);
 
+        jComboBoxSexo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxSexo.setRenderer(sexoListCellRenderer1);
 
         jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, sexoList, jComboBoxSexo);
         bindingGroup.addBinding(jComboBoxBinding);
 
         jPanel2.add(jComboBoxSexo);
-        jComboBoxSexo.setBounds(200, 90, 60, 28);
+        jComboBoxSexo.setBounds(240, 90, 40, 28);
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Convênio:");
         jPanel2.add(jLabel4);
         jLabel4.setBounds(10, 70, 70, 20);
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Situação:");
         jPanel2.add(jLabel5);
         jLabel5.setBounds(540, 70, 140, 20);
 
+        jComboBoxEstadoCivil.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxEstadoCivil.setRenderer(estadoCivilListCellRenderer1);
 
         jComboBoxBinding = org.jdesktop.swingbinding.SwingBindings.createJComboBoxBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, estadocivilList, jComboBoxEstadoCivil);
         bindingGroup.addBinding(jComboBoxBinding);
 
         jPanel2.add(jComboBoxEstadoCivil);
-        jComboBoxEstadoCivil.setBounds(270, 90, 100, 28);
+        jComboBoxEstadoCivil.setBounds(290, 90, 100, 28);
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Nome:");
         jPanel2.add(jLabel6);
-        jLabel6.setBounds(90, 16, 90, 20);
+        jLabel6.setBounds(90, 16, 370, 20);
 
+        jTextFieldNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldNomeActionPerformed(evt);
             }
         });
         jPanel2.add(jTextFieldNome);
-        jTextFieldNome.setBounds(90, 36, 250, 28);
+        jTextFieldNome.setBounds(90, 36, 370, 28);
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Limite:");
         jPanel2.add(jLabel7);
-        jLabel7.setBounds(630, 16, 80, 20);
+        jLabel7.setBounds(140, 285, 100, 20);
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Endereço:");
         jPanel2.add(jLabel8);
         jLabel8.setBounds(10, 124, 110, 20);
 
-        jLabel9.setText("Renda:");
-        jPanel2.add(jLabel9);
-        jLabel9.setBounds(570, 286, 80, 20);
-
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Nr:");
         jPanel2.add(jLabel10);
         jLabel10.setBounds(380, 124, 70, 20);
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("Bairro:");
         jPanel2.add(jLabel11);
         jLabel11.setBounds(470, 124, 90, 20);
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("CPF:");
         jPanel2.add(jLabel12);
         jLabel12.setBounds(10, 178, 50, 20);
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel13.setText("RG:");
         jPanel2.add(jLabel13);
         jLabel13.setBounds(260, 178, 50, 20);
 
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Naturalidade:");
         jPanel2.add(jLabel14);
         jLabel14.setBounds(470, 178, 100, 20);
 
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("Nome do pai:");
         jPanel2.add(jLabel15);
         jLabel15.setBounds(10, 232, 100, 20);
 
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel16.setText("Nome da mãe:");
         jPanel2.add(jLabel16);
         jLabel16.setBounds(360, 232, 100, 20);
 
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel17.setText("Observações:");
         jPanel2.add(jLabel17);
         jLabel17.setBounds(180, 340, 100, 20);
 
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel18.setText("Cargo:");
         jPanel2.add(jLabel18);
-        jLabel18.setBounds(220, 286, 100, 20);
+        jLabel18.setBounds(420, 285, 150, 20);
 
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel19.setText("Data de admissão:");
         jPanel2.add(jLabel19);
-        jLabel19.setBounds(410, 286, 160, 20);
+        jLabel19.setBounds(580, 285, 120, 20);
+
+        jTextFieldTelefone.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldTelefone);
-        jTextFieldTelefone.setBounds(350, 36, 130, 28);
+        jTextFieldTelefone.setBounds(470, 36, 110, 28);
+
+        jTextFieldEndereco.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldEndereco);
         jTextFieldEndereco.setBounds(10, 144, 360, 28);
+
+        jTextFieldEnderecoNr.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldEnderecoNr);
         jTextFieldEnderecoNr.setBounds(380, 144, 80, 28);
+
+        jTextFieldBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldBairro);
         jTextFieldBairro.setBounds(470, 144, 230, 30);
+
+        jTextFieldCPF.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldCPF);
         jTextFieldCPF.setBounds(10, 198, 220, 28);
+
+        jTextFieldRG.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldRG);
         jTextFieldRG.setBounds(260, 198, 180, 28);
+
+        jTextFieldNaturalidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldNaturalidade);
         jTextFieldNaturalidade.setBounds(470, 198, 230, 28);
+
+        jTextFieldNomePai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldNomePai);
         jTextFieldNomePai.setBounds(10, 252, 340, 28);
+
+        jTextFieldNomeMae.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldNomeMae);
         jTextFieldNomeMae.setBounds(360, 252, 340, 28);
+
+        jTextFieldEmprego.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldEmprego);
-        jTextFieldEmprego.setBounds(10, 306, 200, 28);
+        jTextFieldEmprego.setBounds(260, 305, 150, 28);
+
+        jTextFieldCargo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldCargo);
-        jTextFieldCargo.setBounds(220, 306, 180, 28);
+        jTextFieldCargo.setBounds(420, 305, 150, 28);
+
+        jDateChooserAdmissao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jDateChooserAdmissao);
-        jDateChooserAdmissao.setBounds(410, 306, 150, 28);
+        jDateChooserAdmissao.setBounds(580, 305, 120, 28);
 
         jFormattedTextFieldLimite.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("###0.###"))));
         jFormattedTextFieldLimite.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldLimite.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jFormattedTextFieldLimite.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jFormattedTextFieldLimiteFocusGained(evt);
@@ -421,52 +467,50 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jFormattedTextFieldLimite);
-        jFormattedTextFieldLimite.setBounds(630, 36, 80, 30);
-        jPanel2.add(jDateChooser1);
-        jDateChooser1.setBounds(380, 90, 150, 28);
+        jFormattedTextFieldLimite.setBounds(140, 305, 100, 30);
 
+        jDateChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(jDateChooser1);
+        jDateChooser1.setBounds(400, 90, 130, 28);
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel20.setText("Estado Civil:");
         jPanel2.add(jLabel20);
-        jLabel20.setBounds(270, 70, 80, 20);
+        jLabel20.setBounds(290, 70, 80, 20);
 
-        jFormattedTextFieldRenda.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.00"))));
-        jFormattedTextFieldRenda.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jFormattedTextFieldRenda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jFormattedTextFieldRendaActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jFormattedTextFieldRenda);
-        jFormattedTextFieldRenda.setBounds(570, 306, 130, 30);
-
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel21.setText("Telefone:");
         jPanel2.add(jLabel21);
-        jLabel21.setBounds(350, 16, 120, 20);
+        jLabel21.setBounds(470, 16, 110, 20);
 
         jTextAreaObservacao.setColumns(20);
+        jTextAreaObservacao.setFont(new java.awt.Font("Monospaced", 0, 14)); // NOI18N
         jTextAreaObservacao.setRows(5);
         jScrollPane1.setViewportView(jTextAreaObservacao);
 
         jPanel2.add(jScrollPane1);
-        jScrollPane1.setBounds(170, 360, 530, 110);
+        jScrollPane1.setBounds(170, 360, 530, 120);
 
+        jComboBoxSituacao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxSituacao.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ativo", "inativo", "bloqueado" }));
         jPanel2.add(jComboBoxSituacao);
         jComboBoxSituacao.setBounds(540, 90, 160, 30);
 
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel22.setText("Data de Nascimento:");
         jPanel2.add(jLabel22);
-        jLabel22.setBounds(380, 70, 140, 20);
+        jLabel22.setBounds(400, 70, 130, 20);
 
+        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel23.setText("Emprego:");
         jPanel2.add(jLabel23);
-        jLabel23.setBounds(10, 286, 100, 20);
+        jLabel23.setBounds(260, 285, 150, 20);
 
         jFormattedTextFieldGasto.setEditable(false);
         jFormattedTextFieldGasto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         jFormattedTextFieldGasto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldGasto.setCaretColor(new java.awt.Color(255, 51, 51));
-        jFormattedTextFieldGasto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jFormattedTextFieldGasto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jFormattedTextFieldGasto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextFieldGastoActionPerformed(evt);
@@ -475,6 +519,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jFormattedTextFieldGasto);
         jFormattedTextFieldGasto.setBounds(10, 360, 130, 30);
 
+        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel24.setText("Total Gasto:");
         jPanel2.add(jLabel24);
         jLabel24.setBounds(10, 340, 80, 20);
@@ -483,7 +528,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jFormattedTextFieldAberto.setForeground(new java.awt.Color(255, 0, 51));
         jFormattedTextFieldAberto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
         jFormattedTextFieldAberto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jFormattedTextFieldAberto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jFormattedTextFieldAberto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jFormattedTextFieldAberto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFormattedTextFieldAbertoActionPerformed(evt);
@@ -492,17 +537,38 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel2.add(jFormattedTextFieldAberto);
         jFormattedTextFieldAberto.setBounds(10, 430, 130, 30);
 
+        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel25.setText("Total Aberto:");
         jPanel2.add(jLabel25);
         jLabel25.setBounds(10, 410, 80, 20);
 
+        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel26.setText("Celular:");
         jPanel2.add(jLabel26);
-        jLabel26.setBounds(490, 16, 120, 20);
+        jLabel26.setBounds(590, 16, 110, 20);
+
+        jTextFieldTelefone1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel2.add(jTextFieldTelefone1);
-        jTextFieldTelefone1.setBounds(490, 36, 130, 28);
+        jTextFieldTelefone1.setBounds(590, 36, 110, 28);
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setText("Renda:");
+        jPanel2.add(jLabel9);
+        jLabel9.setBounds(10, 285, 100, 20);
+
+        jFormattedTextFieldRenda.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#,###.00"))));
+        jFormattedTextFieldRenda.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldRenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jFormattedTextFieldRenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextFieldRendaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jFormattedTextFieldRenda);
+        jFormattedTextFieldRenda.setBounds(10, 305, 100, 30);
 
         jButtonPesquisa.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonPesquisa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonPesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/1408_32x32.png"))); // NOI18N
         jButtonPesquisa.setText("Pesquisar");
         jButtonPesquisa.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -518,21 +584,18 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(253, 253, 253)
-                        .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36)
-                        .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 736, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(253, 253, 253)
+                .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonPesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 871, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -554,7 +617,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 866, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,7 +626,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         bindingGroup.bind();
 
-        setSize(new java.awt.Dimension(752, 688));
+        setSize(new java.awt.Dimension(882, 688));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
