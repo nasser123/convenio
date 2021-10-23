@@ -208,7 +208,7 @@ ORDER BY
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="292" y="0" width="223" height="20" uuid="d3a1156e-01ba-4ceb-9fec-ccf0bc899e86"/>
+				<reportElement x="318" y="0" width="197" height="20" uuid="d3a1156e-01ba-4ceb-9fec-ccf0bc899e86"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
 			</textField>
@@ -216,6 +216,13 @@ ORDER BY
 				<reportElement x="515" y="0" width="40" height="20" uuid="51d6f3e4-b130-4c5d-9f31-736f7eecb3cf"/>
 				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="218" y="0" width="100" height="16" uuid="c9af068e-4695-4d23-a581-9a500442db34"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

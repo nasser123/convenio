@@ -384,6 +384,13 @@ ORDER BY
 				<reportElement x="515" y="0" width="40" height="20" uuid="44a86fff-110b-46aa-8994-9adce3616b82"/>
 				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="203" y="0" width="100" height="16" uuid="3ed0694f-e4ed-41c4-acd0-7f161f207fea"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>
@@ -403,11 +410,11 @@ ORDER BY
 				<text><![CDATA[Total do Convênio:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="193" width="331" height="20" uuid="65be7158-b8aa-4041-8780-5acdf1215c0c"/>
+				<reportElement x="0" y="141" width="331" height="20" uuid="65be7158-b8aa-4041-8780-5acdf1215c0c"/>
 				<text><![CDATA[Obs. Após a data de vencimento haverá acréscimo de 5%]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="213" width="478" height="20" uuid="908fae97-e1e0-4109-890a-02875687c26f"/>
+				<reportElement x="0" y="194" width="478" height="20" uuid="908fae97-e1e0-4109-890a-02875687c26f"/>
 				<text><![CDATA[Ass.;____________________________________________  Recebi em:  ____/______/_______]]></text>
 			</staticText>
 			<staticText>

@@ -69,7 +69,7 @@ public class Venda implements Serializable {
         this.idvenda = idvenda;
     }
 
-    public Venda(Date data, Integer nrparcelas, Float valor, Integer notafiscal, Cliente idcliente, boolean proximomes) {
+    public Venda(Date data, Integer nrparcelas, Float valor, Integer notafiscal, Cliente idcliente, boolean proximomes, String observacao) {
         Parcela p = new Parcela();
         //Venda v = new Venda();
         this.setData(data);
@@ -77,6 +77,7 @@ public class Venda implements Serializable {
         this.setValor(valor);
         this.setNotafiscal(notafiscal);
         this.setIdcliente(idcliente);
+        this.setObservacao(observacao);
         this.parcelaList = p.getParcelas(valor, data, nrparcelas, proximomes, idcliente.getIdconvenio());
         this.setParcelaList(parcelaList);
 

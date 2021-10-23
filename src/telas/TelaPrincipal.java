@@ -74,9 +74,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemVendaCliente = new javax.swing.JMenuItem();
         jMenuComprovantePagamento = new javax.swing.JMenu();
         jMenuItemVendasPeriodo = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItemVendasCliente = new javax.swing.JMenuItem();
         jMenuItemParcelasConvenio = new javax.swing.JMenuItem();
+        jMenuItemParcelasCliente = new javax.swing.JMenuItem();
         jMenuItemClientes = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItemComprovantePagamento = new javax.swing.JMenuItem();
         jMenuConfiguracao = new javax.swing.JMenu();
         jMenuItemBackup = new javax.swing.JMenuItem();
@@ -265,14 +267,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuComprovantePagamento.add(jMenuItemVendasPeriodo);
 
-        jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jMenuItem4.setText("Vendas por Cliente");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemVendasCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItemVendasCliente.setText("Vendas por Cliente");
+        jMenuItemVendasCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItemVendasClienteActionPerformed(evt);
             }
         });
-        jMenuComprovantePagamento.add(jMenuItem4);
+        jMenuComprovantePagamento.add(jMenuItemVendasCliente);
 
         jMenuItemParcelasConvenio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemParcelasConvenio.setText("Parcelas por Convênio");
@@ -283,6 +285,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuComprovantePagamento.add(jMenuItemParcelasConvenio);
 
+        jMenuItemParcelasCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItemParcelasCliente.setText("Parcelas por Cliente");
+        jMenuItemParcelasCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemParcelasClienteActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItemParcelasCliente);
+
         jMenuItemClientes.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemClientes.setText("Clientes");
         jMenuItemClientes.addActionListener(new java.awt.event.ActionListener() {
@@ -291,6 +302,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuComprovantePagamento.add(jMenuItemClientes);
+
+        jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jMenuItem3.setText("Contas a receber");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItem3);
 
         jMenuItemComprovantePagamento.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItemComprovantePagamento.setText("Comprovante de Pagamento");
@@ -462,9 +482,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
         new TelaRelatorioComprovantePagamento().setVisible(true);
     }//GEN-LAST:event_jMenuItemComprovantePagamentoActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItemVendasClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVendasClienteActionPerformed
        new TelaRelatorioVendasCliente().setVisible(true);
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItemVendasClienteActionPerformed
+
+    private void jMenuItemParcelasClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemParcelasClienteActionPerformed
+       new TelaRelatorioParcelasCliente().setVisible(true);
+    }//GEN-LAST:event_jMenuItemParcelasClienteActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        new TelaRelatorioContasReceber().setVisible(true);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -521,15 +549,17 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuConvenio;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItemBackup;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemClientes;
     private javax.swing.JMenuItem jMenuItemComprovantePagamento;
     private javax.swing.JMenuItem jMenuItemConfiguracao;
+    private javax.swing.JMenuItem jMenuItemParcelasCliente;
     private javax.swing.JMenuItem jMenuItemParcelasConvenio;
     private javax.swing.JMenuItem jMenuItemSobre;
     private javax.swing.JMenuItem jMenuItemVendaCliente;
+    private javax.swing.JMenuItem jMenuItemVendasCliente;
     private javax.swing.JMenuItem jMenuItemVendasPeriodo;
     private javax.swing.JMenu jMenuVendas;
     private javax.swing.JPanel jPanel1;

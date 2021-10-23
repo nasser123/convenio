@@ -104,6 +104,8 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
 
         jMonthChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
+        jYearChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
         jComboBoxConvenios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jComboBoxConvenios.setRenderer(convenioListCellRenderer1);
 

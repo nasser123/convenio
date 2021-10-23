@@ -288,6 +288,33 @@ order by
 			</textField>
 		</band>
 	</detail>
+	<pageFooter>
+		<band height="32">
+			<rectangle>
+				<reportElement x="-1" y="0" width="555" height="20" uuid="c7e3afce-6ca9-428e-8744-85aff16a096e"/>
+			</rectangle>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="-1" y="0" width="221" height="20" uuid="5e782678-5991-4251-97af-82a1df28e0f3"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="223" height="20" uuid="9dc2e4d8-850d-4b9c-a700-93aa92bd71cc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="0" width="40" height="20" uuid="0d3dd76f-0912-46fc-bc6b-f8260a810349"/>
+				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="0" width="100" height="16" uuid="03c879b3-ee79-44a8-a7d1-385d2f1075de"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
 	<summary>
 		<band height="62" splitType="Stretch">
 			<staticText>

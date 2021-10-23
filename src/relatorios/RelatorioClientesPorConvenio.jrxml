@@ -317,6 +317,9 @@ WHERE
 				<textElement textAlignment="Center"/>
 				<textFieldExpression><![CDATA[$F{cliente_datanasc}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="10" y="0" width="792" height="16" uuid="188ad9c7-d709-400d-97d1-967eb99ca804"/>
+			</rectangle>
 		</band>
 	</detail>
 	<columnFooter>
@@ -324,9 +327,6 @@ WHERE
 	</columnFooter>
 	<pageFooter>
 		<band height="16" splitType="Stretch">
-			<rectangle>
-				<reportElement x="10" y="0" width="792" height="16" uuid="188ad9c7-d709-400d-97d1-967eb99ca804"/>
-			</rectangle>
 			<textField pattern="EEEEE dd MMMMM yyyy">
 				<reportElement x="15" y="0" width="221" height="16" uuid="4a39fddd-e967-4d7a-90d6-a05e09f53f68"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
@@ -340,6 +340,13 @@ WHERE
 				<reportElement x="757" y="0" width="40" height="16" uuid="167a9b1b-c99d-4436-aed6-52f3091d9290"/>
 				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="337" y="0" width="100" height="16" uuid="bc696107-fb93-490e-813c-99d21e0011d0"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

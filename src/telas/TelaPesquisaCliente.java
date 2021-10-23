@@ -261,6 +261,10 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
             TelaRelatorioVendasCliente trvc = new TelaRelatorioVendasCliente(this.cli);
             trvc.setVisible(true);
         }
+        if(this.telaRetorno == "TelaRelatorioParcelasCliente"){
+            TelaRelatorioParcelasCliente trvc = new TelaRelatorioParcelasCliente(this.cli);
+            trvc.setVisible(true);
+        }
         if(this.telaRetorno == "TelaRelatorioComprovantePagamento"){
             TelaRelatorioComprovantePagamento trcp = new TelaRelatorioComprovantePagamento(this.cli);
             trcp.setVisible(true);

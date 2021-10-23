@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatório de Contas a Receber" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9cd583d0-d0e9-480f-a3c7-184c97c66031">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="PERIODO" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="PERIODOFINAL" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     sum(parcela.valorparcela) AS parcela_datapgto,
+     cliente.`idcliente` AS cliente_idcliente,
+     cliente.`idconvenio` AS cliente_idconvenio,
+     convenio.`idconvenio` AS convenio_idconvenio,
+     convenio.`nome` AS convenio_nome,
+     empresa.`idEmpresa` AS empresa_idEmpresa,
+     empresa.`fantasia` AS empresa_fantasia,
+     empresa.`cnpj` AS empresa_cnpj,
+     empresa.`endereco` AS empresa_endereco,
+     empresa.`telefone` AS empresa_telefone,
+     empresa.`cidade` AS empresa_cidade,
+     venda.`idvenda` AS venda_idvenda,
+     venda.`idcliente` AS venda_idcliente,
+     parcela.`idparcela` AS parcela_idparcela,
+     parcela.`nrparcela` AS parcela_nrparcela,
+     parcela.`idvenda` AS parcela_idvenda,
+     parcela.`valorparcela` AS parcela_valorparcela,
+     parcela.`vencimento` AS parcela_vencimento,
+     parcela.`pago` AS parcela_pago,
+     parcela.`datapgto` AS parcela_datapgto,
+     convenio.`vencimento` AS convenio_vencimento,
+     SUM(parcela.`valorparcela`) 
+FROM
+     `convenio` convenio INNER JOIN `cliente` cliente ON convenio.`idconvenio` = cliente.`idconvenio`
+     INNER JOIN `venda` venda ON cliente.`idcliente` = venda.`idcliente`
+     INNER JOIN `parcela` parcela ON venda.`idvenda` = parcela.`idvenda`,
+     `empresa` empresa
+WHERE
+     parcela.vencimento >= $P{PERIODO}
+ AND parcela.vencimento <= $P{PERIODOFINAL}
+GROUP BY
+     convenio.`idconvenio`]]>
+	</queryString>
+	<field name="parcela_datapgto" class="java.lang.Double"/>
+	<field name="cliente_idcliente" class="java.lang.Integer"/>
+	<field name="cliente_idconvenio" class="java.lang.Integer"/>
+	<field name="convenio_idconvenio" class="java.lang.Integer"/>
+	<field name="convenio_nome" class="java.lang.String"/>
+	<field name="empresa_idEmpresa" class="java.lang.Integer"/>
+	<field name="empresa_fantasia" class="java.lang.String"/>
+	<field name="empresa_cnpj" class="java.lang.String"/>
+	<field name="empresa_endereco" class="java.lang.String"/>
+	<field name="empresa_telefone" class="java.lang.String"/>
+	<field name="empresa_cidade" class="java.lang.String"/>
+	<field name="venda_idvenda" class="java.lang.Integer"/>
+	<field name="venda_idcliente" class="java.lang.Integer"/>
+	<field name="parcela_idparcela" class="java.lang.Integer"/>
+	<field name="parcela_nrparcela" class="java.lang.Integer"/>
+	<field name="parcela_idvenda" class="java.lang.Integer"/>
+	<field name="parcela_valorparcela" class="java.lang.Float"/>
+	<field name="parcela_vencimento" class="java.sql.Date"/>
+	<field name="parcela_pago" class="java.lang.Integer"/>
+	<field name="convenio_vencimento" class="java.lang.Integer"/>
+	<field name="SUM(parcela.`valorparcela`)" class="java.lang.Double"/>
+	<variable name="total" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{SUM(parcela.`valorparcela`)}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="36" width="187" height="20" uuid="8b266eb5-e1e7-4c61-8e2a-80c669135bb5"/>
+				<textElement>
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_endereco}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="56" width="319" height="20" uuid="00f0fabd-34f0-4f8e-a57b-f524e9de660b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_cidade}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="18" width="319" height="18" uuid="f8ca5fed-7ea8-456f-8ddb-7a00d2932c1d"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="false" isItalic="true" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Servindo sua família pelo melhor preço]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="0" width="319" height="20" uuid="a48dc794-ed77-4193-b100-6df451c5d157"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_fantasia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="319" y="36" width="100" height="20" uuid="b845d5ef-0e4b-4449-89b0-1375c551e836"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa_telefone}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="100" y="0" width="319" height="25" uuid="df6ed734-4f8a-45f7-929b-91b2bfd0d5d8"/>
+				<textElement textAlignment="Center">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contas a Receber]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="35" width="65" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="ad1ae195-338a-4790-9b2c-c283e357683d"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Período:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement mode="Transparent" x="97" y="35" width="68" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="b1ca4d74-7388-49ff-b5ef-e96a42299379"/>
+				<textElement verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERIODO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="165" y="35" width="30" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="864907d2-6742-4ea8-b009-5bd10351797c"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[a]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="195" y="35" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="65f51009-65f1-4fbc-8231-b8ef85ec5fb1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PERIODOFINAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="445" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="573c624b-3dfb-48ac-8e5b-369d5d027cd7"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Subtotal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="b08203be-0e00-4ac2-b4dd-38c285263316"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Convênio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="232" y="2" width="122" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="08daabe5-1e69-41ad-aa31-f9fad1667386"/>
+				<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Dia de vencimento]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="1" width="208" height="20" uuid="ca50a062-4278-462c-a084-7f9417d0bd45"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{convenio_nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="1" width="77" height="20" uuid="6f835d00-45c9-4457-976b-2d2aefa658a3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{convenio_vencimento}]]></textFieldExpression>
+			</textField>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="445" y="3" width="100" height="20" uuid="6faecc13-36e8-431d-9770-0c5535ad534a"/>
+				<textElement textAlignment="Right">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUM(parcela.`valorparcela`)}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy HH.mm.ss">
+				<reportElement x="115" y="1" width="100" height="20" uuid="720cd247-abba-499b-86d4-a9fc401e2fdd"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="1" width="115" height="20" uuid="cb0ee999-103b-4dec-92b2-af702cf87b45"/>
+				<text><![CDATA[Relatório emitido em:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="365" y="1" width="190" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="c49ffbb2-b8b2-49b4-8d3d-a5b66a1441fa"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="10" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="87" y="0" width="232" height="20" uuid="8d5b8135-fbba-41fa-8227-6f824db9e12a"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<textField pattern="R$ ###0.00" isBlankWhenNull="false">
+				<reportElement mode="Transparent" x="445" y="0" width="100" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="e62990eb-ebf9-4f83-9649-05af308afe1b"/>
+				<textElement textAlignment="Right" verticalAlignment="Top" rotation="None" markup="none">
+					<font fontName="SansSerif" size="14" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

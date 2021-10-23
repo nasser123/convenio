@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio de Vendas por Cliente" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="51ef7cb7-9bc9-4a43-9765-f39e3997ac7b">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="23"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="CLIENTE" class="java.lang.Integer"/>
 	<parameter name="EMPRESA" class="java.lang.Integer"/>
 	<queryString>
@@ -291,7 +291,31 @@ order by
 		<band height="13" splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="14" splitType="Stretch"/>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-1" y="0" width="555" height="20" uuid="3c0d14c7-4105-4381-8b8d-dfbe8a4d05bb"/>
+			</rectangle>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="-1" y="0" width="221" height="20" uuid="d005c1e6-9d9a-47e8-8fc7-b13d2ff6b1b4"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="0" width="223" height="20" uuid="175a2f97-3387-46d5-99c0-64435139a9bb"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="0" width="40" height="20" uuid="ef365eee-1a02-456c-b52d-a0e0cdba04eb"/>
+				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="202" y="0" width="100" height="16" uuid="10c661ac-47b4-4a91-a785-24aaa8ff0ce7"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
+		</band>
 	</pageFooter>
 	<summary>
 		<band height="62" splitType="Stretch">
