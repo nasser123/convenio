@@ -115,7 +115,7 @@ public class ConfigTelas {
          * this.janela.getSize().width + "\n" +
                 this.janela.getSize().height);
          */
-        jp.setTitle("Sistema de Crediario");
+        jp.setTitle("Sistema de convênio");
 
         jp.setResizable(false);
 
@@ -148,7 +148,7 @@ public class ConfigTelas {
         conj.add(AWTKeyStroke.getAWTKeyStroke(KeyEvent.VK_ENTER, 0));
         jd.setFocusTraversalKeys(KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, conj);
     
-        jd.setTitle("SisCred");
+        jd.setTitle("Sistema de convênio");
     }
 
 }

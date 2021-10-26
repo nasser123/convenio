@@ -21,7 +21,7 @@ import util.ConnectionFactory;
  * @author Produção
  */
 public class TelaVendaCliente extends javax.swing.JFrame {
-    
+
     Cliente c = new Cliente();
 
     /**
@@ -35,9 +35,9 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
         filtrar(this.c);
-        
+
     }
-    
+
     public TelaVendaCliente(Cliente c) {
         this.c = c;
         initComponents();
@@ -46,16 +46,16 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         ct.carregarConfig(this);
         this.jTextFieldCodigo.setText(this.c.getIdcliente().toString());
         this.jTextFieldNome.setText(this.c.getNome());
-        
+
         filtrar(this.c);
     }
-    
+
     public void filtrar(Cliente c) {
-        
+
         this.c = c;
-        
+
         VendaController vc = new VendaController();
-        
+
         java.util.Collection data;
         try {
             data = (java.util.Collection) vc.pesquisarPorIdCliente(this.c);
@@ -73,7 +73,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
         }
-        
+
     }
 
     /**
@@ -171,7 +171,6 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jTableVendas.setAutoCreateRowSorter(true);
         jTableVendas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTableVendas.setRowHeight(20);
-        jTableVendas.setRowSorter(null);
         jTableVendas.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         org.jdesktop.swingbinding.JTableBinding jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, vendaList, jTableVendas);
@@ -267,6 +266,9 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         columnBinding.setColumnName("Pago");
         columnBinding.setColumnClass(Boolean.class);
         columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${datapgto}"));
+        columnBinding.setColumnName("Data Pagamento");
+        columnBinding.setColumnClass(java.util.Date.class);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane2.setViewportView(jTable1);
@@ -442,7 +444,14 @@ public class TelaVendaCliente extends javax.swing.JFrame {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
         }
-        
+
+        if (evt.getClickCount() > 1) {
+            Venda v = (Venda) jComboBox1.getSelectedItem();
+            new TelaParcelasEditar(v, "TelaVendaCliente").setVisible(true);
+            this.dispose();
+
+        }
+
 
     }//GEN-LAST:event_jTableVendasMouseClicked
 
@@ -453,16 +462,16 @@ public class TelaVendaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonEditarActionPerformed
 
     private void jButtonRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelatorioActionPerformed
-        
+
         new TelaRelatorioVendasCliente(this.c).setVisible(true);
-        
+
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
-    
+
     private void atualizaTabelas(java.awt.event.ActionEvent evt) {
         this.dispose();
         new TelaVendaCliente().setVisible(true);
     }
-    
+
     private void verificaCliente() {
         Integer id = 0;
         boolean validado = true;
@@ -477,25 +486,25 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                     jTextFieldCodigo.requestFocus();
                     jTextFieldCodigo.selectAll();
                 }
-                
+
             } catch (SQLException ex) {
                 ConfigurationFactory.getLOG().warn(ex.getMessage());
-                
+
             } catch (NumberFormatException nfe) {
                 //JOptionPane.showMessageDialog(rootPane, "Digite apenas números!");
                 ConfigurationFactory.getLOG().warn(nfe.getMessage());
                 jTextFieldCodigo.setText(null);
                 validado = false;
-                
+
             } catch (IndexOutOfBoundsException iobe) {
                 ConfigurationFactory.getLOG().warn(iobe.getMessage());
                 JOptionPane.showMessageDialog(rootPane, "Cliente não encontrado!");
                 validado = false;
             }
         }
-        
+
     }
-    
+
     private void preencheDados() {
         filtrar(c);
         jTextFieldCodigo.setText(this.c.getIdcliente().toString());
@@ -541,7 +550,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
          * Create and display the form
          */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            
+
             public void run() {
                 new TelaVendaCliente().setVisible(true);
             }

@@ -38,8 +38,7 @@ WHERE
  AND data <= $P{dataFinal}
  AND Empresa.`idEmpresa` = $P{EMPRESA}
 ORDER BY
-	if($P{ordem1}=0, convenio.`nome` , data ), 
-	if($P{ordem1}=1, data , convenio.`nome`), 
+	if($P{ordem1}=0, convenio.`nome` , if($P{ordem1}=1, data , if($P{ordem1}=2, cliente.`nome`, data)) ), 
 	venda_idvenda]]>
 	</queryString>
 	<field name="venda_idvenda" class="java.lang.Integer"/>
@@ -229,6 +228,13 @@ ORDER BY
 				<reportElement x="515" y="0" width="40" height="20" uuid="3276cfff-a3de-4d9f-bc57-d2aab864e14a"/>
 				<textFieldExpression><![CDATA["  " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="197" y="0" width="108" height="20" uuid="429f0dd7-0c54-4481-8969-a48c453578bf"/>
+				<textElement>
+					<font size="10" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Totaltech Sistemas]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

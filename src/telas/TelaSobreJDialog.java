@@ -26,7 +26,7 @@ public class TelaSobreJDialog extends javax.swing.JDialog {
         
         ConfigTelas ct = new ConfigTelas(jPanel1, 300, 400);
         ct.carregarConfig(jPanel1);
-        this.setTitle("Convênio");
+        this.setTitle("Sistema de convênio");
     }
 
     /**
@@ -56,7 +56,7 @@ public class TelaSobreJDialog extends javax.swing.JDialog {
         jLabel1.setText("Sistema de Convênio");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("Versão do Sistema: 0.9.2.2");
+        jLabel5.setText("Versão do Sistema: 0.9.2.3");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Data de Compilação: 22/10/2021");

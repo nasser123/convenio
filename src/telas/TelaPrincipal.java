@@ -78,6 +78,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemParcelasConvenio = new javax.swing.JMenuItem();
         jMenuItemParcelasCliente = new javax.swing.JMenuItem();
         jMenuItemClientes = new javax.swing.JMenuItem();
+        jCheckBoxMenuItemPagamentos = new javax.swing.JCheckBoxMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItemComprovantePagamento = new javax.swing.JMenuItem();
         jMenuConfiguracao = new javax.swing.JMenu();
@@ -302,6 +303,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
             }
         });
         jMenuComprovantePagamento.add(jMenuItemClientes);
+
+        jCheckBoxMenuItemPagamentos.setSelected(true);
+        jCheckBoxMenuItemPagamentos.setText("Pagamentos");
+        jMenuComprovantePagamento.add(jCheckBoxMenuItemPagamentos);
 
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItem3.setText("Contas a receber");
@@ -541,6 +546,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonClientes;
     private javax.swing.JButton jButtonConvenios;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemPagamentos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastros;

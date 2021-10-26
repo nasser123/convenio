@@ -257,15 +257,15 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
             TelaCadastroVenda tcv = new TelaCadastroVenda(this.cli);
             tcv.setVisible(true);
         }
-        if(this.telaRetorno == "TelaRelatorioVendasCliente"){
+        if (this.telaRetorno == "TelaRelatorioVendasCliente") {
             TelaRelatorioVendasCliente trvc = new TelaRelatorioVendasCliente(this.cli);
             trvc.setVisible(true);
         }
-        if(this.telaRetorno == "TelaRelatorioParcelasCliente"){
+        if (this.telaRetorno == "TelaRelatorioParcelasCliente") {
             TelaRelatorioParcelasCliente trvc = new TelaRelatorioParcelasCliente(this.cli);
             trvc.setVisible(true);
         }
-        if(this.telaRetorno == "TelaRelatorioComprovantePagamento"){
+        if (this.telaRetorno == "TelaRelatorioComprovantePagamento") {
             TelaRelatorioComprovantePagamento trcp = new TelaRelatorioComprovantePagamento(this.cli);
             trcp.setVisible(true);
         }
@@ -279,25 +279,51 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+//        if (evt.getClickCount() > 1) {
+//            Cliente cli = (Cliente) jComboBoxSelecionado.getSelectedItem();
+//            ClienteController cc = new ClienteController();
+//            try {
+//                cli = cc.pesquisarPorId(cli.getIdcliente());
+//                if (this.telaRetorno == "TelaVendaCliente") {
+//                    TelaVendaCliente tcv = new TelaVendaCliente(cli);
+//                    tcv.setVisible(true);
+//                }
+//                if (this.telaRetorno == "TelaCadastroVenda") {
+//                    TelaCadastroVenda tcv = new TelaCadastroVenda(cli);
+//                    tcv.setVisible(true);
+//                }
+//                this.dispose();
+//            } catch (SQLException ex) {
+//                ConfigurationFactory.getLOG().info(ex.getMessage());
+//            }
+//
+//            
+//        }
         if (evt.getClickCount() > 1) {
-            Cliente cli = (Cliente) jComboBoxSelecionado.getSelectedItem();
-            ClienteController cc = new ClienteController();
-            try {
-                cli = cc.pesquisarPorId(cli.getIdcliente());
-                if (this.telaRetorno == "TelaVendaCliente") {
-                    TelaVendaCliente tcv = new TelaVendaCliente(cli);
-                    tcv.setVisible(true);
-                }
-                if (this.telaRetorno == "TelaCadastroVenda") {
-                    TelaCadastroVenda tcv = new TelaCadastroVenda(cli);
-                    tcv.setVisible(true);
-                }
-                this.dispose();
-            } catch (SQLException ex) {
-                ConfigurationFactory.getLOG().info(ex.getMessage());
+            this.cli = (Cliente) jComboBoxSelecionado.getSelectedItem();
+
+            if (this.telaRetorno == "TelaVendaCliente") {
+                TelaVendaCliente tcv = new TelaVendaCliente(this.cli);
+                tcv.setVisible(true);
+            }
+            if (this.telaRetorno == "TelaCadastroVenda") {
+                TelaCadastroVenda tcv = new TelaCadastroVenda(this.cli);
+                tcv.setVisible(true);
+            }
+            if (this.telaRetorno == "TelaRelatorioVendasCliente") {
+                TelaRelatorioVendasCliente trvc = new TelaRelatorioVendasCliente(this.cli);
+                trvc.setVisible(true);
+            }
+            if (this.telaRetorno == "TelaRelatorioParcelasCliente") {
+                TelaRelatorioParcelasCliente trvc = new TelaRelatorioParcelasCliente(this.cli);
+                trvc.setVisible(true);
+            }
+            if (this.telaRetorno == "TelaRelatorioComprovantePagamento") {
+                TelaRelatorioComprovantePagamento trcp = new TelaRelatorioComprovantePagamento(this.cli);
+                trcp.setVisible(true);
             }
 
-            
+            this.dispose();
         }
 
     }//GEN-LAST:event_jTable1MouseClicked
@@ -334,7 +360,7 @@ public class TelaPesquisaCliente extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-           ConfigurationFactory.getLOG().warn(ex.getMessage());
+            ConfigurationFactory.getLOG().warn(ex.getMessage());
         } catch (InstantiationException ex) {
             ConfigurationFactory.getLOG().warn(ex.getMessage());
         } catch (IllegalAccessException ex) {

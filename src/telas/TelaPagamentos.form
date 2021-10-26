@@ -502,8 +502,14 @@
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jMonthChooserPropertyChange"/>
+          </Events>
         </Component>
         <Component class="com.toedter.calendar.JYearChooser" name="jYearChooser">
+          <Events>
+            <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="jYearChooserPropertyChange"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonGravar">
           <Properties>
@@ -625,7 +631,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
-            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="Todos"/>
           </Properties>
           <Events>
@@ -640,6 +645,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
+            <Property name="selected" type="boolean" value="true"/>
             <Property name="text" type="java.lang.String" value="N&#xe3;o Pagos"/>
           </Properties>
           <Events>

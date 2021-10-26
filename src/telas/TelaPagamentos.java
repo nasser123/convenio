@@ -234,6 +234,17 @@ public class TelaPagamentos extends javax.swing.JFrame {
         jLabel4.setText("Total Pendente:");
 
         jMonthChooser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jMonthChooser.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jMonthChooserPropertyChange(evt);
+            }
+        });
+
+        jYearChooser.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jYearChooserPropertyChange(evt);
+            }
+        });
 
         jButtonGravar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonGravar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/save.png"))); // NOI18N
@@ -293,7 +304,6 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButtonTodos);
         jRadioButtonTodos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonTodos.setSelected(true);
         jRadioButtonTodos.setText("Todos");
         jRadioButtonTodos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -303,6 +313,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
         buttonGroup1.add(jRadioButtonNaoPagos);
         jRadioButtonNaoPagos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonNaoPagos.setSelected(true);
         jRadioButtonNaoPagos.setText("Não Pagos");
         jRadioButtonNaoPagos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -463,8 +474,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonFiltrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFiltrarActionPerformed
+        filtrar();
         
-        int mes = jMonthChooser.getMonth();
+    }//GEN-LAST:event_jButtonFiltrarActionPerformed
+    private void filtrar(){
+    int mes = jMonthChooser.getMonth();
         int ano = jYearChooser.getYear();
         boolean todos = jRadioButtonTodos.isSelected();
         Date dataFim = Datas.getData("01/" + (mes + 2) + "/" + ano);
@@ -486,11 +500,14 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
 //        
         retornaTotalParcelas();
-    }//GEN-LAST:event_jButtonFiltrarActionPerformed
+    
+    
+    
+    }
     
     
     private void jComboBoxConvenioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxConvenioActionPerformed
-        jButtonFiltrarActionPerformed(evt);
+        filtrar();
     }//GEN-LAST:event_jComboBoxConvenioActionPerformed
 
     private void jTable1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTable1PropertyChange
@@ -519,11 +536,11 @@ public class TelaPagamentos extends javax.swing.JFrame {
         } catch (SQLException ex) {
             ConfigurationFactory.getLOG().error("erro na gravaçao");
         }
-        this.jButtonFiltrarActionPerformed(evt);
+        filtrar();
     }//GEN-LAST:event_jButtonGravarActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        this.jButtonFiltrarActionPerformed(evt);
+        filtrar();
     }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -580,16 +597,16 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox1PropertyChange
 
     private void jRadioButtonNaoPagosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonNaoPagosActionPerformed
-        jButtonFiltrarActionPerformed(evt);
+        filtrar();
     }//GEN-LAST:event_jRadioButtonNaoPagosActionPerformed
 
     private void jRadioButtonTodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTodosActionPerformed
-        jButtonFiltrarActionPerformed(evt);
+        filtrar();
         
     }//GEN-LAST:event_jRadioButtonTodosActionPerformed
 
     private void jButtonComprovanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprovanteActionPerformed
-        jButtonGravarActionPerformed(evt);
+        filtrar();
         ExecutaRelatorio er = new ExecutaRelatorio();
         
         
@@ -600,6 +617,14 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
         er.abrirRelatorioParcelasConvenioComprovante(data, convenio.getIdconvenio(), EMPRESA.getIdEmpresa());
     }//GEN-LAST:event_jButtonComprovanteActionPerformed
+
+    private void jMonthChooserPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jMonthChooserPropertyChange
+        filtrar();
+    }//GEN-LAST:event_jMonthChooserPropertyChange
+
+    private void jYearChooserPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jYearChooserPropertyChange
+        filtrar();
+    }//GEN-LAST:event_jYearChooserPropertyChange
     
     public void retornaTotalParcelas() {
         Float total = 0f;

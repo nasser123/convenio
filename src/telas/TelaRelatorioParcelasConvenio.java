@@ -205,7 +205,7 @@ public class TelaRelatorioParcelasConvenio extends javax.swing.JFrame {
         Object periodo = dataIni;
         Object periodofinal = dataFim;
 
-        t.abrirRelatorioParcelasConvenio(convenio, periodo, periodofinal, EMPRESA.getIdEmpresa());
+        t.abrirRelatorioParcelasConvenioNovo(convenio, periodo, periodofinal, EMPRESA.getIdEmpresa());
 
     }//GEN-LAST:event_jButton5ActionPerformed
 
