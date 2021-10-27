@@ -161,3 +161,4 @@
 2021-10-26 00:38:52,768 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
 2021-10-26 00:38:52,815 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:100.0-Cliente: 11-ANDREIA OLIVEIRA-Nr parcelas:3-Data:26-10-2021
 2021-10-26 00:38:54,455 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:100.0-Cliente: 11-ANDREIA OLIVEIRA-Nr parcelas:3-Data:26-10-2021
+2021-10-26 22:45:23,114 [main]  INFO testecategoria:44 – Abertura de sistema
