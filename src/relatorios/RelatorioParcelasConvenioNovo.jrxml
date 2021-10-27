@@ -51,8 +51,7 @@ or
 	and parcela.`pago` = 0)
 ORDER BY
      cliente.`nome` ASC,
-     parcela.`vencimento` ASC
-     ]]>
+     parcela.`vencimento` ASC]]>
 	</queryString>
 	<field name="cliente_nome" class="java.lang.String"/>
 	<field name="convenio_nome" class="java.lang.String"/>
@@ -110,7 +109,7 @@ ORDER BY
 		<variableExpression><![CDATA[$V{parcela}]]></variableExpression>
 	</variable>
 	<variable name="totalConvenioPago" class="java.lang.Double" calculation="Sum">
-		<variableExpression><![CDATA[$V{totalPagoCliente}]]></variableExpression>
+		<variableExpression><![CDATA[$V{valorPago}]]></variableExpression>
 	</variable>
 	<variable name="totalSaldoConvenio" class="java.lang.Double">
 		<variableExpression><![CDATA[$V{totalConvenio} - $V{totalConvenioPago}]]></variableExpression>
