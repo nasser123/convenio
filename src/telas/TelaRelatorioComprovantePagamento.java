@@ -53,6 +53,20 @@ public class TelaRelatorioComprovantePagamento extends javax.swing.JFrame {
         jButtonRelatorio.setEnabled(true);
 
     }
+    
+    public TelaRelatorioComprovantePagamento(Convenio convenio, Date data) {
+        initComponents();
+        ConfigTelas ct = new ConfigTelas(this);
+        ct.carregarConfig(this);
+        Convenio con = convenio;
+        jDateChooser1.setDate(data);
+        jRadioButtonConvenio.setSelected(true);
+        jComboBoxConvenio.setSelectedItem(con);
+        preencheTela();
+        jButtonRelatorio.setEnabled(true);
+
+    }
+    
 
     public void preencheTela() {
         if (jRadioButtonConvenio.isSelected()) {
@@ -129,8 +143,8 @@ public class TelaRelatorioComprovantePagamento extends javax.swing.JFrame {
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/phone_book.png"))); // NOI18N
-        jButtonRelatorio.setText("Relatório");
+        jButtonRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/printer.png"))); // NOI18N
+        jButtonRelatorio.setText("Comprovante");
         jButtonRelatorio.setToolTipText("");
         jButtonRelatorio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonRelatorio.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -198,7 +212,7 @@ public class TelaRelatorioComprovantePagamento extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonRelatorio)
                         .addGap(18, 18, 18)
                         .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())

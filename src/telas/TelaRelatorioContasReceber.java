@@ -25,10 +25,6 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
 
-
-
-
-
     }
 
     /**
@@ -53,6 +49,9 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel4 = new javax.swing.JLabel();
+        jRadioButtonTodos = new javax.swing.JRadioButton();
+        jRadioButtonPagos = new javax.swing.JRadioButton();
+        jRadioButtonNaoPagos = new javax.swing.JRadioButton();
 
         convenioListCellRenderer1.setText("convenioListCellRenderer1");
 
@@ -126,6 +125,22 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Data Final");
 
+        jRadioButtonTodos.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jRadioButtonTodos);
+        jRadioButtonTodos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonTodos.setSelected(true);
+        jRadioButtonTodos.setText("Todos");
+
+        jRadioButtonPagos.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jRadioButtonPagos);
+        jRadioButtonPagos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonPagos.setText("Somente pagos");
+
+        jRadioButtonNaoPagos.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(jRadioButtonNaoPagos);
+        jRadioButtonNaoPagos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jRadioButtonNaoPagos.setText("Somente não pagos");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -133,7 +148,7 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 428, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 573, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButtonRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -142,11 +157,15 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jRadioButtonNaoPagos)
+                    .addComponent(jRadioButtonPagos)
+                    .addComponent(jRadioButtonTodos)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -154,21 +173,28 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
+                        .addGap(0, 304, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonRelatorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel4)
-                        .addGap(7, 7, 7)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jRadioButtonTodos)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButtonPagos)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButtonNaoPagos)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -183,27 +209,32 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        setSize(new java.awt.Dimension(454, 373));
+        setSize(new java.awt.Dimension(599, 503));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelatorioActionPerformed
         ExecutaRelatorio er = new ExecutaRelatorio();
-        
+
         Date dataInicial = jDateChooser1.getDate();
         Date dataFinal = jDateChooser2.getDate();
-        
+        String situacao = "";
+       
+        if (jRadioButtonTodos.isSelected()) {
+            situacao = "2";
+        }
+        if (jRadioButtonPagos.isSelected()) {
+            situacao = "1";
+        }
+        if (jRadioButtonNaoPagos.isSelected()) {
+            situacao = "0";
+        }
 
-        
-        
-        
-        
         //HashMap<String, Object> parameterMap = new HashMap<String, Object>();
-
         Object dataIni = dataInicial;
         Object dataFim = dataFinal;
 
-        er.abrirRelatorioContasReceber(dataIni, dataFim, EMPRESA.getIdEmpresa());
+        er.abrirRelatorioContasReceber(dataIni, dataFim, EMPRESA.getIdEmpresa(), situacao);
 
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
 
@@ -232,30 +263,30 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
     }//GEN-LAST:event_jDateChooser1PropertyChange
 
     private void jDateChooser2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooser2PropertyChange
-      verificaDatas();
+        verificaDatas();
     }//GEN-LAST:event_jDateChooser2PropertyChange
 
-    private void verificaDatas(){
+    private void verificaDatas() {
 
         boolean bDatIni = false;
         boolean bDatFim = false;
         Date dDatIni = jDateChooser1.getDate();
         Date dDatFim = jDateChooser2.getDate();
-        
-        if(dDatIni != null){
+
+        if (dDatIni != null) {
             bDatIni = true;
         }
-        if(dDatFim != null){
+        if (dDatFim != null) {
             bDatFim = true;
         }
-        if(bDatIni && bDatFim){
+        if (bDatIni && bDatFim) {
             jButtonRelatorio.setEnabled(true);
-        }else{
+        } else {
             jButtonRelatorio.setEnabled(false);
         }
-        
-        
+
     }
+
     /**
      * @param args the command line arguments
      */
@@ -311,5 +342,8 @@ public class TelaRelatorioContasReceber extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButtonNaoPagos;
+    private javax.swing.JRadioButton jRadioButtonPagos;
+    private javax.swing.JRadioButton jRadioButtonTodos;
     // End of variables declaration//GEN-END:variables
 }

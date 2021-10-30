@@ -151,7 +151,7 @@ public class ConnectionFactory {
 
                     }
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(2000);
                     } catch (InterruptedException ex) {
                         ConfigurationFactory.getLOG().warn(ex.getMessage());
                     }

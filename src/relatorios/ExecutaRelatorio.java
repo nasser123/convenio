@@ -226,13 +226,23 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
-    
-    public void abrirRelatorioContasReceber(Object datainicial, Object datafinal, Object empresa) {
+    /**
+     * @param datainicial data inicial do relatorio
+     * @param datafinal data final do relatorio
+     * @param empresa empresa
+     * @param situacao busca a partir da situação
+     * 
+     *      0 - busca somente não pagos
+     *      1 - busca somente pagos
+     *      2 - busca todos os lançamentos
+    */
+    public void abrirRelatorioContasReceber(Object datainicial, Object datafinal, Object empresa, String situacao) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioContasReceber.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
         parametros.put("PERIODO", datainicial);
         parametros.put("PERIODOFINAL", datafinal);
         parametros.put("EMPRESA", empresa);
+        parametros.put("SITUACAO", situacao);
         try {
             // abre o relatório
             ReportUtils.openReport("Relatorio de Parcelas por Cliente", inputStream, parametros, ConnectionFactory.getConnection());

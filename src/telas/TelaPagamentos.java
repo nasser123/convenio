@@ -240,6 +240,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
             }
         });
 
+        jYearChooser.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jYearChooser.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 jYearChooserPropertyChange(evt);
@@ -324,7 +325,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
         jButtonComprovante.setBackground(new java.awt.Color(255, 255, 255));
         jButtonComprovante.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButtonComprovante.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/printer.png"))); // NOI18N
-        jButtonComprovante.setText("Imprimir");
+        jButtonComprovante.setText("Comprovante");
         jButtonComprovante.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonComprovante.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButtonComprovante.addActionListener(new java.awt.event.ActionListener() {
@@ -348,7 +349,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButtonGravar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonComprovante, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonComprovante)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -516,7 +517,7 @@ public class TelaPagamentos extends javax.swing.JFrame {
 
     private void jButtonGravarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravarActionPerformed
         for (int i = 0; i < parcelaList.size(); i++) {
-            if (parcelaList.get(i).isPago() && !(parcelaList.get(i).getDatapgto() == jDateChooser1.getDate())) {
+            if (parcelaList.get(i).isPago() && (parcelaList.get(i).getDatapgto() == null)) {
                 parcelaList.get(i).setDatapgto(jDateChooser1.getDate());
             }
             if (!parcelaList.get(i).isPago() && (parcelaList.get(i).getDatapgto() != null)) {
@@ -529,8 +530,9 @@ public class TelaPagamentos extends javax.swing.JFrame {
         ParcelaController pc = new ParcelaController();
         //Logger log = ConfigurationFactory.getLogger();
         try {
+            ConfigurationFactory.getLOG().info("inicio_grava_parcelas");
             pc.alterarListaParcelas(parcelaList, true);
-            ConfigurationFactory.getLOG().info("gravou");
+            ConfigurationFactory.getLOG().info("fim_grava_parcelas");
             
             
         } catch (SQLException ex) {
@@ -606,16 +608,20 @@ public class TelaPagamentos extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButtonTodosActionPerformed
 
     private void jButtonComprovanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprovanteActionPerformed
-        filtrar();
-        ExecutaRelatorio er = new ExecutaRelatorio();
+//        filtrar();
+//        ExecutaRelatorio er = new ExecutaRelatorio();
+//        
+//        
+//        HashMap<String, Object> parameterMap = new HashMap<String, Object>();
+//
+//        Date data = jDateChooser1.getDate();
+//        Convenio c = this.convenio;
+//        new TelaRelatorioComprovantePagamento().setVisible(true);
+//        
+//        
+//        er.abrirRelatorioParcelasConvenioComprovante(data, convenio.getIdconvenio(), EMPRESA.getIdEmpresa());
+        new TelaRelatorioComprovantePagamento(convenio, jDateChooser1.getDate()).setVisible(true);
         
-        
-        HashMap<String, Object> parameterMap = new HashMap<String, Object>();
-
-        Date data = jDateChooser1.getDate();
-        Convenio c = this.convenio;
-
-        er.abrirRelatorioParcelasConvenioComprovante(data, convenio.getIdconvenio(), EMPRESA.getIdEmpresa());
     }//GEN-LAST:event_jButtonComprovanteActionPerformed
 
     private void jMonthChooserPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jMonthChooserPropertyChange

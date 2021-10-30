@@ -9,6 +9,8 @@
 	<parameter name="PERIODOFINAL" class="java.util.Date">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
+	<parameter name="SITUACAO" class="java.lang.String"/>
+	<parameter name="EMPRESA" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[SELECT
      sum(parcela.valorparcela) AS parcela_datapgto,
@@ -41,6 +43,7 @@ FROM
 WHERE
      parcela.vencimento >= $P{PERIODO}
  AND parcela.vencimento <= $P{PERIODOFINAL}
+ AND (if($P{SITUACAO}=0, (parcela.pago = 0) , if($P{SITUACAO}=1, (parcela.pago = 1), '1=1' )))
 GROUP BY
      convenio.`idconvenio`]]>
 	</queryString>

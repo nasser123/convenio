@@ -163,3 +163,388 @@
 2021-10-26 00:38:54,455 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:100.0-Cliente: 11-ANDREIA OLIVEIRA-Nr parcelas:3-Data:26-10-2021
 2021-10-26 22:45:23,114 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-10-27 01:50:34,945 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:11:49,465 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:12:21,522 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 264-1 no valor de: 67.78 para: true-Cliente:505 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,594 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 285-1 no valor de: 25.2 para: true-Cliente:505 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,596 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 291-2 no valor de: 32.89 para: true-Cliente:505 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,599 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 301-2 no valor de: 143.88 para: true-Cliente:783 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,602 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 313-4 no valor de: 39.98 para: true-Cliente:693 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,605 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 315-1 no valor de: 103.94 para: true-Cliente:784 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,607 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 320-1 no valor de: 39.98 para: true-Cliente:784 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,609 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 331-2 no valor de: 27.92 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,611 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 336-2 no valor de: 12.99 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,613 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 346-2 no valor de: 55.83 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,614 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 351-2 no valor de: 49.54 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,616 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 357-3 no valor de: 41.98 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,618 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 362-3 no valor de: 69.14 para: true-Cliente:785 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,620 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 395-1 no valor de: 35.98 para: true-Cliente:462 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,622 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 400-1 no valor de: 138.74 para: true-Cliente:462 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,626 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 406-1 no valor de: 143.12 para: true-Cliente:462 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,628 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 412-2 no valor de: 40.7 para: true-Cliente:462 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,630 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 423-1 no valor de: 29.98 para: true-Cliente:532 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,631 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 427-1 no valor de: 118.9 para: true-Cliente:532 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,633 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 432-1 no valor de: 29.95 para: true-Cliente:532 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,634 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 441-1 no valor de: 135.56 para: true-Cliente:787 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,636 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 448-2 no valor de: 43.78 para: true-Cliente:788 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,637 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 457-1 no valor de: 162.56 para: true-Cliente:789 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,639 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 472-1 no valor de: 33.98 para: true-Cliente:789 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,640 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 483-1 no valor de: 23.8 para: true-Cliente:790 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,642 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 509-4 no valor de: 67.34 para: true-Cliente:791 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,644 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 518-3 no valor de: 34.99 para: true-Cliente:791 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,645 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 522-1 no valor de: 69.96 para: true-Cliente:378 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,647 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 527-1 no valor de: 42.48 para: true-Cliente:378 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,649 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 531-1 no valor de: 584.28 para: true-Cliente:378 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,650 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 542-2 no valor de: 51.94 para: true-Cliente:84 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,652 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 547-2 no valor de: 61.9 para: true-Cliente:84 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,653 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 557-1 no valor de: 45.6 para: true-Cliente:22 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,655 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 561-1 no valor de: 22.48 para: true-Cliente:792 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,657 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 565-1 no valor de: 91.94 para: true-Cliente:793 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,659 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 570-1 no valor de: 487.1 para: true-Cliente:793 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,661 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 598-1 no valor de: 33.98 para: true-Cliente:288 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,662 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 613-1 no valor de: 33.98 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,664 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 618-1 no valor de: 35.98 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,665 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 623-1 no valor de: 69.98 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,666 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 625-1 no valor de: 225.7 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,668 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 626-1 no valor de: 29.95 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,669 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 627-1 no valor de: 43.68 para: true-Cliente:797 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,671 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 656-5 no valor de: 51.96 para: true-Cliente:151 Data:null
+2021-10-29 20:12:21,672 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 661-5 no valor de: 452.38 para: true-Cliente:151 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,673 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 672-1 no valor de: 64.3 para: false-Cliente:804 Data:null
+2021-10-29 20:12:21,674 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 678-1 no valor de: 32.0 para: true-Cliente:805 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,676 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 690-2 no valor de: 41.94 para: true-Cliente:803 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,677 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 701-2 no valor de: 63.49 para: true-Cliente:802 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,679 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 733-1 no valor de: 43.96 para: true-Cliente:799 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,680 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 743-1 no valor de: 139.34 para: true-Cliente:808 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,682 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 748-1 no valor de: 31.98 para: true-Cliente:808 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,683 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 749-1 no valor de: 93.16 para: true-Cliente:808 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,684 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 765-1 no valor de: 32.94 para: true-Cliente:8 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,685 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 770-1 no valor de: 31.98 para: true-Cliente:8 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,686 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 790-1 no valor de: 168.34 para: true-Cliente:218 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,687 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 796-2 no valor de: 36.63 para: true-Cliente:218 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,688 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 801-1 no valor de: 132.93 para: true-Cliente:809 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,689 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 804-1 no valor de: 31.98 para: true-Cliente:467 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,690 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 812-1 no valor de: 81.86 para: false-Cliente:786 Data:null
+2021-10-29 20:12:21,691 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 826-1 no valor de: 154.9 para: true-Cliente:812 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,692 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 827-1 no valor de: 35.98 para: true-Cliente:812 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,693 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 832-1 no valor de: 59.78 para: true-Cliente:812 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,694 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 841-5 no valor de: 75.96 para: false-Cliente:152 Data:null
+2021-10-29 20:12:21,694 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 851-5 no valor de: 179.95 para: false-Cliente:152 Data:null
+2021-10-29 20:12:21,695 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 943-1 no valor de: 115.93 para: true-Cliente:650 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,696 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 944-1 no valor de: 174.87 para: true-Cliente:650 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,697 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 947-1 no valor de: 56.63 para: true-Cliente:650 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,698 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 949-1 no valor de: 40.33 para: true-Cliente:650 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:21,699 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 951-1 no valor de: 136.34 para: true-Cliente:650 Data:Fri Oct 29 20:11:55 BRT 2021
+2021-10-29 20:12:29,674 [AWT-EventQueue-0]  INFO testecategoria:533 – gravou
+2021-10-29 20:18:44,391 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 311-2 no valor de: 39.98 para: true-Cliente:693 Data:Tue Aug 10 00:00:00 BRT 2021
+2021-10-29 20:18:44,420 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 355-1 no valor de: 41.98 para: true-Cliente:785 Data:Tue Aug 10 00:00:00 BRT 2021
+2021-10-29 20:18:44,426 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 360-1 no valor de: 69.14 para: true-Cliente:785 Data:Tue Aug 10 00:00:00 BRT 2021
+2021-10-29 20:18:44,433 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 507-2 no valor de: 67.34 para: true-Cliente:791 Data:Tue Aug 10 00:00:00 BRT 2021
+2021-10-29 20:18:44,439 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 516-1 no valor de: 34.99 para: true-Cliente:791 Data:Tue Aug 10 00:00:00 BRT 2021
+2021-10-29 20:18:44,446 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 654-3 no valor de: 51.96 para: false-Cliente:151 Data:null
+2021-10-29 20:18:44,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 659-3 no valor de: 452.38 para: false-Cliente:151 Data:null
+2021-10-29 20:18:44,457 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 839-3 no valor de: 75.96 para: true-Cliente:152 Data:Fri Oct 29 20:17:21 BRT 2021
+2021-10-29 20:18:44,463 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 849-3 no valor de: 179.95 para: false-Cliente:152 Data:null
+2021-10-29 20:19:06,710 [AWT-EventQueue-0]  INFO testecategoria:534 – gravou
+2021-10-29 20:26:12,045 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:26:26,395 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 20:26:26,395 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1401-1 no valor de: 101.16 para: true-Cliente:856 Data:Fri Oct 29 20:26:18 BRT 2021
+2021-10-29 20:26:26,410 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1402-1 no valor de: 53.54 para: false-Cliente:856 Data:null
+2021-10-29 20:26:28,844 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 20:29:16,413 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:29:58,702 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:30:28,282 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 20:30:28,282 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1018-1 no valor de: 46.77 para: true-Cliente:76 Data:Fri Oct 29 20:30:04 BRT 2021
+2021-10-29 20:30:30,688 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 20:33:47,482 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:34:07,283 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 20:34:07,283 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 672-1 no valor de: 64.3 para: true-Cliente:804 Data:Fri Oct 29 20:33:53 BRT 2021
+2021-10-29 20:34:07,298 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 812-1 no valor de: 81.86 para: false-Cliente:786 Data:null
+2021-10-29 20:34:07,314 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 841-5 no valor de: 75.96 para: false-Cliente:152 Data:null
+2021-10-29 20:34:07,314 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 851-5 no valor de: 179.95 para: true-Cliente:152 Data:Fri Oct 29 20:33:53 BRT 2021
+2021-10-29 20:34:16,823 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 20:34:23,373 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 20:34:23,373 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 264-1 no valor de: 67.78 para: true-Cliente:505 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 285-1 no valor de: 25.2 para: true-Cliente:505 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 291-2 no valor de: 32.89 para: true-Cliente:505 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 301-2 no valor de: 143.88 para: true-Cliente:783 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 313-4 no valor de: 39.98 para: true-Cliente:693 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 315-1 no valor de: 103.94 para: true-Cliente:784 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 320-1 no valor de: 39.98 para: true-Cliente:784 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,388 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 331-2 no valor de: 27.92 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 336-2 no valor de: 12.99 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 346-2 no valor de: 55.83 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 351-2 no valor de: 49.54 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 357-3 no valor de: 41.98 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 362-3 no valor de: 69.14 para: true-Cliente:785 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 395-1 no valor de: 35.98 para: true-Cliente:462 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 400-1 no valor de: 138.74 para: true-Cliente:462 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 406-1 no valor de: 143.12 para: true-Cliente:462 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 412-2 no valor de: 40.7 para: true-Cliente:462 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,404 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 423-1 no valor de: 29.98 para: true-Cliente:532 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 427-1 no valor de: 118.9 para: true-Cliente:532 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 432-1 no valor de: 29.95 para: true-Cliente:532 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 441-1 no valor de: 135.56 para: true-Cliente:787 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 448-2 no valor de: 43.78 para: true-Cliente:788 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 457-1 no valor de: 162.56 para: true-Cliente:789 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 472-1 no valor de: 33.98 para: true-Cliente:789 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 483-1 no valor de: 23.8 para: true-Cliente:790 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 509-4 no valor de: 67.34 para: true-Cliente:791 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 518-3 no valor de: 34.99 para: true-Cliente:791 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,419 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 522-1 no valor de: 69.96 para: true-Cliente:378 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 527-1 no valor de: 42.48 para: true-Cliente:378 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 531-1 no valor de: 584.28 para: true-Cliente:378 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 542-2 no valor de: 51.94 para: true-Cliente:84 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 547-2 no valor de: 61.9 para: true-Cliente:84 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 557-1 no valor de: 45.6 para: true-Cliente:22 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 561-1 no valor de: 22.48 para: true-Cliente:792 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 565-1 no valor de: 91.94 para: true-Cliente:793 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 570-1 no valor de: 487.1 para: true-Cliente:793 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 598-1 no valor de: 33.98 para: true-Cliente:288 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 613-1 no valor de: 33.98 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,435 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 618-1 no valor de: 35.98 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 623-1 no valor de: 69.98 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 625-1 no valor de: 225.7 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 626-1 no valor de: 29.95 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 627-1 no valor de: 43.68 para: true-Cliente:797 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 656-5 no valor de: 51.96 para: true-Cliente:151 Data:Fri Oct 29 20:33:53 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 661-5 no valor de: 452.38 para: true-Cliente:151 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 672-1 no valor de: 64.3 para: true-Cliente:804 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 678-1 no valor de: 32.0 para: true-Cliente:805 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 690-2 no valor de: 41.94 para: true-Cliente:803 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 701-2 no valor de: 63.49 para: true-Cliente:802 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 733-1 no valor de: 43.96 para: true-Cliente:799 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,451 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 743-1 no valor de: 139.34 para: true-Cliente:808 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 748-1 no valor de: 31.98 para: true-Cliente:808 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 749-1 no valor de: 93.16 para: true-Cliente:808 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 765-1 no valor de: 32.94 para: true-Cliente:8 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 770-1 no valor de: 31.98 para: true-Cliente:8 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 790-1 no valor de: 168.34 para: true-Cliente:218 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 796-2 no valor de: 36.63 para: true-Cliente:218 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 801-1 no valor de: 132.93 para: true-Cliente:809 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 804-1 no valor de: 31.98 para: true-Cliente:467 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 812-1 no valor de: 81.86 para: false-Cliente:786 Data:null
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 826-1 no valor de: 154.9 para: true-Cliente:812 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 827-1 no valor de: 35.98 para: true-Cliente:812 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 832-1 no valor de: 59.78 para: true-Cliente:812 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 841-5 no valor de: 75.96 para: false-Cliente:152 Data:null
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 851-5 no valor de: 179.95 para: true-Cliente:152 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 943-1 no valor de: 115.93 para: true-Cliente:650 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 944-1 no valor de: 174.87 para: true-Cliente:650 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 947-1 no valor de: 56.63 para: true-Cliente:650 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,466 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 949-1 no valor de: 40.33 para: true-Cliente:650 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:23,482 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 951-1 no valor de: 136.34 para: true-Cliente:650 Data:Fri Oct 29 00:00:00 BRT 2021
+2021-10-29 20:34:25,908 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 20:38:22,397 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 20:39:45,108 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 20:39:45,108 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1439-1 no valor de: 33.98 para: true-Cliente:117 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,171 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1443-1 no valor de: 29.95 para: true-Cliente:117 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1444-1 no valor de: 63.6 para: true-Cliente:117 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1447-1 no valor de: 132.0 para: true-Cliente:117 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1450-1 no valor de: 74.38 para: true-Cliente:117 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1454-1 no valor de: 33.98 para: true-Cliente:122 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1459-1 no valor de: 53.98 para: true-Cliente:122 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1460-1 no valor de: 47.98 para: true-Cliente:122 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1461-1 no valor de: 73.96 para: true-Cliente:122 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1464-1 no valor de: 40.94 para: true-Cliente:122 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,186 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1516-1 no valor de: 41.98 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1521-1 no valor de: 213.6 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1526-1 no valor de: 39.93 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1527-1 no valor de: 41.98 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1528-1 no valor de: 41.98 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1529-1 no valor de: 71.96 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1530-1 no valor de: 128.56 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1531-1 no valor de: 180.9 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1532-1 no valor de: 292.72 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1535-1 no valor de: 33.98 para: true-Cliente:184 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,202 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1374-1 no valor de: 56.63 para: true-Cliente:187 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1415-1 no valor de: 67.96 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1420-1 no valor de: 85.4 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1425-1 no valor de: 42.8 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1432-1 no valor de: 41.87 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1434-1 no valor de: 85.5 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1435-1 no valor de: 37.98 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,218 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1436-1 no valor de: 79.78 para: true-Cliente:189 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1392-1 no valor de: 42.26 para: true-Cliente:211 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1393-1 no valor de: 75.82 para: true-Cliente:211 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1395-1 no valor de: 62.3 para: true-Cliente:591 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1397-1 no valor de: 46.97 para: true-Cliente:591 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1467-1 no valor de: 52.36 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1469-1 no valor de: 31.98 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1472-1 no valor de: 61.96 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1475-1 no valor de: 99.74 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1478-1 no valor de: 49.92 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1480-1 no valor de: 63.46 para: true-Cliente:767 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1368-1 no valor de: 58.6 para: true-Cliente:850 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1366-1 no valor de: 73.86 para: true-Cliente:851 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,233 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1375-1 no valor de: 23.2 para: true-Cliente:852 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1365-1 no valor de: 33.16 para: true-Cliente:853 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1364-1 no valor de: 25.98 para: true-Cliente:854 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1383-1 no valor de: 39.98 para: true-Cliente:855 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1388-1 no valor de: 175.15 para: true-Cliente:855 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1403-2 no valor de: 53.54 para: true-Cliente:856 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1406-1 no valor de: 67.82 para: true-Cliente:857 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1409-1 no valor de: 51.97 para: true-Cliente:857 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1413-1 no valor de: 55.0 para: true-Cliente:857 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1484-1 no valor de: 83.96 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1486-1 no valor de: 79.92 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1490-1 no valor de: 123.93 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1492-1 no valor de: 37.97 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,249 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1494-1 no valor de: 58.97 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,265 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1496-1 no valor de: 76.66 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,265 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1498-1 no valor de: 41.98 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,265 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1499-1 no valor de: 70.6 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:45,265 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1500-1 no valor de: 35.98 para: true-Cliente:858 Data:Fri Oct 29 20:39:31 BRT 2021
+2021-10-29 20:39:47,483 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 21:08:14,731 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 21:08:40,022 [AWT-EventQueue-0]  INFO testecategoria:533 – inicio_grava_parcelas
+2021-10-29 21:08:40,038 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 265-2 no valor de: 67.78 para: true-Cliente:505 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,163 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 286-2 no valor de: 25.2 para: true-Cliente:505 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,163 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 292-3 no valor de: 32.89 para: true-Cliente:505 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 302-3 no valor de: 143.88 para: true-Cliente:783 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 305-1 no valor de: 39.96 para: true-Cliente:783 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 314-5 no valor de: 39.98 para: true-Cliente:693 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 316-2 no valor de: 103.94 para: true-Cliente:784 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 321-2 no valor de: 39.98 para: true-Cliente:784 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,178 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 325-1 no valor de: 53.73 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,194 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 332-3 no valor de: 27.92 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,194 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 337-3 no valor de: 12.99 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,194 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 347-3 no valor de: 55.83 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,194 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 352-3 no valor de: 49.54 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,194 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 358-4 no valor de: 41.98 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 363-4 no valor de: 69.14 para: true-Cliente:785 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 375-1 no valor de: 134.21 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 380-1 no valor de: 65.58 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 390-1 no valor de: 37.98 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 396-2 no valor de: 35.98 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,209 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 401-2 no valor de: 138.74 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 405-1 no valor de: 89.96 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 407-2 no valor de: 143.12 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 413-3 no valor de: 40.7 para: true-Cliente:462 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 416-1 no valor de: 67.76 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 424-2 no valor de: 29.97 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 425-1 no valor de: 66.0 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,225 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 426-1 no valor de: 66.78 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 428-2 no valor de: 118.9 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 433-2 no valor de: 29.95 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 434-1 no valor de: 35.98 para: true-Cliente:532 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 439-1 no valor de: 29.9 para: true-Cliente:786 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 442-2 no valor de: 135.56 para: true-Cliente:787 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,241 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 446-1 no valor de: 139.9 para: true-Cliente:171 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 449-3 no valor de: 43.78 para: true-Cliente:788 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 452-1 no valor de: 87.36 para: true-Cliente:789 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 458-2 no valor de: 162.56 para: true-Cliente:789 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 473-2 no valor de: 33.98 para: true-Cliente:789 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 488-1 no valor de: 65.4 para: true-Cliente:311 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 501-1 no valor de: 96.94 para: true-Cliente:791 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,256 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 510-5 no valor de: 67.34 para: true-Cliente:791 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 519-4 no valor de: 34.99 para: true-Cliente:791 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 523-2 no valor de: 69.96 para: true-Cliente:378 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 528-2 no valor de: 42.48 para: true-Cliente:378 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 532-2 no valor de: 584.28 para: true-Cliente:378 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 536-1 no valor de: 55.96 para: true-Cliente:378 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 543-3 no valor de: 51.94 para: true-Cliente:84 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 548-3 no valor de: 61.9 para: true-Cliente:84 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 558-2 no valor de: 45.6 para: true-Cliente:22 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,272 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 560-1 no valor de: 46.63 para: true-Cliente:22 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 562-2 no valor de: 22.48 para: true-Cliente:792 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 566-2 no valor de: 91.94 para: true-Cliente:793 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 571-2 no valor de: 487.1 para: true-Cliente:793 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 575-1 no valor de: 55.6 para: true-Cliente:794 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 580-1 no valor de: 37.96 para: true-Cliente:794 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 585-1 no valor de: 97.0 para: true-Cliente:794 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 586-1 no valor de: 49.97 para: true-Cliente:794 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 589-1 no valor de: 65.76 para: true-Cliente:795 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 594-1 no valor de: 39.98 para: true-Cliente:795 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 595-1 no valor de: 38.8 para: true-Cliente:795 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 596-1 no valor de: 27.98 para: true-Cliente:795 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 597-1 no valor de: 83.13 para: true-Cliente:795 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 599-2 no valor de: 33.98 para: true-Cliente:288 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 603-1 no valor de: 482.88 para: true-Cliente:797 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,287 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 608-1 no valor de: 33.98 para: true-Cliente:797 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 614-2 no valor de: 33.98 para: true-Cliente:797 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 619-2 no valor de: 35.98 para: true-Cliente:797 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 624-2 no valor de: 69.98 para: true-Cliente:797 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 628-1 no valor de: 39.0 para: true-Cliente:796 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 643-1 no valor de: 58.78 para: true-Cliente:796 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 649-1 no valor de: 132.93 para: true-Cliente:798 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 662-1 no valor de: 35.98 para: true-Cliente:801 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 667-1 no valor de: 76.24 para: true-Cliente:801 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 673-1 no valor de: 30.98 para: true-Cliente:804 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 679-1 no valor de: 44.78 para: true-Cliente:805 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 684-1 no valor de: 77.78 para: true-Cliente:803 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 691-3 no valor de: 41.94 para: true-Cliente:803 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,303 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 694-1 no valor de: 53.78 para: true-Cliente:803 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 695-1 no valor de: 84.0 para: true-Cliente:802 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 702-3 no valor de: 63.49 para: true-Cliente:802 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 707-1 no valor de: 39.18 para: true-Cliente:802 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 709-1 no valor de: 84.0 para: true-Cliente:800 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 711-1 no valor de: 39.98 para: true-Cliente:800 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 712-1 no valor de: 53.98 para: true-Cliente:800 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 713-1 no valor de: 48.34 para: true-Cliente:799 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 718-1 no valor de: 79.94 para: true-Cliente:799 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 723-1 no valor de: 49.94 para: true-Cliente:799 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,319 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 728-1 no valor de: 39.96 para: true-Cliente:799 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 734-1 no valor de: 84.4 para: true-Cliente:807 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 741-1 no valor de: 34.17 para: true-Cliente:588 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 742-1 no valor de: 77.14 para: true-Cliente:588 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 744-2 no valor de: 139.34 para: true-Cliente:808 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 750-1 no valor de: 29.98 para: true-Cliente:808 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 755-1 no valor de: 159.48 para: true-Cliente:808 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 760-1 no valor de: 32.47 para: true-Cliente:8 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 763-1 no valor de: 41.98 para: true-Cliente:8 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 764-1 no valor de: 34.56 para: true-Cliente:8 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,334 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 766-2 no valor de: 32.94 para: true-Cliente:8 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 771-2 no valor de: 31.98 para: true-Cliente:8 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 775-1 no valor de: 65.56 para: true-Cliente:218 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 780-1 no valor de: 46.8 para: true-Cliente:218 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 791-2 no valor de: 168.34 para: true-Cliente:218 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 797-3 no valor de: 36.64 para: true-Cliente:218 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 798-1 no valor de: 26.63 para: true-Cliente:72 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 799-1 no valor de: 34.95 para: true-Cliente:72 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 800-1 no valor de: 40.78 para: true-Cliente:72 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 802-2 no valor de: 132.93 para: true-Cliente:809 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 805-2 no valor de: 31.98 para: true-Cliente:467 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 809-1 no valor de: 50.88 para: true-Cliente:467 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 813-2 no valor de: 81.86 para: true-Cliente:786 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 815-1 no valor de: 20.95 para: true-Cliente:810 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 816-1 no valor de: 48.97 para: true-Cliente:812 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 821-1 no valor de: 53.17 para: true-Cliente:812 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,350 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 828-2 no valor de: 35.98 para: true-Cliente:812 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 833-2 no valor de: 59.78 para: true-Cliente:812 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 852-1 no valor de: 41.98 para: true-Cliente:815 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 855-1 no valor de: 58.8 para: true-Cliente:816 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 861-1 no valor de: 238.06 para: true-Cliente:816 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 862-1 no valor de: 157.03 para: true-Cliente:816 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 864-1 no valor de: 40.46 para: true-Cliente:437 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 865-1 no valor de: 39.99 para: true-Cliente:437 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 869-1 no valor de: 25.98 para: true-Cliente:437 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 874-1 no valor de: 190.76 para: true-Cliente:437 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 879-1 no valor de: 78.36 para: true-Cliente:817 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 884-1 no valor de: 33.98 para: true-Cliente:818 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 885-1 no valor de: 72.5 para: true-Cliente:819 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 886-1 no valor de: 27.98 para: true-Cliente:819 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 888-1 no valor de: 61.94 para: true-Cliente:66 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 902-1 no valor de: 103.74 para: true-Cliente:66 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 903-1 no valor de: 49.96 para: true-Cliente:66 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 905-1 no valor de: 75.96 para: true-Cliente:297 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 913-1 no valor de: 75.96 para: true-Cliente:822 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,366 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 918-1 no valor de: 39.96 para: true-Cliente:822 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 923-1 no valor de: 152.23 para: true-Cliente:822 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 926-1 no valor de: 33.98 para: true-Cliente:822 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 945-2 no valor de: 174.87 para: true-Cliente:650 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 948-2 no valor de: 56.63 para: true-Cliente:650 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 950-2 no valor de: 40.33 para: true-Cliente:650 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 953-1 no valor de: 21.67 para: true-Cliente:214 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 956-1 no valor de: 58.58 para: true-Cliente:214 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 961-1 no valor de: 124.0 para: true-Cliente:214 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 966-1 no valor de: 124.34 para: true-Cliente:214 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 967-1 no valor de: 67.74 para: true-Cliente:214 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1586-1 no valor de: 29.98 para: true-Cliente:794 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1591-1 no valor de: 105.56 para: true-Cliente:66 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1596-1 no valor de: 33.98 para: true-Cliente:796 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:40,381 [AWT-EventQueue-0]  INFO testecategoria:91 –  Alterada parcela id: 1607-1 no valor de: 519.16 para: true-Cliente:378 Data:Fri Oct 29 21:08:20 BRT 2021
+2021-10-29 21:08:42,599 [AWT-EventQueue-0]  INFO testecategoria:535 – fim_grava_parcelas
+2021-10-29 23:14:02,477 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 23:15:14,293 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 23:22:08,084 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-10-29 23:23:44,564 [main]  INFO testecategoria:44 – Abertura de sistema

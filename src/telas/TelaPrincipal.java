@@ -29,9 +29,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
         initComponents();
-        
+
         EntityManager entity = ConnectionFactory.getEntityManager();
-        
+
         BufferedImage ico = null;
         try {
             ico = ImageIO.read(this.getClass().getResource("/imagens/vendas64.png"));
@@ -78,7 +78,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemParcelasConvenio = new javax.swing.JMenuItem();
         jMenuItemParcelasCliente = new javax.swing.JMenuItem();
         jMenuItemClientes = new javax.swing.JMenuItem();
-        jCheckBoxMenuItemPagamentos = new javax.swing.JCheckBoxMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItemComprovantePagamento = new javax.swing.JMenuItem();
         jMenuConfiguracao = new javax.swing.JMenu();
@@ -89,6 +88,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(800, 600));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -304,10 +311,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuComprovantePagamento.add(jMenuItemClientes);
 
-        jCheckBoxMenuItemPagamentos.setSelected(true);
-        jCheckBoxMenuItemPagamentos.setText("Pagamentos");
-        jMenuComprovantePagamento.add(jCheckBoxMenuItemPagamentos);
-
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jMenuItem3.setText("Contas a receber");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -391,8 +394,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonClientesActionPerformed
 
     private void jMenuComprovantePagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuComprovantePagamentoActionPerformed
-             new TelaRelatorioComprovantePagamento().setVisible(true);
-             
+        new TelaRelatorioComprovantePagamento().setVisible(true);
+
 
     }//GEN-LAST:event_jMenuComprovantePagamentoActionPerformed
 
@@ -464,16 +467,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         int sair = JOptionPane.showConfirmDialog(rootPane, "Você tem certeza que deseja sair do programa?");
         if (sair == 0) {
             int backup = JOptionPane.showConfirmDialog(rootPane, "Você deseja realizar backup?");
-            if(backup == 0){
+            if (backup == 0) {
                 Connection con = ConnectionFactory.getConnection();
                 boolean gravou = ConnectionFactory.geraBackup();
-                if(gravou){
+                if (gravou) {
                     JOptionPane.showMessageDialog(rootPane, "Arquivo gravado com sucesso");
-                }else{
+                } else {
                     JOptionPane.showMessageDialog(rootPane, "Não foi possível gravar o arquivo");
                 }
             }
-            
+
             System.exit(0);
         }
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -488,16 +491,55 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemComprovantePagamentoActionPerformed
 
     private void jMenuItemVendasClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVendasClienteActionPerformed
-       new TelaRelatorioVendasCliente().setVisible(true);
+        new TelaRelatorioVendasCliente().setVisible(true);
     }//GEN-LAST:event_jMenuItemVendasClienteActionPerformed
 
     private void jMenuItemParcelasClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemParcelasClienteActionPerformed
-       new TelaRelatorioParcelasCliente().setVisible(true);
+        new TelaRelatorioParcelasCliente().setVisible(true);
     }//GEN-LAST:event_jMenuItemParcelasClienteActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         new TelaRelatorioContasReceber().setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        int sair = JOptionPane.showConfirmDialog(rootPane, "Você tem certeza que deseja sair do programa?");
+        if (sair == 0) {
+            int backup = JOptionPane.showConfirmDialog(rootPane, "Você deseja realizar backup?");
+            if (backup == 0) {
+                Connection con = ConnectionFactory.getConnection();
+                boolean gravou = ConnectionFactory.geraBackup();
+                if (gravou) {
+                    JOptionPane.showMessageDialog(rootPane, "Arquivo gravado com sucesso");
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Não foi possível gravar o arquivo");
+                }
+            }
+
+            System.exit(0);
+        }
+
+
+    }//GEN-LAST:event_formWindowClosed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        int sair = JOptionPane.showConfirmDialog(rootPane, "Você tem certeza que deseja sair do programa?");
+        if (sair == 0) {
+            int backup = JOptionPane.showConfirmDialog(rootPane, "Você deseja realizar backup?");
+            if (backup == 0) {
+                Connection con = ConnectionFactory.getConnection();
+                boolean gravou = ConnectionFactory.geraBackup();
+                if (gravou) {
+                    JOptionPane.showMessageDialog(rootPane, "Arquivo gravado com sucesso");
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Não foi possível gravar o arquivo");
+                }
+            }
+
+            System.exit(0);
+        }
+
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
@@ -520,7 +562,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-           ConfigurationFactory.getLOG().warn(ex.getMessage());
+            ConfigurationFactory.getLOG().warn(ex.getMessage());
         } catch (InstantiationException ex) {
             ConfigurationFactory.getLOG().warn(ex.getMessage());
         } catch (IllegalAccessException ex) {
@@ -546,7 +588,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonClientes;
     private javax.swing.JButton jButtonConvenios;
-    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItemPagamentos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastros;
