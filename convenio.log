@@ -548,3 +548,97 @@
 2021-10-29 23:15:14,293 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-10-29 23:22:08,084 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-10-29 23:23:44,564 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:27:42,947 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:28:13,155 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:29:45,770 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 13:29:45,810 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:123.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2021-11-02 13:50:48,665 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:51:05,974 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 13:51:06,021 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1500.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2021-11-02 13:51:47,802 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:52:07,603 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 13:52:07,884 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1111.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2021-11-02 13:53:51,610 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:54:09,395 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 13:54:09,614 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1500.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 13:57:27,524 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 13:57:48,038 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 13:57:48,257 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1200.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:09:50,870 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:10:10,308 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:10:10,589 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:444.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2021-11-02 14:10:33,901 [AWT-EventQueue-0]  WARN testecategoria:281 – Error loading object from InputStream
+2021-11-02 14:11:34,979 [AWT-EventQueue-0]  WARN testecategoria:281 – Error loading object from InputStream
+2021-11-02 14:15:11,065 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:15:22,201 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:15:22,232 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:111.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:15:23,965 [AWT-EventQueue-0]  WARN testecategoria:283 – Error loading object from InputStream
+2021-11-02 14:18:29,119 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:18:43,292 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:18:43,354 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:222.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:20:55,318 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:21:07,131 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:21:07,178 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:2222.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:5-Data:2-11-2021
+2021-11-02 14:25:54,704 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:26:08,598 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:26:08,645 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:2222.0-Cliente: 5-SHEILA RIPOLL-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:29:27,621 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:29:55,230 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:29:55,261 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:5555.0-Cliente: 5-SHEILA RIPOLL-Nr parcelas:5-Data:2-11-2021
+2021-11-02 14:35:36,950 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:35:47,298 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:35:47,329 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:444.0-Cliente: 5-SHEILA RIPOLL-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:36:49,902 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:37:09,748 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:37:09,811 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:55.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 14:40:33,518 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 14:40:44,191 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 14:40:44,222 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:33.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 17:30:49,870 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 17:31:08,880 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 17:31:08,911 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:444.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 17:33:40,065 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 17:33:52,108 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 17:34:09,432 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 17:34:09,463 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:200.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:5-Data:2-11-2021
+2021-11-02 17:34:52,767 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 17:35:02,922 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 17:35:02,953 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:333.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:2-11-2021
+2021-11-02 18:25:51,352 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:25:53,875 [main] ERROR testecategoria:148 – não foi encontrado arquivo de configuração .\system.properties (O sistema não pode encontrar o arquivo especificado)
+2021-11-02 18:26:26,818 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:27:04,801 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:27:49,746 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:28:25,694 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:28:51,681 [main] ERROR testecategoria:150 – não foi encontrado arquivo de configuração parse error (at line: 5): db.name=mysql
+2021-11-02 18:30:44,152 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:31:10,281 [main] ERROR testecategoria:145 – não foi encontrado arquivo de configuração parse error (at line: 5): db.name=mysql
+2021-11-02 18:31:18,281 [main] ERROR testecategoria:148 – não foi encontrado arquivo de configuração .src\convenio\system.properties (O sistema não pode encontrar o caminho especificado)
+2021-11-02 18:33:36,415 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:34:50,915 [main] ERROR testecategoria:145 – não foi encontrado arquivo de configuração parse error (at line: 5): db.name=mysql
+2021-11-02 18:34:59,653 [main] ERROR testecategoria:148 – não foi encontrado arquivo de configuração .src\convenio\system.properties (O sistema não pode encontrar o caminho especificado)
+2021-11-02 18:35:51,476 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:37:49,754 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:39:28,443 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:40:00,855 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 18:40:22,435 [main] ERROR testecategoria:150 – não foi encontrado arquivo de configuração parse error (at line: 5): db.name=mysql
+2021-11-02 19:18:52,698 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:19:05,543 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:19:05,589 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:333.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:6-Data:2-11-2021
+2021-11-02 19:23:30,719 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:23:47,164 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:23:58,647 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:23:58,662 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:330.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:1-Data:2-11-2021
+2021-11-02 19:31:04,747 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:31:26,037 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:31:33,740 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:31:38,773 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:31:50,559 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:31:50,590 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:111.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:1-Data:2-11-2021
+2021-11-02 19:34:21,239 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:34:45,180 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:34:45,227 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:222.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2021-11-02 19:40:28,914 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:49:41,016 [main]  INFO testecategoria:44 – Abertura de sistema
+2021-11-02 19:49:54,657 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2021-11-02 19:49:54,673 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:333.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:1-Data:2-11-2021

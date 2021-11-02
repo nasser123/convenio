@@ -37,6 +37,8 @@ public class ConfigurationFactory {
     private static Section config;
     public static Logger LOG;
     public static String DBEMPRESA;
+    public static String IMPRESSORACUPOM;
+    public static Integer NRVIAS;
 
     public static Logger getLOG() {
         if (LOG == null) {
@@ -56,6 +58,7 @@ public class ConfigurationFactory {
         }
         return LOG;
     }
+    
 
     public ConfigurationFactory(String secao) throws FileNotFoundException {
         if (secao == null) {
@@ -84,6 +87,13 @@ public class ConfigurationFactory {
             DBFILE = new File(DBDIR);
             BACKUP = config.get("db.backup");
             DBEMPRESA = config.get("db.empresa");
+            IMPRESSORACUPOM = config.get("db.impressoracupom");
+            try{
+            NRVIAS = Integer.parseInt(config.get("db.nrvias"));
+            }catch(NumberFormatException nfe){
+                NRVIAS = 2;
+            }
+            
         }
         if (DBDIR == null) {
             DBDIR = "mysql";
@@ -125,6 +135,13 @@ public class ConfigurationFactory {
             DBFILE = new File(DBDIR);
             BACKUP = config.get("db.backup");
             DBEMPRESA = config.get("db.empresa");
+            IMPRESSORACUPOM = config.get("db.impressoracupom");
+            try{
+            NRVIAS = Integer.parseInt(config.get("db.nrvias"));
+            }catch(NumberFormatException nfe){
+                NRVIAS = 2;
+            }
+            
         }
         return config;
     }
@@ -183,6 +200,11 @@ public class ConfigurationFactory {
             buffW.newLine();
             buffW.write("db.empresa=" + DBEMPRESA);
             buffW.newLine();
+            buffW.write("db.impressoracupom=" + IMPRESSORACUPOM);
+            buffW.newLine();
+            buffW.write("db.nrvias=" + NRVIAS);
+            buffW.newLine();
+            
            
 
             buffR.close();

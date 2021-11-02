@@ -4,18 +4,15 @@
  */
 package telas;
 
-import beans.Convenio;
 import beans.Venda;
 import controller.VendaController;
 import static convenio.Convenio.EMPRESA;
 import java.sql.SQLException;
-import java.util.Date;
 import java.util.HashMap;
 import relatorios.ExecutaRelatorio;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
-import util.Datas;
 
 /**
  *
@@ -480,6 +477,7 @@ public class TelaParcelasEditar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButtonGravar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGravar1ActionPerformed
+        
         ExecutaRelatorio t = new ExecutaRelatorio();
         //int idvenda = venda1.getIdvenda();
         HashMap<String, Object> parameterMap = new HashMap<String, Object>();

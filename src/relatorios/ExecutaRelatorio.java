@@ -1,11 +1,22 @@
 package relatorios;
 
+import java.awt.print.PrinterException;
+import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JRExporterParameter;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
 import util.ConfigurationFactory;
+import static util.ConfigurationFactory.IMPRESSORACUPOM;
 import util.ConnectionFactory;
+import util.Impressoras;
 import util.ReportUtils;
 
 /**
@@ -101,8 +112,7 @@ public class ExecutaRelatorio {
         }
 
     }
-    
-    
+
     public void abrirRelatorioVendasClientePorPeriodo(Object cliente, Object periodo, Object periodofinal, Object empresa) {
 
         InputStream inputStream = getClass().getResourceAsStream("RelatorioVendasPorClientePorPeriodo.jasper");
@@ -197,7 +207,7 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
-    
+
     public void abrirRelatorioParcelasClienteComprovante(Object datapgto, Object cliente, Object empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasClienteComprovante.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
@@ -211,7 +221,7 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
-    
+
     public void abrirRelatorioParcelasCliente(Object datainicial, Object datafinal, Object cliente, Object empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioParcelasCliente.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
@@ -226,16 +236,16 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
+
     /**
      * @param datainicial data inicial do relatorio
      * @param datafinal data final do relatorio
      * @param empresa empresa
      * @param situacao busca a partir da situação
-     * 
-     *      0 - busca somente não pagos
-     *      1 - busca somente pagos
-     *      2 - busca todos os lançamentos
-    */
+     *
+     * 0 - busca somente não pagos 1 - busca somente pagos 2 - busca todos os
+     * lançamentos
+     */
     public void abrirRelatorioContasReceber(Object datainicial, Object datafinal, Object empresa, String situacao) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioContasReceber.jasper");
         Map<String, Object> parametros = new HashMap<String, Object>();
@@ -250,6 +260,7 @@ public class ExecutaRelatorio {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
     }
+
     public void abrirRelatorioCupom(Integer idvenda, Integer empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioCupom.jasper");
         Map<String, Integer> parametros = new HashMap<String, Integer>();
@@ -257,10 +268,56 @@ public class ExecutaRelatorio {
         parametros.put("EMPRESA", empresa);
         try {
             // abre o relatório
-            ReportUtils.openReport("Relatório de Clientes por Convenio", inputStream, parametros, ConnectionFactory.getConnection());
+            //ReportUtils.openReport("Relatório de Clientes por Convenio", inputStream, parametros, ConnectionFactory.getConnection());
+
+            /*teste para salvar em PDF*/
+            Map<String, Object> parametrosNovo = new HashMap<String, Object>();
+            Object oVenda = idvenda;
+            Object oEmpresa = empresa;
+            parametrosNovo.put("IDVENDA", oVenda);
+            parametrosNovo.put("EMPRESA", oEmpresa);
+            File file = new File("./parcelas.pdf");
+
+            JasperPrint printNovo;
+            InputStream inputStreamNovo = getClass().getResourceAsStream("RelatorioCupom.jasper");
+            printNovo = JasperFillManager.fillReport(inputStreamNovo, parametrosNovo, ConnectionFactory.getConnection());
+            JRPdfExporter pdfExporter = new JRPdfExporter();
+            pdfExporter.setParameter(JRExporterParameter.JASPER_PRINT, printNovo);
+            pdfExporter.setParameter(JRExporterParameter.OUTPUT_FILE, file);
+            pdfExporter.exportReport();
+            teste(file, 2);
+
         } catch (JRException exc) {
             ConfigurationFactory.getLOG().warn(exc.getMessage());
         }
+    }
+
+    /*teste de impressao de arquivo PDF*/
+    public void teste(File file, int copias) {
+        try {
+            //        String[] args = new String[1];
+//        args[0] = file.getAbsolutePath();
+//        try {
+//            for (int i = 0; i < copias; i++) {
+//                Printing.main(args);
+//            }
+//
+//        } catch (PrinterException ex) {
+//            ConfigurationFactory.getLOG().warn(ex.getMessage());
+//        } catch (IOException ex) {
+//            ConfigurationFactory.getLOG().warn(ex.getMessage());
+//        }
+
+            for (int i = 0; i < ConfigurationFactory.NRVIAS; i++) {
+                Impressao.imprimir(Impressoras.getImpressoraCupom(), file.toString(), 1);
+            }
+
+        } catch (PrinterException ex) {
+            Logger.getLogger(ExecutaRelatorio.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(ExecutaRelatorio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     public void abrirRelatorioClientes(String relatorio, HashMap param) {
