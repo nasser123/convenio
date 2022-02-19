@@ -109,7 +109,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Vers&#xe3;o do Sistema: 0.9.2.4"/>
+            <Property name="text" type="java.lang.String" value="Vers&#xe3;o do Sistema: 0.9.2.5"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
@@ -117,7 +117,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="14" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Data de Compila&#xe7;&#xe3;o: 29/10/2021"/>
+            <Property name="text" type="java.lang.String" value="Data de Compila&#xe7;&#xe3;o: 19/02/2022"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
