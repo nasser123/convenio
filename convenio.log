@@ -642,3 +642,15 @@
 2021-11-02 19:49:41,016 [main]  INFO testecategoria:44 – Abertura de sistema
 2021-11-02 19:49:54,657 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
 2021-11-02 19:49:54,673 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:333.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:1-Data:2-11-2021
+2022-02-07 00:24:55,384 [main]  INFO testecategoria:44 – Abertura de sistema
+2022-02-07 00:27:03,070 [main]  INFO testecategoria:44 – Abertura de sistema
+2022-02-17 17:24:08,860 [main]  INFO testecategoria:44 – Abertura de sistema
+2022-02-17 17:24:50,153 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:123.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:4-Data:2-11-2021
+2022-02-19 11:16:15,543 [main]  INFO testecategoria:44 – Abertura de sistema
+2022-02-19 11:16:44,002 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:333.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:1-Data:2-11-2021
+2022-02-19 11:18:39,745 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2022-02-19 11:18:39,776 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:1000.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:3-Data:19-2-2022
+2022-02-19 11:19:29,051 [AWT-EventQueue-0]  WARN testecategoria:121 – Excluida venda id: 529- Cliente: MARIANNA TROJAN no valor de: 1000.0 realizada no dia : 19-2-2022
+2022-02-19 11:20:04,747 [AWT-EventQueue-0]  WARN testecategoria:44 – 1:Erro ao converter valor
+2022-02-19 11:20:04,763 [AWT-EventQueue-0]  INFO testecategoria:58 – Venda cadastrada:2000.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:5-Data:19-2-2022
+2022-02-19 11:20:25,051 [AWT-EventQueue-0]  INFO testecategoria:80 – Venda Alterada:2000.0-Cliente: 4-MARIANNA TROJAN-Nr parcelas:5-Data:19-2-2022
