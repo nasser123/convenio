@@ -13,6 +13,7 @@ import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import util.Datas;
 
 /**
  *
@@ -406,15 +407,18 @@ public class Cliente implements Serializable {
         return v;
     }
     
-//    public Float getAbertoMes(int mes, int ano){
-//        Float v = 0f;
-//        String sDatini = "01/"+mes+"/"+ano;
-//        String sDatfim = "01/"+(mes + 1)+"/"+ano;
-//        Date datini = Datas.transformaStringDate(sDatini);
-//        Date datfim = 
-//                
-//    return v;
-//    }
+    
+    
+    public Float getVencido(){
+        Float v = 0f;
+        Date hoje = Datas.getCurrentTime();
+        for(int i = 0 ; i < vendaList.size(); i++){
+            v = v + vendaList.get(i).getVencidas();
+        }
+        
+                
+    return v;
+    }
 
     public String getCelular() {
         return celular;

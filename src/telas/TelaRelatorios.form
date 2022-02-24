@@ -55,7 +55,7 @@
         <Property name="text" type="java.lang.String" value="clienteListCellRenderer1"/>
       </Properties>
     </Component>
-    <Component class="renderizadores.ConvenioListCellRenderer" name="convenioListCellRenderer1">
+    <Component class="renderizadores.ParcelaListCellRenderer" name="convenioListCellRenderer1">
       <Properties>
         <Property name="text" type="java.lang.String" value="convenioListCellRenderer1"/>
       </Properties>

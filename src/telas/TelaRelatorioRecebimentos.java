@@ -15,12 +15,12 @@ import util.ConnectionFactory;
  *
  * @author Produção
  */
-public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
+public class TelaRelatorioRecebimentos extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaPadrao
      */
-    public TelaRelatorioVendasPorPeriodo() {
+    public TelaRelatorioRecebimentos() {
         initComponents();
         ConfigTelas ct = new ConfigTelas(this);
         ct.carregarConfig(this);
@@ -47,11 +47,6 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
         jButtonRelatorio = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
-        jLabel4 = new javax.swing.JLabel();
-        jRadioButtonConvenio = new javax.swing.JRadioButton();
-        jRadioButtonData = new javax.swing.JRadioButton();
-        jRadioButtonCliente = new javax.swing.JRadioButton();
 
         convenioListCellRenderer1.setText("convenioListCellRenderer1");
 
@@ -73,7 +68,7 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Relatório de Vendas por Período");
+        jLabel1.setText("Relatório de Recebimentos");
 
         jButtonRelatorio.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRelatorio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -89,30 +84,9 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
         });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Data Inicial");
+        jLabel2.setText("Data");
 
         jDateChooser1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jDateChooser2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Data Final");
-
-        jRadioButtonConvenio.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButtonConvenio);
-        jRadioButtonConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonConvenio.setSelected(true);
-        jRadioButtonConvenio.setText("Convênio");
-
-        jRadioButtonData.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButtonData);
-        jRadioButtonData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonData.setText("Data");
-
-        jRadioButtonCliente.setBackground(new java.awt.Color(255, 255, 255));
-        buttonGroup1.add(jRadioButtonCliente);
-        jRadioButtonCliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jRadioButtonCliente.setText("Nome Cliente");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -130,15 +104,9 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
                         .addContainerGap())))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRadioButtonConvenio)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jRadioButtonData)
-                    .addComponent(jRadioButtonCliente))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 240, Short.MAX_VALUE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -156,17 +124,7 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4)
-                        .addGap(7, 7, 7)
-                        .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
-                        .addComponent(jRadioButtonConvenio)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jRadioButtonData)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jRadioButtonCliente)))
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -188,24 +146,14 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
     private void jButtonRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRelatorioActionPerformed
         ExecutaRelatorio t = new ExecutaRelatorio();
 
-        Date dataInicial = jDateChooser1.getDate();
-        Date dataFinal = jDateChooser2.getDate();
-        Integer ordenamento1 = 0;
-
-        if (jRadioButtonConvenio.isSelected()) {
-            ordenamento1 = 0;
-        }
-        if (jRadioButtonData.isSelected()) {
-            ordenamento1 = 1;
-        }
-        if (jRadioButtonCliente.isSelected()) {
-            ordenamento1 = 2;
-        }
+        Date dataRecebimento = jDateChooser1.getDate();
+        
+        
             //HashMap<String, Object> parameterMap = new HashMap<String, Object>();
-            Object dataIni = dataInicial;
-            Object dataFim = dataFinal;
+            Object datapgto = dataRecebimento;
 
-            t.abrirRelatorioVendaPorPeriodo(dataIni, dataFim, ordenamento1, EMPRESA.getIdEmpresa());
+
+            t.abrirRelatorioRecebimentos(datapgto, EMPRESA.getIdEmpresa());
 
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
 
@@ -250,7 +198,7 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                new TelaRelatorioVendasPorPeriodo().setVisible(true);
+                new TelaRelatorioRecebimentos().setVisible(true);
             }
         });
     }
@@ -263,13 +211,8 @@ public class TelaRelatorioVendasPorPeriodo extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonRelatorio;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButtonCliente;
-    private javax.swing.JRadioButton jRadioButtonConvenio;
-    private javax.swing.JRadioButton jRadioButtonData;
     // End of variables declaration//GEN-END:variables
 }

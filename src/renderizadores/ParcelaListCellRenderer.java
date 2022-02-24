@@ -13,7 +13,7 @@ import java.awt.Component;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JList;
 
-public class ConvenioListCellRenderer extends DefaultListCellRenderer {
+public class ParcelaListCellRenderer extends DefaultListCellRenderer {
 
     @Override
     public Component getListCellRendererComponent(

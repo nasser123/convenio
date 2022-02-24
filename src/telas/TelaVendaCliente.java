@@ -8,10 +8,8 @@ import beans.Cliente;
 import beans.Venda;
 import controller.ClienteController;
 import controller.VendaController;
-import static convenio.Convenio.EMPRESA;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import relatorios.ExecutaRelatorio;
 import util.ConfigTelas;
 import util.ConfigurationFactory;
 import util.ConnectionFactory;
@@ -46,6 +44,10 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         ct.carregarConfig(this);
         this.jTextFieldCodigo.setText(this.c.getIdcliente().toString());
         this.jTextFieldNome.setText(this.c.getNome());
+        jFormattedTextFieldGasto.setValue(this.c.getTotalGasto());
+        jFormattedTextFieldAberto.setValue(this.c.getTotalAberto());
+        jFormattedTextFieldVencido.setValue(this.c.getVencido());
+        
 
         filtrar(this.c);
     }
@@ -90,8 +92,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         vendaQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT v FROM Venda v");
         vendaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(vendaQuery.getResultList());
         valorTableCellRenderer1 = new renderizadores.ValorTableCellRenderer();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        vencidoTableCellRenderer1 = new renderizadores.VencidoTableCellRenderer();
         jPanel1 = new javax.swing.JPanel();
         jButtonVoltar = new javax.swing.JButton();
         jButtonNovo = new javax.swing.JButton();
@@ -111,21 +112,16 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         jButtonRelatorio = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jFormattedTextFieldAberto = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldGasto = new javax.swing.JFormattedTextField();
+        jFormattedTextFieldVencido = new javax.swing.JFormattedTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         valorTableCellRenderer1.setText("valorTableCellRenderer1");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable2);
+        vencidoTableCellRenderer1.setText("vencidoTableCellRenderer1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -145,10 +141,15 @@ public class TelaVendaCliente extends javax.swing.JFrame {
 
         jButtonNovo.setBackground(new java.awt.Color(255, 255, 255));
         jButtonNovo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/7687_32x32.png"))); // NOI18N
+        jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icones/32x32/add_to_shopping_cart.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonNovo.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonNovo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonNovoActionPerformed(evt);
+            }
+        });
 
         jButtonExcluir.setBackground(new java.awt.Color(255, 255, 255));
         jButtonExcluir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -191,6 +192,11 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${valor}"));
         columnBinding.setColumnName("Valor");
         columnBinding.setColumnClass(Float.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${temVencida}"));
+        columnBinding.setColumnName("Tem Vencida");
+        columnBinding.setColumnClass(Boolean.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jTableVendas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -245,6 +251,7 @@ public class TelaVendaCliente extends javax.swing.JFrame {
 
         jTable1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTable1.setRowHeight(20);
+        jTable1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${selectedElement.parcelaList}");
         jTableBinding = org.jdesktop.swingbinding.SwingBindings.createJTableBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, jTableVendas, eLProperty, jTable1);
@@ -271,12 +278,21 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${datapgto}"));
         columnBinding.setColumnName("Data Pagamento");
         columnBinding.setColumnClass(java.util.Date.class);
+        columnBinding.setEditable(false);
+        columnBinding = jTableBinding.addColumnBinding(org.jdesktop.beansbinding.ELProperty.create("${ehVencida}"));
+        columnBinding.setColumnName("Vencida");
+        columnBinding.setColumnClass(Boolean.class);
+        columnBinding.setEditable(false);
         bindingGroup.addBinding(jTableBinding);
         jTableBinding.bind();
         jScrollPane2.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
+        }
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
+            jTable1.getColumnModel().getColumn(6).setCellRenderer(null);
         }
 
         jButtonEditar.setBackground(new java.awt.Color(255, 255, 255));
@@ -317,15 +333,52 @@ public class TelaVendaCliente extends javax.swing.JFrame {
 
         jScrollPane4.setViewportView(jTextArea1);
 
+        jFormattedTextFieldAberto.setEditable(false);
+        jFormattedTextFieldAberto.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldAberto.setForeground(new java.awt.Color(51, 51, 255));
+        jFormattedTextFieldAberto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldAberto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldAberto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jFormattedTextFieldAberto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextFieldAbertoActionPerformed(evt);
+            }
+        });
+
+        jFormattedTextFieldGasto.setEditable(false);
+        jFormattedTextFieldGasto.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldGasto.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldGasto.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldGasto.setCaretColor(new java.awt.Color(255, 51, 51));
+        jFormattedTextFieldGasto.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jFormattedTextFieldGasto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextFieldGastoActionPerformed(evt);
+            }
+        });
+
+        jFormattedTextFieldVencido.setEditable(false);
+        jFormattedTextFieldVencido.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldVencido.setForeground(new java.awt.Color(255, 0, 51));
+        jFormattedTextFieldVencido.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(java.text.NumberFormat.getCurrencyInstance())));
+        jFormattedTextFieldVencido.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldVencido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jFormattedTextFieldVencido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextFieldVencidoActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setText("Total Gasto");
+
+        jLabel5.setText("Total em Aberto");
+
+        jLabel6.setText("Total Vencido");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 963, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -344,6 +397,10 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButtonPesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -352,13 +409,27 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                                     .addComponent(jTextFieldCodigo))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jTextFieldNome))
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 782, Short.MAX_VALUE))
                         .addGap(932, 932, 932))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextFieldGasto, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jFormattedTextFieldAberto, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jFormattedTextFieldVencido, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,13 +445,23 @@ public class TelaVendaCliente extends javax.swing.JFrame {
                     .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonPesquisar))
-                .addGap(3, 3, 3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jFormattedTextFieldGasto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextFieldAberto, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jFormattedTextFieldVencido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)
-                    .addComponent(jScrollPane4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -403,14 +484,12 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 684, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         bindingGroup.bind();
 
-        setSize(new java.awt.Dimension(759, 651));
+        setSize(new java.awt.Dimension(811, 723));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -456,9 +535,14 @@ public class TelaVendaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonExcluirActionPerformed
 
     private void jTableVendasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableVendasMouseClicked
+        
+
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
+            
+            
+            
         }
 
         if (evt.getClickCount() > 1) {
@@ -482,6 +566,23 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         new TelaRelatorioVendasCliente(this.c).setVisible(true);
 
     }//GEN-LAST:event_jButtonRelatorioActionPerformed
+
+    private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
+        new TelaCadastroVenda(c).setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonNovoActionPerformed
+
+    private void jFormattedTextFieldAbertoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextFieldAbertoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextFieldAbertoActionPerformed
+
+    private void jFormattedTextFieldGastoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextFieldGastoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextFieldGastoActionPerformed
+
+    private void jFormattedTextFieldVencidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextFieldVencidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextFieldVencidoActionPerformed
 
     private void atualizaTabelas(java.awt.event.ActionEvent evt) {
         this.dispose();
@@ -525,6 +626,10 @@ public class TelaVendaCliente extends javax.swing.JFrame {
         filtrar(c);
         jTextFieldCodigo.setText(this.c.getIdcliente().toString());
         jTextFieldNome.setText(this.c.getNome());
+        jFormattedTextFieldGasto.setValue(this.c.getTotalGasto());
+        jFormattedTextFieldAberto.setValue(this.c.getTotalAberto());
+        jFormattedTextFieldVencido.setValue(this.c.getVencido());
+        
         if (jTable1.getColumnModel().getColumnCount() > 0) {
             jTable1.getColumnModel().getColumn(1).setCellRenderer(valorTableCellRenderer1);
             jTable1.getColumnModel().getColumn(3).setCellRenderer(valorTableCellRenderer1);
@@ -581,21 +686,26 @@ public class TelaVendaCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRelatorio;
     private javax.swing.JButton jButtonVoltar;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JFormattedTextField jFormattedTextFieldAberto;
+    private javax.swing.JFormattedTextField jFormattedTextFieldGasto;
+    private javax.swing.JFormattedTextField jFormattedTextFieldVencido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
     private javax.swing.JTable jTableVendas;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextFieldCodigo;
     private javax.swing.JTextField jTextFieldNome;
     private renderizadores.ValorTableCellRenderer valorTableCellRenderer1;
+    private renderizadores.VencidoTableCellRenderer vencidoTableCellRenderer1;
     private java.util.List<beans.Venda> vendaList;
     private javax.persistence.Query vendaQuery;
     private org.jdesktop.beansbinding.BindingGroup bindingGroup;

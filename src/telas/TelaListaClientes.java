@@ -63,7 +63,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
     private void initComponents() {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         entityManager = ConnectionFactory.getEntityManager();
         clienteQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Cliente c");
         clienteList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(clienteQuery.getResultList()));
@@ -498,7 +498,7 @@ public class TelaListaClientes extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.util.List<beans.Cliente> clienteList;
     private javax.persistence.Query clienteQuery;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jButtonEditar;
     private javax.swing.JButton jButtonExcluir;

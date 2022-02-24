@@ -47,7 +47,7 @@ public class TelaParcelas extends javax.swing.JFrame {
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery.getResultList();
         parcelaQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT p FROM Parcela p");
         parcelaList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(new java.util.LinkedList(parcelaQuery.getResultList()));
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -306,7 +306,7 @@ public class TelaParcelas extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.util.List<beans.Convenio> convenioList;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.Query convenioQuery;
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jButton1;

@@ -80,6 +80,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItemClientes = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItemComprovantePagamento = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuConfiguracao = new javax.swing.JMenu();
         jMenuItemBackup = new javax.swing.JMenuItem();
         jMenuItemConfiguracao = new javax.swing.JMenuItem();
@@ -329,6 +330,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         jMenuComprovantePagamento.add(jMenuItemComprovantePagamento);
 
+        jMenuItem4.setText("Recebimentos por Data");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenuComprovantePagamento.add(jMenuItem4);
+
         jMenuBar1.add(jMenuComprovantePagamento);
 
         jMenuConfiguracao.setText("Ferramentas");
@@ -541,6 +550,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_formWindowClosing
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        new TelaRelatorioRecebimentos().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -597,6 +610,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItemBackup;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemClientes;

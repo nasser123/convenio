@@ -57,6 +57,10 @@ public class Parcela implements Serializable {
     @JoinColumn(name = "idvenda", referencedColumnName = "idvenda")
     @ManyToOne(optional = false)
     private Venda idvenda;
+    @Transient
+    private Boolean ehVencida;
+
+    
 
 
     public PropertyChangeSupport getChangeSupport() {
@@ -245,5 +249,16 @@ public class Parcela implements Serializable {
 
     public void setDatapgto(Date datapgto) {
         this.datapgto = datapgto;
+    }
+    
+    public Boolean getEhVencida(){
+        Date hoje = Datas.getCurrentTime();
+        if(vencimento.before(hoje)&&!pago)
+            return true;
+        return false;
+    }
+    
+    public void setEhVencida(Boolean ehVencida) {
+        this.ehVencida = ehVencida;
     }
 }

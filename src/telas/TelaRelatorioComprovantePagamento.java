@@ -101,7 +101,7 @@ public class TelaRelatorioComprovantePagamento extends javax.swing.JFrame {
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
         convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c ORDER BY c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery.getResultList();
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         convenioQuery1 = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c");
         convenioList1 = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery1.getResultList();
         buttonGroup2 = new javax.swing.ButtonGroup();
@@ -376,7 +376,7 @@ public class TelaRelatorioComprovantePagamento extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private java.util.List<beans.Convenio> convenioList;
     private java.util.List<beans.Convenio> convenioList1;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.EntityManager convenioPUEntityManager;
     private javax.persistence.Query convenioQuery;
     private javax.persistence.Query convenioQuery1;

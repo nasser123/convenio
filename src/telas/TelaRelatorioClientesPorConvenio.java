@@ -46,7 +46,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
         entityManager = ConnectionFactory.getEntityManager();
         convenioQuery = java.beans.Beans.isDesignTime() ? null : entityManager.createQuery("SELECT c FROM Convenio c ORDER by c.nome");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : org.jdesktop.observablecollections.ObservableCollections.observableList(convenioQuery.getResultList());
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         jPanel1 = new javax.swing.JPanel();
         jButtonVolta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -264,7 +264,7 @@ public class TelaRelatorioClientesPorConvenio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private java.util.List<beans.Convenio> convenioList;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.Query convenioQuery;
     private javax.persistence.EntityManager entityManager;
     private javax.swing.JButton jButtonRelatorio;

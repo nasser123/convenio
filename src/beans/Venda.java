@@ -4,6 +4,7 @@
  */
 package beans;
 
+import com.lowagie.text.pdf.PRAcroForm;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.io.Serializable;
@@ -23,12 +24,18 @@ import util.Datas;
 @Table(name = "venda")
 @XmlRootElement
 @NamedQueries({
-    @NamedQuery(name = "Venda.findAll", query = "SELECT v FROM Venda v"),
-    @NamedQuery(name = "Venda.findByIdvenda", query = "SELECT v FROM Venda v WHERE v.idvenda = :idvenda"),
-    @NamedQuery(name = "Venda.findByData", query = "SELECT v FROM Venda v WHERE v.data = :data"),
-    @NamedQuery(name = "Venda.findByNrparcelas", query = "SELECT v FROM Venda v WHERE v.nrparcelas = :nrparcelas"),
-    @NamedQuery(name = "Venda.findByNotafiscal", query = "SELECT v FROM Venda v WHERE v.notafiscal = :notafiscal"),
-    @NamedQuery(name = "Venda.findByIdcliente", query = "SELECT v FROM Venda v WHERE v.idcliente = :idcliente"),
+    @NamedQuery(name = "Venda.findAll", query = "SELECT v FROM Venda v")
+    ,
+    @NamedQuery(name = "Venda.findByIdvenda", query = "SELECT v FROM Venda v WHERE v.idvenda = :idvenda")
+    ,
+    @NamedQuery(name = "Venda.findByData", query = "SELECT v FROM Venda v WHERE v.data = :data")
+    ,
+    @NamedQuery(name = "Venda.findByNrparcelas", query = "SELECT v FROM Venda v WHERE v.nrparcelas = :nrparcelas")
+    ,
+    @NamedQuery(name = "Venda.findByNotafiscal", query = "SELECT v FROM Venda v WHERE v.notafiscal = :notafiscal")
+    ,
+    @NamedQuery(name = "Venda.findByIdcliente", query = "SELECT v FROM Venda v WHERE v.idcliente = :idcliente")
+    ,
     @NamedQuery(name = "Venda.findByValor", query = "SELECT v FROM Venda v WHERE v.valor = :valor")})
 public class Venda implements Serializable {
 
@@ -61,6 +68,8 @@ public class Venda implements Serializable {
     private List<Parcela> parcelaList;
     @Transient
     private String sData;
+    @Transient
+    private Boolean temVencida;
 
     public Venda() {
     }
@@ -196,7 +205,18 @@ public class Venda implements Serializable {
             if (!parcelaList.get(i).isPago()) {
                 p = p + parcelaList.get(i).getValorparcela();
             }
+        }
 
+        return p;
+    }
+
+    public Float getVencidas() {
+        Float p = 0f;
+        Date hoje = Datas.getCurrentTime();
+        for (int i = 0; i < parcelaList.size(); i++) {
+            if (!parcelaList.get(i).isPago() && (parcelaList.get(i).getVencimento().before(hoje))) {
+                p = p + parcelaList.get(i).getValorparcela();
+            }
         }
 
         return p;
@@ -210,7 +230,7 @@ public class Venda implements Serializable {
         return p;
     }
 
-    public boolean verificaParcelas(){
+    public boolean verificaParcelas() {
         if (!Objects.equals(getSomaParcelas(), getValor())) {
             return false;
         }
@@ -231,6 +251,14 @@ public class Venda implements Serializable {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public Boolean getTemVencida() {
+        for (int i = 0; i < parcelaList.size(); i++) {
+            if(parcelaList.get(i).getEhVencida())
+                return true;
+        }
+        return false;
     }
 
 }

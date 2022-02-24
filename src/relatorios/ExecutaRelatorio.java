@@ -181,6 +181,21 @@ public class ExecutaRelatorio {
         }
     }
 
+    public void abrirRelatorioRecebimentos(Object datapgto,  Object empresa) {
+        InputStream inputStream = getClass().getResourceAsStream("RelatorioRecebimentos.jasper");
+        Map<String, Object> parametros = new HashMap<String, Object>();
+        parametros.put("DATA_PGTO", datapgto);
+        parametros.put("EMPRESA", empresa);
+
+        try {
+            // abre o relatório
+            ReportUtils.openReport("Relatório de Recebimentos", inputStream, parametros, ConnectionFactory.getConnection());
+        } catch (JRException exc) {
+            ConfigurationFactory.getLOG().warn(exc.getMessage());
+        }
+    }
+    
+    
     public void abrirRelatorioClientesPorConvenio(Integer convenio, Integer empresa) {
         InputStream inputStream = getClass().getResourceAsStream("RelatorioClientesPorConvenio.jasper");
         Map<String, Integer> parametros = new HashMap<String, Integer>();

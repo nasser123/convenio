@@ -141,7 +141,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jTextField3 = new javax.swing.JTextField();
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         estadoCivilListCellRenderer1 = new renderizadores.EstadoCivilListCellRenderer();
         sexoListCellRenderer1 = new renderizadores.SexoListCellRenderer();
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
@@ -821,7 +821,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.util.List<beans.Convenio> convenioList;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.EntityManager convenioPUEntityManager;
     private javax.persistence.Query convenioQuery;
     private renderizadores.EstadoCivilListCellRenderer estadoCivilListCellRenderer1;

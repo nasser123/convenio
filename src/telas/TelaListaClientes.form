@@ -2,7 +2,7 @@
 
 <Form version="1.6" maxVersion="1.8" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Component class="renderizadores.ConvenioListCellRenderer" name="convenioListCellRenderer1">
+    <Component class="renderizadores.ParcelaListCellRenderer" name="convenioListCellRenderer1">
       <Properties>
         <Property name="text" type="java.lang.String" value="convenioListCellRenderer1"/>
       </Properties>

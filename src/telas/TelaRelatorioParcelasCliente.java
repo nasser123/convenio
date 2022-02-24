@@ -62,7 +62,7 @@ public class TelaRelatorioParcelasCliente extends javax.swing.JFrame {
         convenioPUEntityManager = ConnectionFactory.getEntityManager();
         convenioQuery = java.beans.Beans.isDesignTime() ? null : convenioPUEntityManager.createQuery("SELECT c FROM Convenio c");
         convenioList = java.beans.Beans.isDesignTime() ? java.util.Collections.emptyList() : convenioQuery.getResultList();
-        convenioListCellRenderer1 = new renderizadores.ConvenioListCellRenderer();
+        convenioListCellRenderer1 = new renderizadores.ParcelaListCellRenderer();
         buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jButtonVoltar = new javax.swing.JButton();
@@ -334,7 +334,7 @@ public class TelaRelatorioParcelasCliente extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private java.util.List<beans.Convenio> convenioList;
-    private renderizadores.ConvenioListCellRenderer convenioListCellRenderer1;
+    private renderizadores.ParcelaListCellRenderer convenioListCellRenderer1;
     private javax.persistence.EntityManager convenioPUEntityManager;
     private javax.persistence.Query convenioQuery;
     private javax.swing.JButton jButtonPesquisar;

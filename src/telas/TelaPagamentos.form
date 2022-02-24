@@ -29,7 +29,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;beans.Convenio&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="renderizadores.ConvenioListCellRenderer" name="convenioListCellRenderer1">
+    <Component class="renderizadores.ParcelaListCellRenderer" name="convenioListCellRenderer1">
       <Properties>
         <Property name="text" type="java.lang.String" value="convenioListCellRenderer1"/>
       </Properties>
@@ -138,7 +138,7 @@
                                       </Group>
                                       <Component id="jMonthChooser" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="13" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jLabel8" alignment="1" min="-2" pref="86" max="-2" attributes="0"/>
                                       <Component id="jYearChooser" alignment="1" min="-2" pref="86" max="-2" attributes="0"/>
@@ -150,20 +150,11 @@
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButtonFiltrar" min="-2" pref="98" max="-2" attributes="0"/>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jScrollPane1" min="-2" pref="752" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel2" max="32767" attributes="0"/>
-                                      <Component id="jLabel3" max="32767" attributes="0"/>
-                                      <Component id="jLabel4" max="32767" attributes="0"/>
-                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="jScrollPane1" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jCheckBox1" min="-2" pref="187" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
@@ -171,15 +162,21 @@
                                           <Component id="jButton1" min="-2" pref="91" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="40" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel2" max="32767" attributes="0"/>
+                                      <Component id="jLabel3" max="32767" attributes="0"/>
+                                      <Component id="jLabel4" max="32767" attributes="0"/>
+                                      <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jFormattedTextFieldPendente" min="-2" pref="172" max="-2" attributes="0"/>
-                                      <Component id="jDateChooser1" min="-2" pref="172" max="-2" attributes="0"/>
-                                      <Component id="jFormattedTextFieldPago" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
-                                      <Component id="jFormattedTextFieldTotal" alignment="1" min="-2" pref="172" max="-2" attributes="0"/>
+                                      <Component id="jFormattedTextFieldPendente" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="jDateChooser1" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="jFormattedTextFieldPago" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="jFormattedTextFieldTotal" alignment="1" min="-2" pref="140" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                               </Group>
@@ -357,12 +354,14 @@
                         <ComponentRef name="valorTableCellRenderer1"/>
                       </Renderer>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="40" resizable="false">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="32" resizable="false">
                       <Title/>
                       <Editor/>
-                      <Renderer/>
+                      <Renderer editor="org.netbeans.modules.form.ComponentChooserEditor">
+                        <ComponentRef name="valorTableCellRenderer1"/>
+                      </Renderer>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="25" resizable="false">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="15" resizable="false">
                       <Title/>
                       <Editor/>
                       <Renderer/>
@@ -374,20 +373,24 @@
                         <ComponentRef name="valorTableCellRenderer1"/>
                       </Renderer>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="40" resizable="false">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="32" resizable="false">
+                      <Title/>
+                      <Editor/>
+                      <Renderer editor="org.netbeans.modules.form.ComponentChooserEditor">
+                        <ComponentRef name="valorTableCellRenderer1"/>
+                      </Renderer>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="5" resizable="false">
                       <Title/>
                       <Editor/>
                       <Renderer/>
                     </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="10" resizable="false">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="32" resizable="false">
                       <Title/>
                       <Editor/>
-                      <Renderer/>
-                    </Column>
-                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title/>
-                      <Editor/>
-                      <Renderer/>
+                      <Renderer editor="org.netbeans.modules.form.ComponentChooserEditor">
+                        <ComponentRef name="valorTableCellRenderer1"/>
+                      </Renderer>
                     </Column>
                   </TableColumnModel>
                 </Property>
@@ -414,17 +417,17 @@
                     <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                   </Subbinding>
                   <Subbinding sourcePath="${nrparcela}">
-                    <BindingParameter name="NAME" value="Nrparcela"/>
+                    <BindingParameter name="NAME" value="Qtd Parc"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Integer.class"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                   </Subbinding>
                   <Subbinding sourcePath="${valorparcela}">
-                    <BindingParameter name="NAME" value="Valorparcela"/>
+                    <BindingParameter name="NAME" value="Valor da Parcela"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Float.class"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                   </Subbinding>
                   <Subbinding sourcePath="${vencimento}">
-                    <BindingParameter name="NAME" value="Vencimento"/>
+                    <BindingParameter name="NAME" value="Data Venc"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                   </Subbinding>
@@ -433,7 +436,7 @@
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="Boolean.class"/>
                   </Subbinding>
                   <Subbinding sourcePath="${datapgto}">
-                    <BindingParameter name="NAME" value="DataPgto"/>
+                    <BindingParameter name="NAME" value="Data Pgto"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.COLUMN_CLASS" value="java.util.Date.class"/>
                     <BindingParameter name="javax.swing.binding.ParameterKeys.EDITABLE" value="false"/>
                   </Subbinding>
