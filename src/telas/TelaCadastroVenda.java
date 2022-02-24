@@ -79,6 +79,7 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         }
         jFormattedTextFieldLimite.setValue(this.c.getLimite());
         jFormattedTextFieldPendente.setValue(this.c.getTotalAberto());
+        jFormattedTextFieldVencido.setValue(this.c.getVencido());
         jLabelSituacao.setText(this.c.getSituacao().toUpperCase());
         if(this.c.getSituacao().equalsIgnoreCase("inativo")){
             jLabelSituacao.setForeground(new java.awt.Color(255, 0, 0));
@@ -134,10 +135,13 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jFormattedTextFieldVencido = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setEnabled(false);
 
         jButtonVoltar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonVoltar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -183,6 +187,7 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         jLabel2.setText("Código:");
 
         jTextFieldNome.setEditable(false);
+        jTextFieldNome.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldNome.setEnabled(false);
 
@@ -193,6 +198,7 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         jLabel4.setText("Convênio:");
 
         jTextFieldConvenio.setEditable(false);
+        jTextFieldConvenio.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldConvenio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldConvenio.setEnabled(false);
 
@@ -230,7 +236,7 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         jLabel8.setText("Limite:");
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel9.setText("Valor pendente:");
+        jLabel9.setText("Total em aberto:");
 
         jTextFieldCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -259,13 +265,16 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
         jLabel11.setText("Situação:");
 
         jFormattedTextFieldLimite.setEditable(false);
+        jFormattedTextFieldLimite.setBackground(new java.awt.Color(255, 255, 255));
         jFormattedTextFieldLimite.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
-        jFormattedTextFieldLimite.setEnabled(false);
+        jFormattedTextFieldLimite.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldLimite.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jFormattedTextFieldPendente.setEditable(false);
+        jFormattedTextFieldPendente.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldPendente.setForeground(new java.awt.Color(51, 51, 255));
         jFormattedTextFieldPendente.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
-        jFormattedTextFieldPendente.setEnabled(false);
+        jFormattedTextFieldPendente.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jFormattedTextFieldPendente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         jLabelSituacao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -288,6 +297,16 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("Observações:");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setText("Total Vencido:");
+
+        jFormattedTextFieldVencido.setEditable(false);
+        jFormattedTextFieldVencido.setBackground(new java.awt.Color(255, 255, 255));
+        jFormattedTextFieldVencido.setForeground(new java.awt.Color(255, 0, 51));
+        jFormattedTextFieldVencido.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("¤#,##0.00"))));
+        jFormattedTextFieldVencido.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jFormattedTextFieldVencido.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -315,17 +334,20 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
                                     .addComponent(jComboBoxNrParcelas, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jFormattedTextFieldValor, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jTextFieldNotaFiscal)
-                                    .addComponent(jDateChooserData, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
+                                    .addComponent(jDateChooserData, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabelNota, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabelValor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabelData))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel12))
-                                .addGap(10, 10, 10))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jLabel12)
+                                        .addGap(212, 212, 212))
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 292, Short.MAX_VALUE)
+                                        .addContainerGap())))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jButton6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -348,13 +370,23 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jFormattedTextFieldPendente, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(8, 8, 8)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGap(26, 26, 26)
                                 .addComponent(jButtonVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabelSituacao, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                .addGap(8, 98, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jFormattedTextFieldVencido, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabelSituacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addContainerGap())))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -375,18 +407,23 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel8)
-                                .addComponent(jLabel11)))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelSituacao, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jFormattedTextFieldLimite, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldConvenio, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel9)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jFormattedTextFieldPendente)))
+                        .addComponent(jFormattedTextFieldPendente))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel11))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelSituacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextFieldVencido))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -677,10 +714,12 @@ public class TelaCadastroVenda extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextFieldLimite;
     private javax.swing.JFormattedTextField jFormattedTextFieldPendente;
     private javax.swing.JFormattedTextField jFormattedTextFieldValor;
+    private javax.swing.JFormattedTextField jFormattedTextFieldVencido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

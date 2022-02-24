@@ -59,7 +59,7 @@ public class TelaSobreJDialog extends javax.swing.JDialog {
         jLabel5.setText("Versão do Sistema: 0.9.2.5");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("Data de Compilação: 19/02/2022");
+        jLabel2.setText("Data de Compilação: 24/02/2022");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Totaltech Sistemas");
